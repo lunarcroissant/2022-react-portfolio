@@ -1,0 +1,25 @@
+.btn {
+  all: unset;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  padding: 1rem 5rem;
+  font-size: 1.25rem;
+  color: #f3f3f3;
+  background: var(--dark-grey);
+  font-weight: var(--font--regular);
+  border-radius: 40px;
+  max-width: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+}
+
+.btn-primary:hover {
+  /* background: var(--medium-grey-full-opacity); */
+  background: #2f2f2f;
+  /* color: var(--secondary-colour); */
+}

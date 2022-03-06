@@ -1,0 +1,77 @@
+.icon {
+  transition: all ease-in-out 250ms;
+  position: relative;
+}
+
+.icon--md {
+  width: 1.125rem;
+  height: 1.125rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.icon--border-white {
+  border: 2px solid var(--white);
+}
+
+.icon--border-blue {
+  border: 2px solid var(--blue);
+}
+
+.icon-button {
+  cursor: pointer;
+}
+
+.icon--xs {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.icon--sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon--md {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon--lg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon--xl {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon__text {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  display: flex;
+  opacity: 0;
+  transition: all ease-in-out 250ms;
+}
+
+.icon:hover > .icon__text {
+  opacity: 1;
+}
+
+button.icon {
+  all: unset;
+  width: 40px;
+  height: 40px;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+  cursor: pointer;
+}
+
+button.icon:hover {
+  background: rgba(240, 240, 240, 0.6);
+}

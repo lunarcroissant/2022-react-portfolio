@@ -1,0 +1,28 @@
+.fullviewportslider {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  /* padding: 3rem 0; */
+}
+
+.fullviewportslider__content {
+  display: flex;
+  /* justify-content: center; */
+  /* max-height: 800px;
+  min-height: 80vh; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* padding-top: 3rem; */
+}
+
+.fullviewportslider::-webkit-scrollbar,
+.fullviewportslider__content::-webkit-scrollbar {
+  display: none;
+}
+
+.fullviewportslider::-webkit-scrollbar,
+.fullviewportslider__content::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}

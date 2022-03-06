@@ -1,0 +1,10 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.header__homeIcon {
+  margin-right: 0.5rem;
+}

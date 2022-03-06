@@ -1,0 +1,27 @@
+.verticalSpacing {
+  height: 4rem;
+}
+
+.verticalSpacing--xxs {
+  height: 0.25rem;
+}
+
+.verticalSpacing--xs {
+  height: 0.5rem;
+}
+
+.verticalSpacing--sm {
+  height: 1rem;
+}
+
+.verticalSpacing--md {
+  height: 2rem;
+}
+
+.verticalSpacing--lg {
+  height: 4rem;
+}
+
+.verticalSpacing--xl {
+  height: 8rem;
+}

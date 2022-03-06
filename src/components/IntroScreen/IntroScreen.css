@@ -1,0 +1,89 @@
+.intro-screen {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #f3f3f3;
+  display: flex;
+  padding: 10vh;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeOutCompletely 1s forwards 16s;
+}
+
+.intro-chat {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-message {
+  margin-top: 2rem;
+  word-wrap: break-word;
+  max-width: 40ch;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+
+/* .active {
+  opacity: 1;
+  transform: translateY(0vh);
+  transition: all ease-in-out 600ms;
+}
+
+.spoken {
+  opacity: 0.25;
+  transform: translateY(0vh);
+  transition: all ease-in-out 600ms;
+} */
+
+@keyframes slideInAndOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 0.25;
+    transform: translateY(0vh);
+  }
+}
+
+.one {
+  animation: slideInAndOut 4000ms ease-in-out forwards;
+  animation-delay: 2s;
+}
+.two {
+  animation: slideInAndOut 4000ms ease-in-out forwards;
+  animation-delay: 4s;
+}
+.three {
+  animation: slideInAndOut 4000ms ease-in-out forwards;
+  animation-delay: 8s;
+}
+.four {
+  animation: slideInAndOut 4000ms ease-in-out forwards;
+  animation-delay: 11s;
+}
+
+@keyframes fadeOutCompletely {
+  0% {
+    opacity: 1;
+    background: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    background: #f3f3f3;
+  }
+}

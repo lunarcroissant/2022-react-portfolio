@@ -1,0 +1,12 @@
+.pageCounter {
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  min-width: 150px;
+  width: auto;
+  z-index: 999;
+}
+
+.pageCounter:nth-child(1) {
+  margin: 0 2rem;
+}

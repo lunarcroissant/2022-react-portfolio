@@ -1,0 +1,25 @@
+.infoTile {
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.69),
+    rgba(255, 255, 255, 0.4)
+  );
+  /* background-image: url(/public/assets/Noise.png); */
+  backdrop-filter: blur(30px);
+  border: 2px rgb(156, 156, 156) solid;
+  box-shadow: 0 0.25rem 1rem 0.25rem rgba(83, 83, 83, 0.25);
+  border-radius: 1.5rem;
+  max-width: 20rem;
+  padding: 1.5rem 1.5rem;
+  min-height: 25rem;
+  z-index: 100;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+}
+
+.infoTile.hidden {
+  left: -15rem;
+  bottom: -22rem;
+}

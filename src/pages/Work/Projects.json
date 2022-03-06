@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+    "title": "EE Product Page Redeign",
+    "description": "Overhauling an e-commerce page to optimise customer satisfaction",
+    "tags": [
+      "UI Design", "React", "Figma"
+    ],
+    "backgroundColour": "#507775",
+    "heroImage": "EE_4000x2000.png"
+  },
+  {
+    "title": "iOS Clock App",
+    "description": "Taking the hassle out of alarms with a new grouped alarms functionality",
+    "tags": [
+      "UI Design", "Figma"
+    ],
+    "backgroundColour": "#1F2531",
+    "heroImage": "iOSAlarms_4000x2001.png"
+  },
+  {
+    "title": "Food Swiper",
+    "description": "Creating a platform for easy food reservations",
+    "tags": [
+      "UI Design", "App", "Figma"
+    ],
+    "backgroundColour": "#61ADAD",
+    "heroImage": "Shelf_1000x2000.png"
+  },
+  {
+    "title": "Tracker - To dos",
+    "description": "Building a secure and fast to do list in the browser",
+    "tags": [
+      "Front-end dev", "React", "Figma"
+    ],
+    "backgroundColour": "#594DE9",
+    "heroImage": "Evopack_2000x1000.png"
+  },
+  {
+    "title": "Atiq - Building an e-commerce presence",
+    "description": "Building a secure and fast to do list in the browser",
+    "tags": [
+      "Front-end dev", "React", "Figma"
+    ],
+    "backgroundColour": "#26272C",
+    "heroImage": "Atiq_4000x2001.png"
+  }
+  ]
+}
