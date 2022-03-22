@@ -8,3 +8,21 @@
 .header__homeIcon {
   margin-right: 0.5rem;
 }
+
+.navlink {
+  padding: 0.625rem 1.875rem;
+  background: var(--medium-grey-half-opacity);
+  border-radius: 0.5rem;
+  color: var(--off-white);
+  font-weight: var(--font--medium);
+  margin-left: 0.5rem;
+  height: min-content;
+  cursor: pointer;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+  text-decoration: none;
+  backdrop-filter: blur(30px);
+}
+
+.navlink:hover {
+  background: rgba(110, 110, 110, 0.6);
+}

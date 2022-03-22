@@ -25,18 +25,25 @@ const InfoTile = ({
   // const projects = data.map((project: any) => {
   //   return project;
   // });
-  // console.log(data.projects);
+  console.log(title);
 
   const [showInfoTile, setShowInfoTile] = useState(true);
 
   return (
-    <div className={`col infoTile ${showInfoTile ? null : "hidden"} `}>
+    <div
+      className={`col infoTile ${showInfoTile ? null : "hidden"} `}
+      key={imageSource}
+    >
       {false ? <img className="infoTile__image" /> : null}
       <div className="row justify-between align-start">
         <div className="col width-90">
-          <Text text="Project" textSize={TextSize.xs} opacity="0.5" />
+          <Text size={TextSize.xs} opacity="0.5">
+            Project
+          </Text>
           <VerticalSpacing size="xs" />
-          <Text text={title} textSize={TextSize.lg} opacity="1" />
+          <Text size={TextSize.lg} opacity="1">
+            {title}
+          </Text>
         </div>
         <Icon
           size="sm"
@@ -56,13 +63,19 @@ const InfoTile = ({
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
-        <Text text="Overview" textSize={TextSize.xs} opacity="0.5" />
+        <Text size={TextSize.xs} opacity="0.5">
+          Overview
+        </Text>
         <VerticalSpacing size="xs" />
-        <Text text={description} textSize={TextSize.lg} opacity="1" />
+        <Text size={TextSize.lg} opacity="1">
+          {description}
+        </Text>
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
-        <Text text="Tags" textSize={TextSize.xs} opacity="0.5" />
+        <Text size={TextSize.xs} opacity="0.5">
+          Tags
+        </Text>
         <VerticalSpacing size="xs" />
         <div className="row">
           {tags.map((tag) => {

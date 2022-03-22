@@ -1,0 +1,167 @@
+.itemsGrid {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  grid-template-columns: repeat(6, minmax(100px, 300px));
+  min-height: 10rem;
+
+  // For the outside rows
+
+  & .itemTile:nth-child(1),
+  & .itemTile:nth-child(4),
+  & .itemTile:nth-child(5),
+  & .itemTile:nth-child(8),
+  & .itemTile:nth-child(9),
+  & .itemTile:nth-child(12),
+  & .itemTile:nth-child(13),
+  & .itemTile:nth-child(16),
+  & .itemTile:nth-child(17),
+  & .itemTile:nth-child(20),
+  & .itemTile:nth-child(21),
+  & .itemTile:nth-child(24),
+  & .itemTile:nth-child(25),
+  & .itemTile:nth-child(28),
+  & .itemTile:nth-child(31) {
+    transform: translateY(0px);
+  }
+
+  // For the two half way columns
+
+  & .itemTile:nth-child(2),
+  & .itemTile:nth-child(5),
+  & .itemTile:nth-child(8),
+  & .itemTile:nth-child(11),
+  & .itemTile:nth-child(14),
+  & .itemTile:nth-child(17),
+  & .itemTile:nth-child(20),
+  & .itemTile:nth-child(23),
+  & .itemTile:nth-child(26) {
+    transform: translateY(160px);
+  }
+
+  // For the middle two cols
+
+  & .itemTile:nth-child(3),
+  & .itemTile:nth-child(4),
+  & .itemTile:nth-child(9),
+  & .itemTile:nth-child(10),
+  & .itemTile:nth-child(15),
+  & .itemTile:nth-child(16),
+  & .itemTile:nth-child(21),
+  & .itemTile:nth-child(22) {
+    transform: translateY(240px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .itemsGrid {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(100px, 600px));
+    min-height: 10rem;
+
+    // For the outside rows
+
+    & .itemTile:nth-child(1),
+    & .itemTile:nth-child(4),
+    & .itemTile:nth-child(5),
+    & .itemTile:nth-child(8),
+    & .itemTile:nth-child(9),
+    & .itemTile:nth-child(12),
+    & .itemTile:nth-child(13),
+    & .itemTile:nth-child(16),
+    & .itemTile:nth-child(17),
+    & .itemTile:nth-child(20),
+    & .itemTile:nth-child(21),
+    & .itemTile:nth-child(24),
+    & .itemTile:nth-child(25),
+    & .itemTile:nth-child(28),
+    & .itemTile:nth-child(9) {
+      transform: translateY(0px);
+    }
+
+    // For the two half way columns
+
+    & .itemTile:nth-child(2),
+    & .itemTile:nth-child(3),
+    & .itemTile:nth-child(6),
+    & .itemTile:nth-child(7),
+    & .itemTile:nth-child(10),
+    & .itemTile:nth-child(11),
+    & .itemTile:nth-child(14),
+    & .itemTile:nth-child(15),
+    & .itemTile:nth-child(18),
+    & .itemTile:nth-child(19),
+    & .itemTile:nth-child(23),
+    & .itemTile:nth-child(26),
+    & .itemTile:nth-child(22) {
+      transform: translateY(80px);
+    }
+
+    // For the middle two cols
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .itemsGrid {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px, 30vw));
+    min-height: 10rem;
+
+    // For the outside rows
+
+    & .itemTile:nth-child(1),
+    & .itemTile:nth-child(3),
+    & .itemTile:nth-child(4),
+    & .itemTile:nth-child(6),
+    & .itemTile:nth-child(7),
+    & .itemTile:nth-child(8),
+    & .itemTile:nth-child(10),
+    & .itemTile:nth-child(11),
+    & .itemTile:nth-child(12),
+    & .itemTile:nth-child(15),
+    & .itemTile:nth-child(18),
+    & .itemTile:nth-child(19),
+    & .itemTile:nth-child(21),
+    & .itemTile:nth-child(22),
+    & .itemTile:nth-child(24),
+    & .itemTile:nth-child(25),
+    & .itemTile:nth-child(27),
+    & .itemTile:nth-child(28) {
+      transform: translateY(0px);
+    }
+
+    // For the two half way columns
+
+    & .itemTile:nth-child(2),
+    & .itemTile:nth-child(5),
+    & .itemTile:nth-child(8),
+    & .itemTile:nth-child(11),
+    & .itemTile:nth-child(14),
+    & .itemTile:nth-child(17),
+    & .itemTile:nth-child(20),
+    & .itemTile:nth-child(23),
+    & .itemTile:nth-child(26) {
+      transform: translateY(160px);
+    }
+
+    // For the middle two cols
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .itemsGrid {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(100px, 45vw));
+    min-height: 10rem;
+
+    & .itemTile:nth-child(1n) {
+      transform: translateY(0px);
+    }
+  }
+}

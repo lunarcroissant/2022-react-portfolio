@@ -1,0 +1,59 @@
+.itemsGrid {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  grid-template-columns: repeat(6, minmax(100px, 300px));
+  min-height: 10rem;
+}
+.itemsGrid .itemTile:nth-child(1), .itemsGrid .itemTile:nth-child(4), .itemsGrid .itemTile:nth-child(5), .itemsGrid .itemTile:nth-child(8), .itemsGrid .itemTile:nth-child(9), .itemsGrid .itemTile:nth-child(12), .itemsGrid .itemTile:nth-child(13), .itemsGrid .itemTile:nth-child(16), .itemsGrid .itemTile:nth-child(17), .itemsGrid .itemTile:nth-child(20), .itemsGrid .itemTile:nth-child(21), .itemsGrid .itemTile:nth-child(24), .itemsGrid .itemTile:nth-child(25), .itemsGrid .itemTile:nth-child(28), .itemsGrid .itemTile:nth-child(31) {
+  transform: translateY(0px);
+}
+.itemsGrid .itemTile:nth-child(2), .itemsGrid .itemTile:nth-child(5), .itemsGrid .itemTile:nth-child(8), .itemsGrid .itemTile:nth-child(11), .itemsGrid .itemTile:nth-child(14), .itemsGrid .itemTile:nth-child(17), .itemsGrid .itemTile:nth-child(20), .itemsGrid .itemTile:nth-child(23), .itemsGrid .itemTile:nth-child(26) {
+  transform: translateY(160px);
+}
+.itemsGrid .itemTile:nth-child(3), .itemsGrid .itemTile:nth-child(4), .itemsGrid .itemTile:nth-child(9), .itemsGrid .itemTile:nth-child(10), .itemsGrid .itemTile:nth-child(15), .itemsGrid .itemTile:nth-child(16), .itemsGrid .itemTile:nth-child(21), .itemsGrid .itemTile:nth-child(22) {
+  transform: translateY(240px);
+}
+
+@media screen and (max-width: 1200px) {
+  .itemsGrid {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(100px, 600px));
+    min-height: 10rem;
+  }
+  .itemsGrid .itemTile:nth-child(1), .itemsGrid .itemTile:nth-child(4), .itemsGrid .itemTile:nth-child(5), .itemsGrid .itemTile:nth-child(8), .itemsGrid .itemTile:nth-child(9), .itemsGrid .itemTile:nth-child(12), .itemsGrid .itemTile:nth-child(13), .itemsGrid .itemTile:nth-child(16), .itemsGrid .itemTile:nth-child(17), .itemsGrid .itemTile:nth-child(20), .itemsGrid .itemTile:nth-child(21), .itemsGrid .itemTile:nth-child(24), .itemsGrid .itemTile:nth-child(25), .itemsGrid .itemTile:nth-child(28), .itemsGrid .itemTile:nth-child(9) {
+    transform: translateY(0px);
+  }
+  .itemsGrid .itemTile:nth-child(2), .itemsGrid .itemTile:nth-child(3), .itemsGrid .itemTile:nth-child(6), .itemsGrid .itemTile:nth-child(7), .itemsGrid .itemTile:nth-child(10), .itemsGrid .itemTile:nth-child(11), .itemsGrid .itemTile:nth-child(14), .itemsGrid .itemTile:nth-child(15), .itemsGrid .itemTile:nth-child(18), .itemsGrid .itemTile:nth-child(19), .itemsGrid .itemTile:nth-child(23), .itemsGrid .itemTile:nth-child(26), .itemsGrid .itemTile:nth-child(22) {
+    transform: translateY(80px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .itemsGrid {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(100px, 30vw));
+    min-height: 10rem;
+  }
+  .itemsGrid .itemTile:nth-child(1), .itemsGrid .itemTile:nth-child(3), .itemsGrid .itemTile:nth-child(4), .itemsGrid .itemTile:nth-child(6), .itemsGrid .itemTile:nth-child(7), .itemsGrid .itemTile:nth-child(8), .itemsGrid .itemTile:nth-child(10), .itemsGrid .itemTile:nth-child(11), .itemsGrid .itemTile:nth-child(12), .itemsGrid .itemTile:nth-child(15), .itemsGrid .itemTile:nth-child(18), .itemsGrid .itemTile:nth-child(19), .itemsGrid .itemTile:nth-child(21), .itemsGrid .itemTile:nth-child(22), .itemsGrid .itemTile:nth-child(24), .itemsGrid .itemTile:nth-child(25), .itemsGrid .itemTile:nth-child(27), .itemsGrid .itemTile:nth-child(28) {
+    transform: translateY(0px);
+  }
+  .itemsGrid .itemTile:nth-child(2), .itemsGrid .itemTile:nth-child(5), .itemsGrid .itemTile:nth-child(8), .itemsGrid .itemTile:nth-child(11), .itemsGrid .itemTile:nth-child(14), .itemsGrid .itemTile:nth-child(17), .itemsGrid .itemTile:nth-child(20), .itemsGrid .itemTile:nth-child(23), .itemsGrid .itemTile:nth-child(26) {
+    transform: translateY(160px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .itemsGrid {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(100px, 45vw));
+    min-height: 10rem;
+  }
+  .itemsGrid .itemTile:nth-child(1n) {
+    transform: translateY(0px);
+  }
+}

@@ -3,6 +3,7 @@ import "./Button.css";
 
 export enum ButtonType {
   primary = "btn-primary",
+  primaryWhite = "btn-primary--light",
   secondary = "btn-secondary",
 }
 

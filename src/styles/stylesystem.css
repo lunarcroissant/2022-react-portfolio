@@ -7,6 +7,7 @@
 /* 1. Global CSS & Variables */
 
 :root {
+  --primary: #252651;
   --off-white: #f4f4f4;
   --dark-grey: #282a33;
   --medium-grey-half-opacity: rgba(61, 61, 61, 0.5);
@@ -17,6 +18,10 @@
   --font--medium: 600;
   --font--regular: 400;
   --font--light: 200;
+}
+
+h1 {
+  font-size: 6rem;
 }
 
 /* 2. Layout */
@@ -48,6 +53,10 @@
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-between {

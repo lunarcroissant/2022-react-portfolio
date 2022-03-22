@@ -1,8 +1,10 @@
 import "./Text.css";
 
 interface IProps {
-  text: string;
-  textSize: TextSize;
+  text?: string;
+  size: TextSize;
+  colour?: TextColour;
+  weight?: TextWeight;
   theme?: string;
   bold?: boolean;
   children?: any;
@@ -18,20 +20,51 @@ export enum TextSize {
   xl = "text--xl",
 }
 
-const Text = ({ text, textSize, theme, bold, opacity }: IProps) => {
+export enum TextWeight {
+  thin = "200",
+  light = "300",
+  regular = "400",
+  medium = "500",
+  semibold = "700",
+  bold = "900",
+}
+
+export enum TextColour {
+  white = "#fff",
+  greyBlue = "var(--grey-blue)",
+  primaryBlue = "var(--primary-blue)",
+  primaryGreen = "var(--primary-green)",
+  offWhite = "var(--off-white)",
+  lightGrey = "var(--light-grey)",
+}
+
+const Text = ({
+  text,
+  size,
+  colour,
+  weight,
+  theme,
+  bold,
+  opacity,
+  children,
+}: IProps) => {
   if (bold) {
     return (
-      <p className={`text ${textSize}`} style={{ opacity: `${opacity}` }}>
-        {text}
+      <p className={`text ${size}`} style={{ opacity: `${opacity}` }}>
+        {children}
       </p>
     );
   } else {
     return (
       <p
-        className={`text ${textSize} text--${theme}`}
-        style={{ opacity: `${opacity}` }}
+        className={`text ${size} text--${theme}`}
+        style={{
+          opacity: `${opacity}`,
+          fontWeight: `${weight}`,
+          color: `${colour}`,
+        }}
       >
-        {text}
+        {children}
       </p>
     );
   }

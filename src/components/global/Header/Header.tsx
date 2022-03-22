@@ -1,9 +1,11 @@
-import NavLink from "../../base/NavLink/NavLink";
-import Text, { TextSize } from "../../base/Text/Text";
+// import NavLink from "../../base/NavLink/NavLink";
+import { NavLink } from "react-router-dom";
+import Icon from "../../base/Icon/Icon";
+import Text, { TextSize, TextWeight } from "../../base/Text/Text";
 import "./Header.css";
 
 interface IProps {
-  linkLabels: string[];
+  linkLabels: any[];
 }
 
 const Header = ({ linkLabels }: IProps) => {
@@ -17,13 +19,32 @@ const Header = ({ linkLabels }: IProps) => {
             className="header__homeIcon"
           />
           <div className="col">
-            <Text text="Eddie" textSize={TextSize.lg} theme="off-white" />
-            <Text text="Tierney" textSize={TextSize.lg} theme="off-white" />
+            <Text size={TextSize.lg} theme="off-white">
+              Eddie
+            </Text>
+            <Text size={TextSize.lg} theme="off-white">
+              Tierney
+            </Text>
           </div>
         </a>
         <div className="row header__navigation">
-          {linkLabels.map((label) => {
-            return <NavLink label={label} />;
+          {linkLabels.map((link) => {
+            return (
+              <NavLink
+                to={`${link.urlPath}`}
+                className={({ isActive }) =>
+                  isActive
+                    ? "navlink row between-xs link--active"
+                    : "navlink between-xs row"
+                }
+                key={link.label}
+              >
+                <Text size={TextSize.sm} weight={TextWeight.light}>
+                  {link.label}
+                </Text>
+                {/* <Icon size="sm" icon="chevron-right--white" /> */}
+              </NavLink>
+            );
           })}
         </div>
       </nav>

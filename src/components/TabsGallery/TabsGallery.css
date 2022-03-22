@@ -1,0 +1,40 @@
+.tabsGallery {
+  padding: 0 1rem 0 1rem;
+  min-height: 200%;
+}
+.tabsGallery__heading {
+  position: fixed;
+  z-index: 0;
+  top: 20vh;
+  left: 0;
+  right: 0;
+}
+.tabsGallery::-webkit-scrollbar, .tabsGallery::-webkit-scrollbar {
+  display: none;
+}
+.tabsGallery::-webkit-scrollbar, .tabsGallery::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
+.tabsGallery__container {
+  justify-content: center;
+  width: 100%;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.tabsGallery__container > * {
+  margin-right: 1rem;
+}
+.tabsGallery.scrolling {
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .tabsGallery__container {
+    justify-content: flex-start;
+  }
+}

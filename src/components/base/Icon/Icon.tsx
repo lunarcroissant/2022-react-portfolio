@@ -2,6 +2,7 @@ import "./Icon.css";
 
 interface IProps {
   size: string;
+  opacity?: string;
   border?: boolean;
   theme?: string;
   icon?: string;
@@ -12,6 +13,7 @@ interface IProps {
 
 const Icon = ({
   size,
+  opacity,
   theme,
   border,
   icon,
@@ -39,6 +41,7 @@ const Icon = ({
         border || isButton ? `icon icon-button icon--${border}-white` : `icon`
       }
       onClick={handleClick}
+      style={{ opacity: `${opacity}` }}
     >
       <img
         src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}

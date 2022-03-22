@@ -32,24 +32,15 @@ const PageCounter = ({ data }: IProps) => {
         isButton
         handleClick={() => setCurrentPage(currentPage - 1)}
       />
-      <Text
-        text={activePageString}
-        textSize={TextSize.lg}
-        opacity="1"
-        theme="off-white"
-      />
-      <Text
-        text="/"
-        textSize={TextSize.lg}
-        opacity="1"
-        theme="off-white"
-      ></Text>
-      <Text
-        text={totalPages}
-        textSize={TextSize.lg}
-        opacity="1"
-        theme="off-white"
-      />
+      <Text size={TextSize.lg} opacity="1" theme="off-white">
+        {activePageString}
+      </Text>
+      <Text size={TextSize.lg} opacity="1" theme="off-white">
+        /
+      </Text>
+      <Text size={TextSize.lg} opacity="1" theme="off-white">
+        {totalPages}
+      </Text>
       <Icon
         size="sm"
         icon="arrow-without-line--right"

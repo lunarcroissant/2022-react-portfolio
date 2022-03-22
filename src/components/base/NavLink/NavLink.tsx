@@ -18,7 +18,7 @@ const NavLink = ({ label, theme, icon, handleClick }: IProps) => {
   return (
     <a className={`navlink navlink--${theme}`} onClick={handleClick}>
       {icon ? <img src={`${process.env.PUBLIC_URL}${icon}`} /> : null}
-      <Text text={label} textSize={TextSize.xs} />
+      <Text text={label} size={TextSize.xs} />
     </a>
   );
 };

@@ -9,7 +9,7 @@ interface IProps {
 const Tag = ({ text }: IProps) => {
   return (
     <div className="tag">
-      <Text text={text} textSize={TextSize.xs} />
+      <Text size={TextSize.xs}>{text}</Text>
     </div>
   );
 };

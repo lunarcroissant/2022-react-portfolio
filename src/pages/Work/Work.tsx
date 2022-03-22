@@ -50,7 +50,14 @@ const Work = ({ data }: IProps) => {
       }}
     >
       <div className="pageContainer col" onScroll={(e: any) => handleScroll(e)}>
-        <Header linkLabels={["Work", "Profile", "Testimonials", "Contact"]} />
+        <Header
+          linkLabels={[
+            { label: "Work", urlPath: "" },
+            { label: "Profile", urlPath: "/profile" },
+            { label: "Testimonials", urlPath: "/testimonials" },
+            { label: "Contact", urlPath: "/contact" },
+          ]}
+        />
         <FullViewportSlider>
           {projectsArray.map((project: any) => {
             return (
