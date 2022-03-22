@@ -21,7 +21,7 @@ const Profile = ({ data }: IProps) => {
       <span className="profile__fade2"></span>
       <Header
         linkLabels={[
-          { label: "Work", urlPath: "" },
+          { label: "Work", urlPath: "/" },
           { label: "Profile", urlPath: "/profile" },
           { label: "Testimonials", urlPath: "/testimonials" },
           { label: "Contact", urlPath: "/contact" },

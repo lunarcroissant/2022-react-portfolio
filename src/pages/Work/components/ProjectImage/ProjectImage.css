@@ -1,15 +1,10 @@
 .projectImage {
   width: 100vw;
   height: auto;
+  /* max-height: 80vh; */
 }
 
 .projectImage__container {
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }

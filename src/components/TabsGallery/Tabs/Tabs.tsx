@@ -95,6 +95,8 @@ const Tabs = ({ data, heading }: IProps) => {
             ? {
                 transform: `translateY(1rem)`,
                 opacity: 0,
+                // position: "absolute",
+                // top: "2rem",
               }
             : {
                 transform: `translateY(0)`,

@@ -6,3 +6,11 @@
   background: var(--dark-grey);
   background: #252651;
 }
+.pageContainer::-webkit-scrollbar, .pageContainer::-webkit-scrollbar {
+  display: none;
+}
+.pageContainer::-webkit-scrollbar, .pageContainer::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}

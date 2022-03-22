@@ -1,8 +1,12 @@
 .project {
-  min-width: 100vw;
-  min-height: 100vh;
-  max-width: 100vw;
-  max-height: 100vh;
   position: relative;
   scroll-snap-align: start;
+}
+.project::-webkit-scrollbar, .project::-webkit-scrollbar {
+  display: none;
+}
+.project::-webkit-scrollbar, .project::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
 }

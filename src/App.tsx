@@ -12,11 +12,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/">
-            <Route index element={<Work />} />
-            <Route path="profile" element={<Profile data={[]} />} />
-            <Route path="contact" element={<Work />} />
-          </Route>
+          <Route path="" element={<Work />} />
+          <Route path="/profile" element={<Profile data={[]} />} />
+          <Route path="/contact" element={<Work />} />
         </Routes>
       </BrowserRouter>
       {/* <Work /> */}

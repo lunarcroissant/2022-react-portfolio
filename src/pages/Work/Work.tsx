@@ -52,7 +52,7 @@ const Work = ({ data }: IProps) => {
       <div className="pageContainer col" onScroll={(e: any) => handleScroll(e)}>
         <Header
           linkLabels={[
-            { label: "Work", urlPath: "" },
+            { label: "Work", urlPath: "/" },
             { label: "Profile", urlPath: "/profile" },
             { label: "Testimonials", urlPath: "/testimonials" },
             { label: "Contact", urlPath: "/contact" },

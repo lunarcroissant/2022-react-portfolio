@@ -4,6 +4,7 @@
   gap: 1rem;
   grid-template-columns: repeat(6, minmax(100px, 300px));
   min-height: 10rem;
+  transition: 400ms ease-in-out;
 }
 .itemsGrid .itemTile:nth-child(1), .itemsGrid .itemTile:nth-child(4), .itemsGrid .itemTile:nth-child(5), .itemsGrid .itemTile:nth-child(8), .itemsGrid .itemTile:nth-child(9), .itemsGrid .itemTile:nth-child(12), .itemsGrid .itemTile:nth-child(13), .itemsGrid .itemTile:nth-child(16), .itemsGrid .itemTile:nth-child(17), .itemsGrid .itemTile:nth-child(20), .itemsGrid .itemTile:nth-child(21), .itemsGrid .itemTile:nth-child(24), .itemsGrid .itemTile:nth-child(25), .itemsGrid .itemTile:nth-child(28), .itemsGrid .itemTile:nth-child(31) {
   transform: translateY(0px);

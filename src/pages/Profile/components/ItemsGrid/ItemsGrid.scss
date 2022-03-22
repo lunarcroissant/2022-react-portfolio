@@ -4,6 +4,7 @@
   gap: 1rem;
   grid-template-columns: repeat(6, minmax(100px, 300px));
   min-height: 10rem;
+  transition: 400ms ease-in-out;
 
   // For the outside rows
 
