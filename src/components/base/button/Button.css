@@ -37,6 +37,15 @@
   color: white;
 }
 
+.btn-blue {
+  color: white;
+  background: var(--deep-blue);
+  font-weight: var(--font--regular);
+  padding: 0.5rem 0;
+}
+.btn-blue > * {
+  color: var(--white);
+}
 .btn-secondary {
   color: #f3f3f3;
   background: none;

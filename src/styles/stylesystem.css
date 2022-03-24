@@ -8,7 +8,9 @@
 
 :root {
   --primary: #252651;
-  --off-white: #f4f4f4;
+  --dark-primary: #282a33;
+  --off-white: #e6e6e6;
+  --deep-blue: #5243ff;
   --dark-grey: #282a33;
   --medium-grey-half-opacity: rgba(61, 61, 61, 0.5);
   --medium-grey-full-opacity: #3d3d3d;

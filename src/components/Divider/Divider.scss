@@ -3,9 +3,24 @@
   &__leftArm,
   &__rightArm {
     height: 2px;
-    width: 100%;
+    width: 90%;
     // min-width: 400px;
     background: var(--off-white);
+  }
+
+  & p {
+    margin: 0 2rem;
+  }
+}
+
+.divider--dark {
+  // padding: 2rem 0;
+  &__leftArm,
+  &__rightArm {
+    height: 2px;
+    width: 90%;
+    // min-width: 400px;
+    background: var(--primary);
   }
 
   & p {

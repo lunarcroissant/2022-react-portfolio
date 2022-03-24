@@ -1,4 +1,4 @@
-import Text, { TextSize } from "../Text/Text";
+import Text, { TextColour, TextSize } from "../Text/Text";
 
 import "./CheckboxItem.css";
 
@@ -17,7 +17,11 @@ const CheckboxItem = ({ label, active, handleClick }: IProps) => {
       onClick={handleClick}
     >
       <input type="checkbox" id={label} />
-      <Text size={TextSize.sm} theme="primary-colour">
+      <Text
+        // colour={TextColour.primaryDark}
+        size={TextSize.sm}
+        // theme="primary-colour"
+      >
         {label}
       </Text>
     </div>

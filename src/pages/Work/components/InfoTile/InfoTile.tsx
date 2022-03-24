@@ -1,4 +1,7 @@
-import Text, { TextSize } from "../../../../components/base/Text/Text";
+import Text, {
+  TextColour,
+  TextSize,
+} from "../../../../components/base/Text/Text";
 import Tag from "../../../../components/base/Tag/Tag";
 import "./InfoTile.css";
 import VerticalSpacing from "../../../../components/base/VerticalSpacing/VerticalSpacing";
@@ -37,17 +40,21 @@ const InfoTile = ({
       {false ? <img className="infoTile__image" /> : null}
       <div className="row justify-between align-start">
         <div className="col width-90">
-          <Text size={TextSize.xs} opacity="0.5">
+          <Text
+            colour={TextColour.primaryDark}
+            size={TextSize.xs}
+            opacity="0.5"
+          >
             Project
           </Text>
           <VerticalSpacing size="xs" />
-          <Text size={TextSize.lg} opacity="1">
+          <Text colour={TextColour.primaryDark} size={TextSize.lg} opacity="1">
             {title}
           </Text>
         </div>
         <Icon
           size="sm"
-          icon={showInfoTile ? "arrow" : "arrow-unhide"}
+          icon={"arrow"}
           isButton
           handleClick={() => {
             setShowInfoTile(!showInfoTile);
@@ -63,17 +70,17 @@ const InfoTile = ({
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
-        <Text size={TextSize.xs} opacity="0.5">
+        <Text colour={TextColour.primaryDark} size={TextSize.xs} opacity="0.5">
           Overview
         </Text>
         <VerticalSpacing size="xs" />
-        <Text size={TextSize.lg} opacity="1">
+        <Text colour={TextColour.primaryDark} size={TextSize.lg} opacity="1">
           {description}
         </Text>
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
-        <Text size={TextSize.xs} opacity="0.5">
+        <Text colour={TextColour.primaryDark} size={TextSize.xs} opacity="0.5">
           Tags
         </Text>
         <VerticalSpacing size="xs" />

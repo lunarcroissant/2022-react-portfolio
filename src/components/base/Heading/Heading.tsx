@@ -2,14 +2,15 @@ import "./Heading.css";
 
 interface IProps {
   children: string;
-  colour: TextColour;
+  colour: string;
   headingLevel: string;
 }
 
 export enum TextColour {
   white = "#fff",
   greyBlue = "var(--grey-blue)",
-  primaryBlue = "var(--primary-blue)",
+  darkGrey = "var(--dark-grey)",
+  primary = "var(--primary)",
   primaryGreen = "var(--primary-green)",
   offWhite = "var(--off-white)",
   lightGrey = "var(--light-grey)",

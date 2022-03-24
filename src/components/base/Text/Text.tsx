@@ -3,7 +3,7 @@ import "./Text.css";
 interface IProps {
   text?: string;
   size: TextSize;
-  colour?: TextColour;
+  colour?: string;
   weight?: TextWeight;
   theme?: string;
   bold?: boolean;
@@ -32,6 +32,8 @@ export enum TextWeight {
 export enum TextColour {
   white = "#fff",
   greyBlue = "var(--grey-blue)",
+  deepBlue = "var(--deep-blue)",
+  primaryDark = "var(--dark-primary)",
   primaryBlue = "var(--primary-blue)",
   primaryGreen = "var(--primary-green)",
   offWhite = "var(--off-white)",

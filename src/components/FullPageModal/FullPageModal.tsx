@@ -16,7 +16,7 @@ const FullPageModal = ({ children }: IProps) => {
     <>
       {contactFormVisible ? (
         <section className="fullpagemodal__container">
-          <div className="fullpagemodal__closeButton width-100 row align-center justify-end">
+          <div className="fullpagemodal__closeButton--light width-100 row align-center justify-end">
             <Icon
               isButton
               size="sm"
@@ -24,7 +24,7 @@ const FullPageModal = ({ children }: IProps) => {
               handleClick={() => setContactFormVisible(false)}
             />
           </div>
-          <div className="fullpagemodal__content">{children}</div>
+          <div className="fullpagemodal__content--light">{children}</div>
         </section>
       ) : null}
     </>

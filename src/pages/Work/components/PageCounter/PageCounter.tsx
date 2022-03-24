@@ -1,6 +1,9 @@
 import { useContext, useState } from "react";
 import Icon from "../../../../components/base/Icon/Icon";
-import Text, { TextSize } from "../../../../components/base/Text/Text";
+import Text, {
+  TextColour,
+  TextSize,
+} from "../../../../components/base/Text/Text";
 import PageContext from "../../../../contexts/PageContext/PageContext";
 
 import "./PageCounter.css";
@@ -32,13 +35,28 @@ const PageCounter = ({ data }: IProps) => {
         isButton
         handleClick={() => setCurrentPage(currentPage - 1)}
       />
-      <Text size={TextSize.lg} opacity="1" theme="off-white">
+      <Text
+        colour={TextColour.white}
+        size={TextSize.lg}
+        opacity="1"
+        theme="off-white"
+      >
         {activePageString}
       </Text>
-      <Text size={TextSize.lg} opacity="1" theme="off-white">
+      <Text
+        colour={TextColour.white}
+        size={TextSize.lg}
+        opacity="1"
+        theme="off-white"
+      >
         /
       </Text>
-      <Text size={TextSize.lg} opacity="1" theme="off-white">
+      <Text
+        colour={TextColour.white}
+        size={TextSize.lg}
+        opacity="1"
+        theme="off-white"
+      >
         {totalPages}
       </Text>
       <Icon

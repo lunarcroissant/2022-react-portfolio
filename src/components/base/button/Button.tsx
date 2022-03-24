@@ -7,6 +7,7 @@ export enum ButtonType {
   primary = "btn-primary",
   primaryWhite = "btn-primary--light",
   secondary = "btn-secondary",
+  secondaryBlue = "btn-blue",
 }
 
 export enum Icons {

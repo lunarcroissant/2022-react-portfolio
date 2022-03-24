@@ -27,13 +27,13 @@ const Project = ({
       className="project"
       onScroll={() => setCurrentPage(currentPage + 1)}
     >
-      <InfoTile
+      {/* <InfoTile
         title={title}
         description={description}
         tags={tags}
         imageSource={imageSource}
         backgroundColour={backgroundColour}
-      />
+      /> */}
       <ProjectImage source={imageSource} backgroundColour={backgroundColour} />
     </section>
   );

@@ -67,17 +67,20 @@ const Work = ({ data }: IProps) => {
         {/* <FullPageModal>
           <VerticalSpacing size="lg" />
           <span className="center-text">
-            <Heading colour={TextColour.white} headingLevel="h3">
+            <Heading colour={TextColour.greyBlue} headingLevel="h3">
               Got a great idea and want to work together? Get in touch!
             </Heading>
           </span>
 
           <VerticalSpacing size="lg" />
-          <Button buttonVariant={ButtonType.secondary} icon={Icons.mailLight}>
+          <Button
+            buttonVariant={ButtonType.secondaryBlue}
+            icon={Icons.mailLight}
+          >
             edwardtierney35@gmail.com
           </Button>
           <VerticalSpacing size="lg" />
-          <Divider>or</Divider>
+          <Divider dark={false}>or</Divider>
           <VerticalSpacing size="lg" />
           <div className="row align-center justify-evenly width-100">
             <Icon
@@ -100,7 +103,7 @@ const Work = ({ data }: IProps) => {
             ></Icon>
           </div>
         </FullPageModal> */}
-        <FullViewportSlider>
+        <FullViewportSlider data={projectsArray}>
           {projectsArray.map((project: any) => {
             return (
               <Project

@@ -1,4 +1,5 @@
-import Text, { TextSize } from "../Text/Text";
+import { Colours } from "../../../constants/globalConstants";
+import Text, { TextColour, TextSize } from "../Text/Text";
 
 import "./Tag.css";
 
@@ -9,7 +10,9 @@ interface IProps {
 const Tag = ({ text }: IProps) => {
   return (
     <div className="tag">
-      <Text size={TextSize.xs}>{text}</Text>
+      <Text colour={Colours.primary} size={TextSize.xs}>
+        {text}
+      </Text>
     </div>
   );
 };

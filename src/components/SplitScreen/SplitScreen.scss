@@ -58,13 +58,13 @@
         rgba(37, 38, 81, 0) 99.84%
       );
       object-fit: cover;
-      z-index: 99;
+      z-index: 98;
       // mix-blend-mode: screen;
     }
   }
 
   &__ctas {
-    z-index: 999;
+    z-index: 99;
     & > button {
       margin-right: 2rem;
     }
@@ -118,7 +118,7 @@
   &__fade2 {
     position: absolute;
     left: 0;
-    z-index: 100;
+    z-index: 98;
   }
 
   &__fade1 {

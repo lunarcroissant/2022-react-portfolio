@@ -8,14 +8,16 @@ import {
   useState,
 } from "react";
 import PageContext from "../../../../contexts/PageContext/PageContext";
+import InfoTile from "../InfoTile/InfoTile";
 import PageCounter from "../PageCounter/PageCounter";
 import "./FullViewportSlider.css";
 
 interface IProps {
   children: ReactNode;
+  data: any;
 }
 
-const FullViewportSlider = ({ children }: IProps) => {
+const FullViewportSlider = ({ children, data }: IProps) => {
   const {
     currentPage,
     setCurrentPage,
@@ -62,6 +64,11 @@ const FullViewportSlider = ({ children }: IProps) => {
     };
   }, [currentPage]);
 
+  const activeContent = data[currentPage];
+
+  const { title, description, tags, imageSource, backgroundColour } =
+    activeContent;
+
   return (
     <section className="fullviewportslider row">
       <div
@@ -72,6 +79,14 @@ const FullViewportSlider = ({ children }: IProps) => {
       >
         {children}
       </div>
+      {}
+      <InfoTile
+        title={title}
+        description={description}
+        tags={tags}
+        imageSource={imageSource}
+        backgroundColour={backgroundColour}
+      />
       <PageCounter data={""} />
     </section>
   );

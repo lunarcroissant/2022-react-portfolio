@@ -5,6 +5,7 @@
   /* overflow-y: hidden; */
   background: var(--dark-grey);
   background: #252651;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
 }
 .pageContainer::-webkit-scrollbar, .pageContainer::-webkit-scrollbar {
   display: none;

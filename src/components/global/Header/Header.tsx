@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import GlobalContext from "../../../contexts/GlobalContext/GlobalContext";
 import Icon from "../../base/Icon/Icon";
 import NavLinkNative from "../../base/NavLinkNative/NavLinkNative";
-import Text, { TextSize, TextWeight } from "../../base/Text/Text";
+import Text, { TextColour, TextSize, TextWeight } from "../../base/Text/Text";
 import "./Header.css";
 
 interface IProps {
@@ -23,10 +23,10 @@ const Header = ({ linkLabels }: IProps) => {
             className="header__homeIcon"
           />
           <div className="col">
-            <Text size={TextSize.lg} theme="off-white">
+            <Text size={TextSize.lg} colour={TextColour.white}>
               Eddie
             </Text>
-            <Text size={TextSize.lg} theme="off-white">
+            <Text size={TextSize.lg} colour={TextColour.white}>
               Tierney
             </Text>
           </div>
@@ -43,7 +43,11 @@ const Header = ({ linkLabels }: IProps) => {
                 }
                 key={link.label}
               >
-                <Text size={TextSize.sm} weight={TextWeight.light}>
+                <Text
+                  size={TextSize.sm}
+                  weight={TextWeight.light}
+                  colour={TextColour.white}
+                >
                   {link.label}
                 </Text>
                 {/* <Icon size="sm" icon="chevron-right--white" /> */}

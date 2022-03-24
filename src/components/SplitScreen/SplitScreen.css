@@ -29,10 +29,10 @@
   height: 100vh;
   background: linear-gradient(90deg, var(--primary) 10%, rgba(37, 38, 81, 0) 99.84%);
   object-fit: cover;
-  z-index: 99;
+  z-index: 98;
 }
 .splitScreen__ctas {
-  z-index: 999;
+  z-index: 99;
 }
 .splitScreen__ctas > button {
   margin-right: 2rem;
@@ -67,7 +67,7 @@
 .splitScreen__fade2 {
   position: absolute;
   left: 0;
-  z-index: 100;
+  z-index: 98;
 }
 .splitScreen__fade1 {
   top: 0;

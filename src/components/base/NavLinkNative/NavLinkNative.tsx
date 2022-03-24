@@ -1,4 +1,4 @@
-import Text, { TextSize, TextWeight } from "../Text/Text";
+import Text, { TextColour, TextSize, TextWeight } from "../Text/Text";
 import "./NavLink.css";
 
 interface IProps {
@@ -18,7 +18,11 @@ const NavLinkNative = ({ children, theme, icon, handleClick }: IProps) => {
   return (
     <a className={`navlink navlink--${theme}`} onClick={handleClick}>
       {icon ? <img src={`${process.env.PUBLIC_URL}${icon}`} /> : null}
-      <Text size={TextSize.sm} weight={TextWeight.light}>
+      <Text
+        colour={TextColour.white}
+        size={TextSize.sm}
+        weight={TextWeight.light}
+      >
         {children}
       </Text>
     </a>

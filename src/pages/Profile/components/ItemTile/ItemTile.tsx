@@ -1,5 +1,6 @@
 import Icon from "../../../../components/base/Icon/Icon";
 import Text, {
+  TextColour,
   TextSize,
   TextWeight,
 } from "../../../../components/base/Text/Text";
@@ -17,10 +18,20 @@ const ItemTile = ({ label, subInfo, icon }: IProps) => {
   return (
     <div className="itemTile" key={`itemTileFor${label}`}>
       <div className="width-100">
-        <Text size={TextSize.lg} weight={TextWeight.bold} theme="off-white">
+        <Text
+          colour={TextColour.white}
+          size={TextSize.lg}
+          weight={TextWeight.bold}
+          theme="off-white"
+        >
           {label}
         </Text>
-        <Text size={TextSize.lg} opacity="0.75" theme="off-white">
+        <Text
+          colour={TextColour.lightGrey}
+          size={TextSize.lg}
+          opacity="0.75"
+          theme="off-white"
+        >
           {subInfo}
         </Text>
       </div>
