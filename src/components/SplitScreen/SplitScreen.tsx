@@ -39,14 +39,8 @@ const SplitScreen = ({
         </Text>
         <VerticalSpacing size="xl" />
         <div className="row justify-start align-center splitScreen__ctas">
-          <Button
-            buttonVariant={ButtonType.primaryWhite}
-            text={primaryCTA}
-          ></Button>
-          <Button
-            buttonVariant={ButtonType.secondary}
-            text={secondaryCTA}
-          ></Button>
+          <Button buttonVariant={ButtonType.primaryWhite}>{primaryCTA}</Button>
+          <Button buttonVariant={ButtonType.secondary}>{secondaryCTA}</Button>
         </div>
       </div>
       <div className="splitScreen__image">

@@ -1,0 +1,8 @@
+.divider__leftArm, .divider__rightArm {
+  height: 2px;
+  width: 100%;
+  background: var(--off-white);
+}
+.divider p {
+  margin: 0 2rem;
+}

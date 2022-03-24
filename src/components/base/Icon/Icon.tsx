@@ -1,3 +1,5 @@
+import Text, { TextColour, TextSize } from "../Text/Text";
+import VerticalSpacing from "../VerticalSpacing/VerticalSpacing";
 import "./Icon.css";
 
 interface IProps {
@@ -8,6 +10,7 @@ interface IProps {
   icon?: string;
   handleClick?: any;
   isButton?: boolean;
+  label?: string;
   hoverText?: string;
 }
 
@@ -19,12 +22,13 @@ const Icon = ({
   icon,
   handleClick,
   isButton,
+  label,
   hoverText,
 }: IProps) => {
   if (isButton) {
     return (
       <button
-        className="icon row justify-center align-center"
+        className="icon icon-button col justify-center align-center"
         onClick={handleClick}
       >
         <img
@@ -32,6 +36,14 @@ const Icon = ({
           alt={icon}
           className={`icon--${size}`}
         />
+        {label ? (
+          <>
+            <VerticalSpacing size="sm" />
+            <Text size={TextSize.md} colour={TextColour.offWhite}>
+              {label}
+            </Text>
+          </>
+        ) : null}
       </button>
     );
   }

@@ -86,7 +86,7 @@ const InfoTile = ({
       <VerticalSpacing size="lg" />
       <HorizontalDivider />
       <VerticalSpacing size="sm" />
-      <Button text="View Case Study" buttonVariant={ButtonType.primary} />
+      <Button buttonVariant={ButtonType.primary}>View Case Study</Button>
     </div>
   );
 };

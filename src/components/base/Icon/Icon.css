@@ -1,13 +1,10 @@
 .icon {
   transition: all ease-in-out 250ms;
   position: relative;
-}
-
-.icon--md {
-  width: 1.125rem;
-  height: 1.125rem;
-  padding: 0.5rem;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .icon--border-white {
@@ -20,6 +17,8 @@
 
 .icon-button {
   cursor: pointer;
+  flex-direction: column;
+  width: min-content;
 }
 
 .icon--xs {
@@ -62,10 +61,12 @@
 
 button.icon {
   all: unset;
-  width: 40px;
-  height: 40px;
-  border-radius: 10rem;
+  padding: 1rem;
+  width: min-content;
+  height: auto;
+  border-radius: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
@@ -73,7 +74,5 @@ button.icon {
 }
 
 button.icon:hover {
-  background: rgba(240, 240, 240, 0.6);
+  background: rgba(240, 240, 240, 0.2);
 }
-
-/*# sourceMappingURL=Icon.css.map */

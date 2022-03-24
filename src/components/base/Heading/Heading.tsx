@@ -16,6 +16,18 @@ export enum TextColour {
 }
 
 const Heading = ({ children, colour, headingLevel }: IProps) => {
+  if (headingLevel === "h3") {
+    return (
+      <h2
+        className="headingH3"
+        style={{
+          color: `${colour}`,
+        }}
+      >
+        {children}
+      </h2>
+    );
+  }
   if (headingLevel === "h2") {
     return (
       <h2

@@ -56,7 +56,7 @@ const IntroScreen = () => {
         </span>
       </div>
 
-      <Button buttonVariant={ButtonType.primary} text="Skip Intro" />
+      <Button buttonVariant={ButtonType.primary}>"Skip Intro"</Button>
     </div>
   );
 };

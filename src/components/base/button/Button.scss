@@ -2,20 +2,23 @@
   all: unset;
   cursor: pointer;
   white-space: nowrap;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .btn-primary {
   color: #f3f3f3;
   background: var(--dark-grey);
   font-weight: var(--font--regular);
-  border-radius: 40px;
-  max-width: min-content;
+  border-radius: 1rem;
+  max-width: 100%;
 }
 
 .btn-primary:hover {
@@ -28,8 +31,6 @@
   background: #f3f3f3;
   color: var(--dark-grey);
   font-weight: var(--font--regular);
-  border-radius: 40px;
-  max-width: min-content;
 
   &:hover {
     background: rgb(26, 151, 124);
@@ -42,8 +43,6 @@
   background: none;
   box-shadow: inset 0 0 0 50px rgb(255, 255, 255, 0.2);
   font-weight: var(--font--regular);
-  border-radius: 40px;
-  max-width: min-content;
 
   &:hover {
     box-shadow: inset 0 0 0 2px white;

@@ -1,0 +1,14 @@
+.divider {
+  // padding: 2rem 0;
+  &__leftArm,
+  &__rightArm {
+    height: 2px;
+    width: 100%;
+    // min-width: 400px;
+    background: var(--off-white);
+  }
+
+  & p {
+    margin: 0 2rem;
+  }
+}
