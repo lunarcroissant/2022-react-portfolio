@@ -1,14 +1,14 @@
-import Text, { TextSize } from "../Text/Text";
+import Text, { TextSize, TextWeight } from "../Text/Text";
 import "./NavLink.css";
 
 interface IProps {
-  label: string;
+  children: string;
   theme?: string;
   icon?: string;
   handleClick?: (value: any) => void;
 }
 
-const NavLink = ({ label, theme, icon, handleClick }: IProps) => {
+const NavLinkNative = ({ children, theme, icon, handleClick }: IProps) => {
   function handleBackClick(ref: any) {
     if (ref && ref.current /* + other conditions */) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -18,9 +18,11 @@ const NavLink = ({ label, theme, icon, handleClick }: IProps) => {
   return (
     <a className={`navlink navlink--${theme}`} onClick={handleClick}>
       {icon ? <img src={`${process.env.PUBLIC_URL}${icon}`} /> : null}
-      <Text text={label} size={TextSize.xs} />
+      <Text size={TextSize.sm} weight={TextWeight.light}>
+        {children}
+      </Text>
     </a>
   );
 };
 
-export default NavLink;
+export default NavLinkNative;

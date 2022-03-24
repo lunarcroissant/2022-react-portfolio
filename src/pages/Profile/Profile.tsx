@@ -23,8 +23,8 @@ const Profile = ({ data }: IProps) => {
         linkLabels={[
           { label: "Work", urlPath: "/" },
           { label: "Profile", urlPath: "/profile" },
-          { label: "Testimonials", urlPath: "/testimonials" },
-          { label: "Contact", urlPath: "/contact" },
+          // { label: "Testimonials", urlPath: "/testimonials" },
+          // { label: "Contact", urlPath: "/contact" },
         ]}
       />
       <SplitScreen

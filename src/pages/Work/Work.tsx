@@ -60,11 +60,11 @@ const Work = ({ data }: IProps) => {
           linkLabels={[
             { label: "Work", urlPath: "/" },
             { label: "Profile", urlPath: "/profile" },
-            { label: "Testimonials", urlPath: "/testimonials" },
-            { label: "Contact", urlPath: "/contact" },
+            // { label: "Testimonials", urlPath: "/testimonials" },
+            // { label: "Contact", urlPath: "/contact" },
           ]}
         />
-        <FullPageModal>
+        {/* <FullPageModal>
           <VerticalSpacing size="lg" />
           <span className="center-text">
             <Heading colour={TextColour.white} headingLevel="h3">
@@ -99,7 +99,7 @@ const Work = ({ data }: IProps) => {
               label="LinkedIn"
             ></Icon>
           </div>
-        </FullPageModal>
+        </FullPageModal> */}
         <FullViewportSlider>
           {projectsArray.map((project: any) => {
             return (

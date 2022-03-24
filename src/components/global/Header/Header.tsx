@@ -1,6 +1,9 @@
 // import NavLink from "../../base/NavLink/NavLink";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import GlobalContext from "../../../contexts/GlobalContext/GlobalContext";
 import Icon from "../../base/Icon/Icon";
+import NavLinkNative from "../../base/NavLinkNative/NavLinkNative";
 import Text, { TextSize, TextWeight } from "../../base/Text/Text";
 import "./Header.css";
 
@@ -9,6 +12,7 @@ interface IProps {
 }
 
 const Header = ({ linkLabels }: IProps) => {
+  const { setContactFormVisible } = useContext(GlobalContext);
   return (
     <header className={`row padding-4 justify-between header`}>
       <nav className="row justify-between width-100">
@@ -46,6 +50,9 @@ const Header = ({ linkLabels }: IProps) => {
               </NavLink>
             );
           })}
+          <NavLinkNative handleClick={() => setContactFormVisible(true)}>
+            Contact
+          </NavLinkNative>
         </div>
       </nav>
     </header>
