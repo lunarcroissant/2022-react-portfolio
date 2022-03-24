@@ -10,7 +10,7 @@ import GlobalContext from "./contexts/GlobalContext/GlobalContext";
 import Contact from "./pages/Contact/Contact";
 
 function App() {
-  const [contactFormVisible, setContactFormVisible] = useState(true);
+  const [contactFormVisible, setContactFormVisible] = useState(false);
   return (
     <>
       <GlobalContext.Provider
