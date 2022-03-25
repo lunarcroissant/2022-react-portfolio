@@ -57,11 +57,7 @@ const ItemsGrid = ({ data, filter }: IProps) => {
       {/* <div className="width-100"></div> */}
       {data.map((item: any) => {
         return (
-          <ItemTile
-            label={item.skill}
-            subInfo={item.status}
-            icon="react-icon--white"
-          />
+          <ItemTile label={item.skill} subInfo={item.status} icon={item.icon} />
         );
       })}
     </div>

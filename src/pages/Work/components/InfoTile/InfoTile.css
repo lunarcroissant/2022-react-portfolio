@@ -17,10 +17,21 @@
 
 .infoTile.hidden {
   left: -15rem;
-  bottom: -22rem;
+  bottom: -21rem;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
 }
 
 .infoTile.hidden div button {
   transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  0% {
+    height: auto;
+    opacity: 0.3;
+  }
+  100% {
+    height: auto;
+    opacity: 1;
+  }
 }

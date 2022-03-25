@@ -35,24 +35,38 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   const ProjectsFullScrollWidth =
     document.getElementById("fullviewportslider__content")?.scrollWidth || 0;
 
+  const ProjectsFullScrollHeight =
+    document.getElementById("fullviewportslider__content")?.scrollHeight || 0;
+
   console.log(ProjectsFullScrollWidth);
 
   const scrollHandler = (event: React.UIEvent<HTMLDivElement>) => {
     const eventTarget = event.target as HTMLDivElement;
-    var fullXWidth = eventTarget.scrollWidth;
-    const distanceFromLeft = eventTarget.scrollLeft;
+    // var fullXWidth = eventTarget.scrollWidth;
+    // const distanceFromLeft = eventTarget.scrollLeft;
 
-    const proportionedProjectWidth = fullXWidth / totalPages;
+    // const proportionedProjectWidth = fullXWidth / totalPages;
 
-    console.log(initialDistanceFromLeft - distanceFromLeft);
-    console.log(proportionedProjectWidth);
+    // console.log(initialDistanceFromLeft - distanceFromLeft);
+    // console.log(proportionedProjectWidth);
 
-    console.log(
-      (distanceFromLeft + proportionedProjectWidth) / proportionedProjectWidth
-    );
+    // console.log(
+    //   (distanceFromLeft + proportionedProjectWidth) / proportionedProjectWidth
+    // );
 
-    if (distanceFromLeft % proportionedProjectWidth === 0) {
-      setCurrentPage(distanceFromLeft / proportionedProjectWidth);
+    // if (distanceFromLeft % proportionedProjectWidth === 0) {
+    //   setCurrentPage(distanceFromLeft / proportionedProjectWidth);
+    // }
+
+    // Measuring via Height
+
+    var fullYHeight = eventTarget.scrollHeight;
+    const distanceFromTop = eventTarget.scrollTop;
+
+    const proportionedProjectHeight = fullYHeight / totalPages;
+
+    if (distanceFromTop % proportionedProjectHeight === 0) {
+      setCurrentPage(distanceFromTop / proportionedProjectHeight);
     }
   };
 
