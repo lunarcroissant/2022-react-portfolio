@@ -28,40 +28,43 @@ const PageCounter = ({ data }: IProps) => {
   };
 
   return (
-    <div className="pageCounter row align-center justify-between">
+    <div className="pageCounter col align-center justify-between">
       <Icon
         size="sm"
-        icon="arrow-without-line--left"
+        icon="icons_chevron-up--white"
         isButton
         handleClick={() => setCurrentPage(currentPage - 1)}
       />
-      <Text
-        colour={TextColour.white}
-        size={TextSize.lg}
-        opacity="1"
-        theme="off-white"
-      >
-        {activePageString}
-      </Text>
-      <Text
-        colour={TextColour.white}
-        size={TextSize.lg}
-        opacity="1"
-        theme="off-white"
-      >
-        /
-      </Text>
-      <Text
-        colour={TextColour.white}
-        size={TextSize.lg}
-        opacity="1"
-        theme="off-white"
-      >
-        {totalPages}
-      </Text>
+      <div className="row">
+        <Text
+          colour={TextColour.white}
+          size={TextSize.lg}
+          opacity="1"
+          theme="off-white"
+        >
+          {activePageString}
+        </Text>
+        <Text
+          colour={TextColour.white}
+          size={TextSize.lg}
+          opacity="1"
+          theme="off-white"
+        >
+          /
+        </Text>
+        <Text
+          colour={TextColour.white}
+          size={TextSize.lg}
+          opacity="1"
+          theme="off-white"
+        >
+          {totalPages}
+        </Text>
+      </div>
+
       <Icon
         size="sm"
-        icon="arrow-without-line--right"
+        icon="icons_chevron-down--white"
         isButton
         handleClick={() => setCurrentPage(currentPage + 1)}
       />
