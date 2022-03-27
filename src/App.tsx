@@ -11,10 +11,16 @@ import Contact from "./pages/Contact/Contact";
 
 function App() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   return (
     <>
       <GlobalContext.Provider
-        value={{ contactFormVisible, setContactFormVisible }}
+        value={{
+          contactFormVisible,
+          setContactFormVisible,
+          mobileMenuVisible,
+          setMobileMenuVisible,
+        }}
       >
         <Contact />
         <BrowserRouter>

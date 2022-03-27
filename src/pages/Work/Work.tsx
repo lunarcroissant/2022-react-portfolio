@@ -6,6 +6,7 @@ import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpaci
 import Divider from "../../components/Divider/Divider";
 import FullPageModal from "../../components/FullPageModal/FullPageModal";
 import Header from "../../components/global/Header/Header";
+import MobileMenu from "../../components/global/MobileMenu/MobileMenu";
 import PageContext from "../../contexts/PageContext/PageContext";
 import FullViewportSlider from "./components/FullViewportSlider/FullViewportSlider";
 import InfoTile from "./components/InfoTile/InfoTile";
@@ -103,6 +104,7 @@ const Work = ({ data }: IProps) => {
             ></Icon>
           </div>
         </FullPageModal> */}
+        {true ? <MobileMenu links={["Profile", "Contact"]} /> : null}
         <FullViewportSlider data={projectsArray}>
           {projectsArray.map((project: any) => {
             return (

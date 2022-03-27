@@ -34,7 +34,6 @@
 .pageContainer {
   width: 100vw;
   height: 100vh;
-  background: url(/public/assets/profileImage.jpg) no-repeat;
   overflow-x: scroll;
   /* overflow-y: hidden; */
 }

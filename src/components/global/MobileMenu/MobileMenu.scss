@@ -1,0 +1,65 @@
+.mobileMenu {
+  position: absolute;
+  top: -100vh;
+  z-index: 101;
+  // animation: fadeIn 600ms ease-in-out forwards;
+
+  &.active {
+    top: 0;
+  }
+  &__container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__backButton {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgb(15, 15, 15, 0.75);
+    // display: inline;
+    backdrop-filter: blur(5vw);
+    & svg,
+    & p {
+      display: inline;
+    }
+  }
+
+  &__links {
+    height: auto;
+    background: #106476;
+    padding: 1.5rem;
+  }
+
+  &__navlinkPrimary,
+  &__navlinkSecondary {
+    text-decoration: none;
+  }
+
+  &__navlinkPrimary {
+    width: 100%;
+  }
+
+  &__navlinkSecondary {
+    text-decoration: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

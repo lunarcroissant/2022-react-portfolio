@@ -4,6 +4,9 @@
   width: 100vw;
   z-index: 99;
 }
+.header__logo {
+  text-decoration: none;
+}
 
 .header__homeIcon {
   margin-right: 0.5rem;
@@ -25,4 +28,36 @@
 
 .navlink:hover {
   background: rgba(110, 110, 110, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__mobileMenu {
+    position: fixed;
+    top: -30vh;
+  }
+  .header__navigation--mobile {
+    width: 36px;
+    height: 16px;
+    position: relative;
+  }
+  .header__navigation--mobile::after, .header__navigation--mobile::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 2px;
+    width: 36px;
+    background: white;
+  }
+  .header__navigation--mobile::after {
+    bottom: 0;
+  }
+  .header__navigation--mobile::before {
+    top: 0;
+  }
 }

@@ -13,3 +13,17 @@
   // right: 0;
   // bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .projectImage {
+    &__container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    position: absolute;
+    left: -10vw;
+    width: auto;
+    height: 60vh;
+  }
+}

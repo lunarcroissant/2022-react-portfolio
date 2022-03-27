@@ -3,6 +3,10 @@
   top: 0;
   width: 100vw;
   z-index: 99;
+
+  &__logo {
+    text-decoration: none;
+  }
 }
 
 .header__homeIcon {
@@ -28,4 +32,40 @@
 
 .navlink:hover {
   background: rgba(110, 110, 110, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    &__mobileMenu {
+      position: fixed;
+      top: -30vh;
+      // display: none;
+    }
+    &__navigation--mobile {
+      width: 36px;
+      height: 16px;
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 2px;
+        width: 36px;
+        background: white;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      &::before {
+        top: 0;
+      }
+    }
+  }
 }

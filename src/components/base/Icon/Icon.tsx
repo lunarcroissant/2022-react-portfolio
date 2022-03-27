@@ -48,19 +48,21 @@ const Icon = ({
     );
   }
   return (
-    <div
-      className={
-        border || isButton ? `icon icon-button icon--${border}-white` : `icon`
-      }
-      onClick={handleClick}
-      style={{ opacity: `${opacity}` }}
-    >
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}
-        alt={icon}
-        className={`icon--${size}`}
-      />
-    </div>
+    <span className="display-inline">
+      <div
+        className={
+          border || isButton ? `icon icon-button icon--${border}-white` : `icon`
+        }
+        onClick={handleClick}
+        style={{ opacity: `${opacity}` }}
+      >
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}
+          alt={icon}
+          className={`icon--${size}`}
+        />
+      </div>
+    </span>
   );
 };
 

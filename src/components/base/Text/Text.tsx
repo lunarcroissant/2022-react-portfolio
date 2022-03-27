@@ -18,6 +18,8 @@ export enum TextSize {
   md = "text--md",
   lg = "text--lg",
   xl = "text--xl",
+  xxl = "text--xxl",
+  xxxl = "text--xxxl",
 }
 
 export enum TextWeight {
@@ -52,7 +54,14 @@ const Text = ({
 }: IProps) => {
   if (bold) {
     return (
-      <p className={`text ${size}`} style={{ opacity: `${opacity}` }}>
+      <p
+        className={`text ${size}`}
+        style={{
+          opacity: `${opacity}`,
+          fontWeight: `${weight}`,
+          color: `${colour}`,
+        }}
+      >
         {children}
       </p>
     );

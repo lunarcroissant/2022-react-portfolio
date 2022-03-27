@@ -5,6 +5,14 @@
   // min-width: 150px;
   width: auto;
   z-index: 99;
+
+  &--mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: unset;
+    // background: transparent;
+  }
 }
 
 .pageCounter:nth-child(1) {

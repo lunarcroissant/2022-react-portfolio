@@ -5,6 +5,7 @@ import Text, {
   TextSize,
 } from "../../../../components/base/Text/Text";
 import PageContext from "../../../../contexts/PageContext/PageContext";
+import useViewportSize from "../../../../hooks/useViewportSize/useViewportSize";
 
 import "./PageCounter.css";
 
@@ -27,6 +28,39 @@ const PageCounter = ({ data }: IProps) => {
     setCurrentPage(currentPage + changeAmount);
   };
 
+  const isMobile = useViewportSize(768);
+
+  if (isMobile) {
+    return (
+      <div className="pageCounter--mobile row">
+        <Text
+          colour={TextColour.white}
+          size={TextSize.xxxl}
+          opacity="0.05"
+          theme="off-white"
+        >
+          {activePageString}
+        </Text>
+        <Text
+          colour={TextColour.white}
+          size={TextSize.xxxl}
+          opacity="0.05"
+          theme="off-white"
+        >
+          /
+        </Text>
+        <Text
+          colour={TextColour.white}
+          size={TextSize.xxxl}
+          opacity="0.05"
+          theme="off-white"
+        >
+          {totalPages}
+        </Text>{" "}
+      </div>
+    );
+  }
+
   return (
     <div className="pageCounter col align-center justify-between">
       <Icon
@@ -47,15 +81,15 @@ const PageCounter = ({ data }: IProps) => {
         <Text
           colour={TextColour.white}
           size={TextSize.lg}
-          opacity="1"
+          opacity="0.5"
           theme="off-white"
         >
-          /
+          &nbsp;|&nbsp;
         </Text>
         <Text
           colour={TextColour.white}
           size={TextSize.lg}
-          opacity="1"
+          opacity="0.5"
           theme="off-white"
         >
           {totalPages}

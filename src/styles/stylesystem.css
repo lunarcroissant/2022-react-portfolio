@@ -73,6 +73,10 @@ h1 {
   text-align: center;
 }
 
+.display-inline {
+  display: inline;
+}
+
 /* .3 Padding & Margins */
 
 .padding-1 {

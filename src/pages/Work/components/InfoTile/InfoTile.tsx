@@ -8,7 +8,11 @@ import VerticalSpacing from "../../../../components/base/VerticalSpacing/Vertica
 import Button, { ButtonType } from "../../../../components/base/button/Button";
 import HorizontalDivider from "../../../../components/base/HorizontalDivider/HorizontalDivider";
 import Icon from "../../../../components/base/Icon/Icon";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import useViewportSize from "../../../../hooks/useViewportSize/useViewportSize";
+import Header from "../../../../components/global/Header/Header";
+import MobileMenu from "../../../../components/global/MobileMenu/MobileMenu";
+import GlobalContext from "../../../../contexts/GlobalContext/GlobalContext";
 
 interface IProps {
   title: string;
@@ -28,9 +32,50 @@ const InfoTile = ({
   // const projects = data.map((project: any) => {
   //   return project;
   // });
-  console.log(title);
+  const [showMenu, setShowMenu] = useState(true);
+
+  const { setMobileMenuVisible } = useContext(GlobalContext);
+
+  const isMobile = useViewportSize(768);
 
   const [showInfoTile, setShowInfoTile] = useState(true);
+
+  if (isMobile) {
+    return (
+      <div className="infoTile col">
+        <div className="row infoTile__about">
+          <div className="col infoTile__copy">
+            <Text
+              colour={TextColour.primaryDark}
+              size={TextSize.xl}
+              opacity="1"
+            >
+              {title}
+            </Text>
+            <VerticalSpacing size="xs" />
+            <Text
+              colour={TextColour.primaryDark}
+              size={TextSize.sm}
+              opacity="0.8"
+            >
+              {description}
+            </Text>
+          </div>
+          <Tag text={"UI"} />
+        </div>
+        <VerticalSpacing size="md" />
+        <div className="row infoTile__actions">
+          <Button buttonVariant={ButtonType.primary}>Read Case Study</Button>
+          <Icon
+            isButton
+            size="md"
+            icon="icons_hamburgerMenu--darkPrimary"
+            handleClick={() => setMobileMenuVisible(true)}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -52,14 +97,33 @@ const InfoTile = ({
             {title}
           </Text>
         </div>
-        <Icon
+        {isMobile ? (
+          <Icon
+            size="sm"
+            icon={"icons_chevron-up--darkPrimary"}
+            isButton
+            handleClick={() => {
+              setShowInfoTile(!showInfoTile);
+            }}
+          />
+        ) : (
+          <Icon
+            size="sm"
+            icon={"arrow"}
+            isButton
+            handleClick={() => {
+              setShowInfoTile(!showInfoTile);
+            }}
+          />
+        )}
+        {/* <Icon
           size="sm"
           icon={"arrow"}
           isButton
           handleClick={() => {
             setShowInfoTile(!showInfoTile);
           }}
-        />
+        /> */}
         {/* <button>
           <img
             src={`${process.env.PUBLIC_URL}/arrow.svg`}

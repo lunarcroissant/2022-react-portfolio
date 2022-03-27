@@ -5,6 +5,12 @@
   width: auto;
   z-index: 99;
 }
+.pageCounter--mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: unset;
+}
 
 .pageCounter:nth-child(1) {
   margin: 0 2rem;

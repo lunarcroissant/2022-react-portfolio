@@ -1,10 +1,22 @@
 .projectImage {
   width: 100vw;
   height: auto;
-  /* max-height: 80vh; */
 }
 
 .projectImage__container {
   width: 100vw;
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .projectImage {
+    position: absolute;
+    left: -10vw;
+    width: auto;
+    height: 60vh;
+  }
+  .projectImage__container {
+    position: relative;
+    overflow: hidden;
+  }
 }

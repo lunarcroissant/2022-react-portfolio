@@ -41,3 +41,30 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .infoTile {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: 100%;
+    min-height: auto;
+    height: min-content;
+
+    &__actions {
+      & button:first-child {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &.hidden {
+      left: 0;
+      right: 0;
+      top: 40vh;
+    }
+
+    &__actions {
+      // margin-top: 2rem;
+    }
+  }
+}
