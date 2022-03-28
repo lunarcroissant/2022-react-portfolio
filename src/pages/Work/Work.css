@@ -1,6 +1,6 @@
 .pageContainer {
   width: 100vw;
-  height: 100vh;
+  height: var(--vh, 100vh);
   overflow-x: scroll;
   /* overflow-y: hidden; */
   background: var(--dark-grey);
