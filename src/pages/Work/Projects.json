@@ -37,8 +37,8 @@
     "heroImage": "Evopack_2000x1000.png"
   },
   {
-    "title": "Atiq - Building an e-commerce presence",
-    "description": "Building a secure and fast to do list in the browser",
+    "title": "Atiq",
+    "description": "Building an e-commerce presence from branding to the implementation in React.js",
     "tags": [
       "Front-end dev", "React", "Figma"
     ],
