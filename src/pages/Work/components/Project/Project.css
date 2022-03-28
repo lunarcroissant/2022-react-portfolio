@@ -1,6 +1,6 @@
 .project {
-  height: var(--vh, 100vh);
   height: -webkit-fill-available;
+  height: var(--vh, 100vh);
   position: relative;
   scroll-snap-align: start;
 }
