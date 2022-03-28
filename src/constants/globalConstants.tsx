@@ -9,3 +9,7 @@ export enum Colours {
   offWhite = "var(--off-white)",
   lightGrey = "var(--light-grey)",
 }
+
+export const iPad: any = !!window.navigator.userAgent.match(/iPad/i);
+export const iPhone: any = !!window.navigator.userAgent.match(/iPhone/i);
+export const iOS: any = iPad || iPhone;
