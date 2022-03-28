@@ -15,6 +15,8 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background: rgb(15, 15, 15, 0.75);
+    backdrop-filter: blur(5vw);
   }
 
   &__backButton {
@@ -24,9 +26,9 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    background: rgb(15, 15, 15, 0.75);
+    // animation: fadeIn cubic-bezier(0.3, 0.4, 0.2, 0.4) 1000ms;
+    // background: rgb(15, 15, 15, 0.75);
     // display: inline;
-    backdrop-filter: blur(5vw);
     & svg,
     & p {
       display: inline;
@@ -39,6 +41,9 @@
     // background: #647692;
     background: #294063;
     padding: 1.5rem;
+    // transform: translateY(100vh);
+
+    // animation: slideUp ease-in-out 400ms;
   }
 
   &__navlinkPrimary,
@@ -55,13 +60,44 @@
   }
 }
 
+@keyframes slideUp {
+  0% {
+    // opacity: 0;
+    transform: translateY(100vh);
+  }
+  100% {
+    // opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+  }
+  40% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
+}
+
+.animate400 {
+  transition: transform 400ms ease-in-out;
+}
+
+.animate1000 {
+  transition: transform 1000ms ease-in-out;
+}
+
+.slideUp {
+  animation: slideUp ease-in-out 600ms;
+  // transform: translateY(0vh);
+}
+
+.fadeIn {
+  // animation: fadeIn cubic-bezier(1, 0, 1, 0) 600ms;
+  // animation: fadeIn cubic-bezier(1, 0, 0.9, 1.01) 1000ms;
+  animation: fadeIn cubic-bezier(0, 0, 1, 1) 1000ms;
 }

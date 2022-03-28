@@ -42,7 +42,9 @@ const MobileMenu = ({ links }: IProps) => {
       {/* <Icon isButton size="md" icon="icons_hamburgerMenu--darkPrimary" /> */}
       <div className="col align-center justify-center mobileMenu__container">
         <button
-          className="row align-center justify-center mobileMenu__backButton"
+          className={`row align-center justify-center mobileMenu__backButton ${
+            mobileMenuVisible && "fadeIn"
+          }`}
           onClick={() => setMobileMenuVisible(false)}
         >
           {/* <Icon size="sm" icon="icons_arrow-left--white" /> */}
@@ -72,7 +74,11 @@ const MobileMenu = ({ links }: IProps) => {
           </Text>
         </button>
 
-        <div className="col mobileMenu__links width-100">
+        <div
+          className={`col mobileMenu__links width-100 ${
+            mobileMenuVisible && "slideUp"
+          }`}
+        >
           {/* <VerticalSpacing size="xxs" /> */}
           <div
             className="row width-100 align-center justify-center"
