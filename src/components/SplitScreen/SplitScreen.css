@@ -68,7 +68,7 @@
 .splitScreen__fade2 {
   position: absolute;
   left: 0;
-  z-index: 98;
+  z-index: 10;
 }
 .splitScreen__fade1 {
   top: 0;
