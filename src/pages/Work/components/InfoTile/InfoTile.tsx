@@ -43,7 +43,7 @@ const InfoTile = ({
   if (isMobile) {
     return (
       <div className="infoTile col">
-        <div className="row infoTile__about">
+        <div className="row justify-between infoTile__about">
           <div className="col infoTile__copy">
             <Text
               colour={TextColour.primaryDark}

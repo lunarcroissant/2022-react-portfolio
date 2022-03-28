@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-    "title": "EE Product Page Redeign",
+    "title": "EE Product Page Redesign",
     "description": "Overhauling an e-commerce page to optimise customer satisfaction",
     "tags": [
       "UI Design", "React", "Figma"
@@ -28,8 +28,8 @@
     "heroImage": "Shelf_1000x2000.png"
   },
   {
-    "title": "Tracker - To dos",
-    "description": "Building a secure and fast to do list in the browser",
+    "title": "Evopack",
+    "description": "Building a scalable and fast web app for a new packaging start up",
     "tags": [
       "Front-end dev", "React", "Figma"
     ],
