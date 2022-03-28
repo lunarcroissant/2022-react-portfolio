@@ -45,6 +45,7 @@
     bottom: 10rem;
     max-width: 100%;
     min-height: auto;
+    max-height: 250px;
     height: min-content;
   }
   .infoTile__actions button:first-child {
