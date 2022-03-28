@@ -73,8 +73,16 @@ button.icon {
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
   cursor: pointer;
+
+  & img {
+    transition: 400ms ease-in-out all;
+    &:hover {
+      // transform: scale(1.1);
+    }
+  }
 }
 
 button.icon:hover {
   background: rgba(240, 240, 240, 0.2);
+  transform: scale(1.1);
 }

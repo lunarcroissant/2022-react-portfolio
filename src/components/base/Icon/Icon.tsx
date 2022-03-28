@@ -4,6 +4,7 @@ import "./Icon.css";
 
 interface IProps {
   size: string;
+  background?: Backgrounds;
   opacity?: string;
   border?: boolean;
   theme?: string;
@@ -14,8 +15,15 @@ interface IProps {
   hoverText?: string;
 }
 
+export enum Backgrounds {
+  white = "white",
+  transparentWhite = "rgba(255, 255, 255, 0.4)",
+  lightGrey = "var(--light-grey)",
+}
+
 const Icon = ({
   size,
+  background,
   opacity,
   theme,
   border,
@@ -28,8 +36,9 @@ const Icon = ({
   if (isButton) {
     return (
       <button
-        className="icon icon-button col justify-center align-center"
+        className={`icon icon-button col justify-center align-center`}
         onClick={handleClick}
+        style={background ? { background: `${background}` } : undefined}
       >
         <img
           src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}

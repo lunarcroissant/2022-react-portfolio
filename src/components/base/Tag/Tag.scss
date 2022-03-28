@@ -6,7 +6,7 @@
   border-radius: 0.5rem;
   margin-right: 0.25rem;
   height: min-content;
-}
-.tag:last-of-type {
-  margin-right: 0;
+  &:last-of-type {
+    margin-right: 0;
+  }
 }

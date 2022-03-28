@@ -7,7 +7,7 @@ import "./InfoTile.css";
 import VerticalSpacing from "../../../../components/base/VerticalSpacing/VerticalSpacing";
 import Button, { ButtonType } from "../../../../components/base/button/Button";
 import HorizontalDivider from "../../../../components/base/HorizontalDivider/HorizontalDivider";
-import Icon from "../../../../components/base/Icon/Icon";
+import Icon, { Backgrounds } from "../../../../components/base/Icon/Icon";
 import { useContext, useState } from "react";
 import useViewportSize from "../../../../hooks/useViewportSize/useViewportSize";
 import Header from "../../../../components/global/Header/Header";
@@ -69,6 +69,7 @@ const InfoTile = ({
           <Icon
             isButton
             size="md"
+            background={Backgrounds.transparentWhite}
             icon="icons_hamburgerMenu--darkPrimary"
             handleClick={() => setMobileMenuVisible(true)}
           />

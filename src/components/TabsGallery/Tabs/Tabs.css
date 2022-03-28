@@ -21,6 +21,9 @@
 .tabs__container > * {
   margin-right: 1rem;
 }
+.tabs__container > *:last-of-type {
+  margin-right: 0;
+}
 .tabs__menu {
   transition: 400ms ease-in-out;
 }
