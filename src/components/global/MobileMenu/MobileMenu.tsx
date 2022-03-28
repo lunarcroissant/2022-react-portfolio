@@ -73,7 +73,7 @@ const MobileMenu = ({ links }: IProps) => {
         </button>
 
         <div className="col mobileMenu__links width-100">
-          <VerticalSpacing size="sm" />
+          {/* <VerticalSpacing size="xxs" /> */}
           <div
             className="row width-100 align-center justify-center"
             onDrag={() => setMobileMenuVisible(false)}
@@ -84,6 +84,7 @@ const MobileMenu = ({ links }: IProps) => {
               viewBox="0 0 83 3"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              opacity={0.2}
             >
               <rect width="83" height="3" rx="1.5" fill="white" />
             </svg>
