@@ -42,7 +42,7 @@
   .infoTile {
     left: 1rem;
     right: 1rem;
-    bottom: 10rem;
+    bottom: 1rem;
     max-width: 100%;
     min-height: auto;
     max-height: 250px;
