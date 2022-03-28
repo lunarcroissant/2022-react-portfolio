@@ -1,4 +1,5 @@
 .project {
+  height: -webkit-fill-available;
   position: relative;
   scroll-snap-align: start;
 }
