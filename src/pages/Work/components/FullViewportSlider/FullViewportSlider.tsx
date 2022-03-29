@@ -61,17 +61,18 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     // Measuring via Height
 
     var fullYHeight = eventTarget.scrollHeight;
-    let innerHeight = window.innerHeight;
-    let test = eventTarget.parentElement?.getBoundingClientRect().height;
-    console.log(test);
+
     // let sliderHeight = eventTarget;
     const distanceFromTop = eventTarget.scrollTop;
 
     const proportionedProjectHeight = fullYHeight / totalPages;
 
-    if (distanceFromTop % proportionedProjectHeight === 0) {
-      setCurrentPage(distanceFromTop / proportionedProjectHeight);
-    }
+    setCurrentPage(Math.round(distanceFromTop / proportionedProjectHeight));
+
+    // Only fire when project is exactly in view
+    // if (distanceFromTop % proportionedProjectHeight === 0) {
+    //   setCurrentPage(distanceFromTop / proportionedProjectHeight);
+    // }
   };
 
   useEffect(() => {
