@@ -1,5 +1,6 @@
 .fullviewportslider {
   height: 100%;
+  height: var(--vh, 100%);
   width: 100%;
   position: relative;
   /* padding: 3rem 0; */
