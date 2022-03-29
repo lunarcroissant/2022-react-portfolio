@@ -14,7 +14,7 @@
   border-radius: 1.5rem;
   max-width: 20rem;
   padding: 1.5rem 1.5rem;
-  min-height: 25rem;
+  // min-height: 25rem;
   z-index: 99;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
   // animation: fadeIn 600ms ease-in-out forwards;
@@ -53,7 +53,7 @@
     bottom: 1rem;
     max-width: 100%;
     // min-height: auto;
-    max-height: 250px;
+    max-height: min-content;
     height: min-content;
 
     &__actions {
