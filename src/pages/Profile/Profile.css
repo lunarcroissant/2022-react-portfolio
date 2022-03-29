@@ -30,10 +30,3 @@
   width: 100vh;
   background: linear-gradient(0deg, var(--primary) -0.17%, rgba(37, 38, 81, 0) 96.88%);
 }
-
-.pageContainer {
-  width: 100vw;
-  height: 100vh;
-  overflow-x: scroll;
-  /* overflow-y: hidden; */
-}
