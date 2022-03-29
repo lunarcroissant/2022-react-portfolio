@@ -135,13 +135,13 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
   const testData = [
     {
       skill: "React",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_react--white",
     },
     {
       skill: "JavaScript",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_javascript--white",
     },
@@ -153,7 +153,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "HTML5",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_html5--white",
     },
@@ -165,7 +165,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "CSS3",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_css3--white",
     },
@@ -177,37 +177,37 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "jQuery",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_jquery--white",
     },
     {
       skill: "Git",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_git--white",
     },
     {
       skill: "BitBucket",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_bitbucket--white",
     },
     {
       skill: "GitLab",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Code"],
       icon: "icons_gitlab--white",
     },
     {
       skill: "Prototyping",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Design"],
       icon: "icons_prototype--white",
     },
     {
       skill: "Figma",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Design"],
       icon: "icons_figma--white",
     },
@@ -219,7 +219,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "Interaction / UI design",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Design"],
       icon: "icons_interaction--white",
     },
@@ -231,13 +231,13 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "Photoshop",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Design"],
       icon: "icons_adobe-photoshop--white",
     },
     {
       skill: "Illustrator & Affinity Designer",
-      status: "Experienced",
+      status: "Advanced",
       categories: ["All", "Design"],
       icon: "icons_affinity-photo--white",
     },
@@ -249,13 +249,13 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "Spline",
-      status: "Experienced",
+      status: "Beginner",
       categories: ["All", "Design"],
       icon: "icons_spline--white",
     },
     {
-      skill: "Basic UX research",
-      status: "Experienced",
+      skill: "UX research",
+      status: "Beginner",
       categories: ["All", "Design"],
       icon: "icons_users--white",
     },
@@ -267,7 +267,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "3D modelling",
-      status: "Experienced",
+      status: "Beginner",
       categories: ["All", "Design"],
       icon: "icons_3d--white",
     },
