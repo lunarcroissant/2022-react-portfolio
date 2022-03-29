@@ -54,7 +54,7 @@
     max-width: 100%;
     // min-height: auto;
     max-height: min-content;
-    height: min-content;
+    height: calc(min-content - (100vh - var(--vh)));
 
     &__actions {
       & button:first-child {
