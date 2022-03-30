@@ -9,6 +9,7 @@ interface IProps {
   bold?: boolean;
   children?: any;
   opacity?: string;
+  blur?: string | 0;
 }
 
 export enum TextSize {
@@ -51,6 +52,7 @@ const Text = ({
   bold,
   opacity,
   children,
+  blur,
 }: IProps) => {
   if (bold) {
     return (
@@ -60,6 +62,7 @@ const Text = ({
           opacity: `${opacity}`,
           fontWeight: `${weight}`,
           color: `${colour}`,
+          filter: `${blur && `blur(${blur})`}`,
         }}
       >
         {children}
@@ -73,6 +76,7 @@ const Text = ({
           opacity: `${opacity}`,
           fontWeight: `${weight}`,
           color: `${colour}`,
+          filter: `${blur && `blur(${blur})`}`,
         }}
       >
         {children}

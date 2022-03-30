@@ -76,6 +76,8 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
 
     setScrolledDistance(verticalOffset);
     console.log(verticalOffset);
+
+    setBlur(`${(verticalOffset / percentageVerticalOffset) * 7}px`);
   };
 
   // window.addEventListener("scroll", (e: Event) => handleScroll(e));

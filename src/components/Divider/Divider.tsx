@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import Text, { TextColour, TextSize } from "../base/Text/Text";
 import "./Divider.css";
 
 interface IProps {
-  children: string;
+  children: string | ReactNode;
   dark?: boolean;
 }
 

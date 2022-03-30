@@ -22,6 +22,11 @@
   --font--light: 200;
 }
 
+@font-face {
+  font-family: Junicode;
+  src: url(/public/fonts/Junicode.ttf);
+}
+
 h1 {
   font-size: 6rem;
 }
