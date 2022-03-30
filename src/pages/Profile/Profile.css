@@ -15,7 +15,7 @@
   height: 20vw;
   width: 100%;
   background: linear-gradient(180deg, transparent, #15627a 100%);
-  z-index: 999;
+  z-index: 25;
 }
 .profile__contentColumn {
   max-width: 1200px;
