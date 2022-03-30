@@ -12,12 +12,14 @@
   bottom: 0;
   right: 0;
   left: 0;
-  height: 60vw;
+  height: 20vw;
   width: 100%;
-  background: linear-gradient(180deg, rgba(21, 98, 122, 0) 0%, rgba(21, 98, 122, 0) 80%, #15627a 100%);
+  background: linear-gradient(180deg, transparent, #15627a 100%);
+  z-index: 999;
 }
 .profile__contentColumn {
   max-width: 1200px;
+  padding: 0 2rem;
 }
 .profile__contentColumn p {
   max-width: 800px;
@@ -27,7 +29,7 @@
   font-size: 6rem;
   color: #f8f8f8;
   letter-spacing: -0.05em;
-  line-height: 115px;
+  line-height: 1.2em;
   font-style: normal;
   font-weight: 400;
 }
@@ -35,4 +37,15 @@
   color: #f8f8f8;
   text-decoration: none;
   border-bottom: solid 4px white;
+}
+@media screen and (max-width: 1024px) {
+  .profile__heading {
+    font-family: "Junicode";
+    font-size: 4rem;
+    color: #f8f8f8;
+    letter-spacing: -0.05em;
+    line-height: 1.2em;
+    font-style: normal;
+    font-weight: 400;
+  }
 }

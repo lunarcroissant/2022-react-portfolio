@@ -41,3 +41,15 @@
 .text--medium-light-grey {
   color: var(--medium-light-grey);
 }
+
+.hide {
+  transform: translateY(1rem);
+  opacity: 0;
+  transition: 400ms ease-in-out;
+}
+
+.visible {
+  transform: translateY(0rem);
+  opacity: 1;
+  transition: 400ms ease-in-out;
+}

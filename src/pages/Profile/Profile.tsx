@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Heading, { TextColour } from "../../components/base/Heading/Heading";
-import Text, { TextSize } from "../../components/base/Text/Text";
+import Text, { LineHeight, TextSize } from "../../components/base/Text/Text";
 import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpacing";
 import Divider from "../../components/Divider/Divider";
 import Header from "../../components/global/Header/Header";
@@ -30,8 +30,6 @@ const Profile = ({ data }: IProps) => {
     const percentageVerticalOffset = window.innerHeight;
 
     setScrolledDistance(verticalOffset);
-    console.log(verticalOffset);
-
     setBlur(`${(verticalOffset / percentageVerticalOffset) * 50}px`);
   };
 
@@ -93,13 +91,13 @@ const Profile = ({ data }: IProps) => {
             <a href="" className="profile__headingLink">
               Eddie
             </a>
-            , a German
+            , a British/German{" "}
           </span>
           <span
             className="profile__headingStandOut"
             style={{ filter: `blur(0)` }}
           >
-            &nbsp;UI/UX Designer and Front-End Developer&nbsp;
+            UI/UX Designer and Front-End Developer{" "}
           </span>
           <span
             className="profile__headingStandBack"
@@ -124,14 +122,24 @@ const Profile = ({ data }: IProps) => {
           </span>
         </h1>
         <VerticalSpacing size="lg" />
-        <Text size={TextSize.lg} colour={TextColour.offWhite} blur={blur}>
+        <Text
+          lineHeight={LineHeight.standard}
+          size={TextSize.lg}
+          colour={TextColour.offWhite}
+          blur={blur}
+        >
           I’m a British/German UI/UX Designer and Front-End Developer that loves
           to bridge the gap between amazing design and technical implementation.
           I strive to create beautiful digital experiences that balance creative
           design with practical needs.
         </Text>
         <VerticalSpacing size="md" />
-        <Text size={TextSize.lg} colour={TextColour.offWhite} blur={blur}>
+        <Text
+          lineHeight={LineHeight.standard}
+          size={TextSize.lg}
+          colour={TextColour.offWhite}
+          blur={blur}
+        >
           Having worked in Marketing, Product Management and Sales, I make sure
           to understand and consider the business needs of every project.{" "}
         </Text>
@@ -153,10 +161,10 @@ const Profile = ({ data }: IProps) => {
         ]}
         heading="What I help with"
       />
-      <VerticalSpacing size="xl" />
-      <Divider>
+      <VerticalSpacing size="xxl" />
+      {/* <Divider>
         <Text size={TextSize.md}>More coming soon</Text>
-      </Divider>
+      </Divider> */}
       {/* <ItemTile label="Tetsing" subInfo="Decent" /> */}
     </div>
   );

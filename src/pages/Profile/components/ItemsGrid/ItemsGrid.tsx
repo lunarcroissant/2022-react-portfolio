@@ -20,7 +20,6 @@ const ItemsGrid = ({ data, filter }: IProps) => {
     // if (!tabs.current.offsetTop)
 
     setScrolledDistance(tabs.current.getBoundingClientRect().y);
-    console.log(scrolledDistance);
     // if (tabs.current && tabs.current.offsetTop) {
     //   setScrolledDistance(tabs.current.offsetTop);
     // }
