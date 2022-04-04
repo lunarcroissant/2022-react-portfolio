@@ -103,7 +103,7 @@ const Profile = ({ data }: IProps) => {
             className="profile__headingStandBack"
             style={{ filter: `blur(${blur})` }}
           >
-            {""}based in{" "}
+            {""}based{" "}
             {/* <a href="" className="profile__headingLink">
               London
             </a> */}
@@ -112,7 +112,7 @@ const Profile = ({ data }: IProps) => {
             className="profile__headingStandOut"
             style={{ filter: `blur(0)` }}
           >
-            London
+            in London
           </span>
           <span
             className="profile__headingStandBack"
