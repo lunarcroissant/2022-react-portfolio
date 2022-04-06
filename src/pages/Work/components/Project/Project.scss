@@ -11,6 +11,21 @@
   // overflow: visible;
   scroll-snap-align: start;
 
+  &:hover {
+    // cursor: none;
+  }
+
+  // &:hover {
+  //   cursor: url("/assets/caseStudy__cursorImage.png") 39 24, pointer;
+  //   cursor: url("/assets/caseStudy__cursorImage.png");
+  //   cursor: -webkit-image-set(
+  //         url("/assets/caseStudy__cursorImage.png") 1x,
+  //         url("/assets/caseStudy__cursorImage@2x.png") 2x
+  //       )
+  //       39 24,
+  //     pointer;
+  // }
+
   &::-webkit-scrollbar,
   &::-webkit-scrollbar {
     display: none;
@@ -21,4 +36,22 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
   }
+
+  &__cursor {
+    position: absolute;
+    // top: 300px;
+    // left: 200px;
+    z-index: 10000;
+    pointer-events: none;
+    padding: 0.8rem 1.5rem;
+    background: #f3f3f3;
+    background: #ffffff;
+    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.25);
+    border-radius: 38px;
+    transform: translateY(-50%) translateX(-50%);
+  }
 }
+
+// @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) &:hover {
+//   cursor: url(/imgs/cursors/view-ENG@2x.png);
+// }

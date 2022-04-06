@@ -3,26 +3,51 @@ import "./Heading.css";
 interface IProps {
   children: string;
   colour: string;
+  weight?: HeadingWeight;
   headingLevel: string;
+}
+export enum HeadingWeight {
+  thin = "200",
+  light = "300",
+  regular = "400",
+  medium = "500",
+  semibold = "700",
+  bold = "900",
 }
 
 export enum TextColour {
   white = "#fff",
   greyBlue = "var(--grey-blue)",
   darkGrey = "var(--dark-grey)",
+  darkBlack = "var(--dark-black)",
+  lightBlack = "var(--light-black)",
   primary = "var(--primary)",
   primaryGreen = "var(--primary-green)",
   offWhite = "var(--off-white)",
   lightGrey = "var(--light-grey)",
 }
 
-const Heading = ({ children, colour, headingLevel }: IProps) => {
+const Heading = ({ children, colour, weight, headingLevel }: IProps) => {
+  if (headingLevel === "h4") {
+    return (
+      <h2
+        className="headingH4"
+        style={{
+          color: `${colour}`,
+          fontWeight: `${weight}`,
+        }}
+      >
+        {children}
+      </h2>
+    );
+  }
   if (headingLevel === "h3") {
     return (
       <h2
         className="headingH3"
         style={{
           color: `${colour}`,
+          fontWeight: `${weight}`,
         }}
       >
         {children}
@@ -32,9 +57,10 @@ const Heading = ({ children, colour, headingLevel }: IProps) => {
   if (headingLevel === "h2") {
     return (
       <h2
-        className="headingH1"
+        className="headingH2"
         style={{
           color: `${colour}`,
+          fontWeight: `${weight}`,
         }}
       >
         {children}
@@ -46,6 +72,7 @@ const Heading = ({ children, colour, headingLevel }: IProps) => {
       className="headingH1"
       style={{
         color: `${colour}`,
+        fontWeight: `${weight}`,
       }}
     >
       {children}

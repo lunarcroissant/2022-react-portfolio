@@ -1,0 +1,7 @@
+.numberedItem {
+  max-width: 400px;
+  margin-right: 2rem;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

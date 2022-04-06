@@ -1,0 +1,15 @@
+.caseStudyHeader__content {
+  display: grid;
+  grid-template-columns: 40vw 20vw min-content;
+}
+.caseStudyHeader__backButton {
+  all: unset;
+  text-decoration: underline;
+  white-space: nowrap;
+  height: min-content;
+  cursor: pointer;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
+}
+.caseStudyHeader__backButton:hover {
+  text-decoration: none;
+}

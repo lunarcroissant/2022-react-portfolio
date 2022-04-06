@@ -12,6 +12,7 @@
   padding: 1.5rem 1.5rem;
   z-index: 99;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+  cursor: default;
 }
 
 .infoTile.hidden {

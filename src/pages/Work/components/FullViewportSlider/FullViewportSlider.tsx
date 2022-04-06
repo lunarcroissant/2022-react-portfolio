@@ -1,13 +1,13 @@
-import {
+import React, {
   createRef,
   ReactNode,
-  useCallback,
   useContext,
   useEffect,
-  useRef,
   useState,
 } from "react";
+import Text, { TextSize } from "../../../../components/base/Text/Text";
 import PageContext from "../../../../contexts/PageContext/PageContext";
+import CaseStudy from "../../../CaseStudy/CaseStudy";
 import InfoTile from "../InfoTile/InfoTile";
 import PageCounter from "../PageCounter/PageCounter";
 import "./FullViewportSlider.css";
@@ -21,11 +21,12 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   const {
     currentPage,
     setCurrentPage,
-    setTotalPages,
     totalPages,
-    scrollProjects,
-    setScrollProjects,
+    showCaseStudy,
+    showCTACursor,
   } = useContext(PageContext);
+
+  const [mouseLocation, setMouseLocation] = useState({ x: 0, y: 0 });
 
   const ref = createRef<HTMLDivElement>();
 
@@ -37,8 +38,6 @@ const FullViewportSlider = ({ children, data }: IProps) => {
 
   const ProjectsFullScrollHeight =
     document.getElementById("fullviewportslider__content")?.scrollHeight || 0;
-
-  console.log(ProjectsFullScrollWidth);
 
   const scrollHandler = (event: React.UIEvent<HTMLDivElement>) => {
     const eventTarget = event.target as HTMLDivElement;
@@ -85,8 +84,99 @@ const FullViewportSlider = ({ children, data }: IProps) => {
 
   const activeContent = data[currentPage];
 
-  const { title, description, tags, imageSource, backgroundColour } =
-    activeContent;
+  const {
+    title,
+    description,
+    tags,
+    imageSource,
+    backgroundColour,
+    caseStudyContent,
+  } = activeContent;
+
+  const projectCursor = document.querySelector(
+    "div.fullviewportslider__cursor"
+  ) as HTMLElement;
+  // const balls = cursorTag?.querySelectorAll("div");
+
+  const determineMouseLocation = (e: any) => {
+    var initialX = e.clientX;
+    var initialY = e.clientY;
+    setMouseLocation({ x: initialX, y: initialY });
+  };
+
+  // window.addEventListener("load", determineMouseLocation);
+
+  // window.removeEventListener("load", determineMouseLocation);
+
+  // useEffect(() => {
+  //   // window.addEventListener("load", determineMouseLocation);
+  //   // determineMouseLocation;
+
+  //   document.addEventListener("mouseenter", function (event) {
+  //     aimX = event.pageX;
+  //     aimY = event.pageY;
+  //     // setMouseLocation({ x: aimX, y: aimY });
+  //   });
+
+  //   return () => {
+  //     // window.removeEventListener("load", determineMouseLocation);
+
+  //     document.addEventListener("mouseenter", function (event) {
+  //       aimX = event.pageX;
+  //       aimY = event.pageY;
+  //       // setMouseLocation({ x: aimX, y: aimY });
+  //     });
+  //   };
+  // }, [currentPage]);
+
+  // useEffect(() => {
+  //   document.addEventListener("mouseenter", function (event) {
+  //     aimX = event.clientX;
+  //     aimY = event.clientY;
+  //   });
+
+  //   return () => {
+  //     document.removeEventListener("mouseenter", function (event) {
+  //       aimX = event.clientX;
+  //       aimY = event.clientY;
+  //     });
+  //   };
+  // }, [showCaseStudy, showCTACursor]);
+
+  let aimX = window.innerWidth / 2;
+  let aimY = window.innerHeight / 2;
+
+  // let currentX = mouseLocation.x;
+  // let currentY = mouseLocation.y;
+
+  let currentX = window.innerWidth / 2;
+  let currentY = window.innerHeight / 2;
+
+  let speed = 0.2;
+
+  const animate = function () {
+    currentX += (aimX - currentX) * speed;
+    currentY += (aimY - currentY) * speed;
+
+    if (projectCursor) {
+      projectCursor.style.left = currentX + "px";
+      projectCursor.style.top = currentY + "px";
+    }
+
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+
+  document.addEventListener("mousemove", function (event) {
+    aimX = event.pageX;
+    aimY = event.pageY;
+  });
+
+  document.addEventListener("mouseenter", function (event) {
+    aimX = currentX;
+    aimY = currentY;
+  });
 
   return (
     <section className="fullviewportslider row">
@@ -106,6 +196,14 @@ const FullViewportSlider = ({ children, data }: IProps) => {
         imageSource={imageSource}
         backgroundColour={backgroundColour}
       />
+      {showCaseStudy ? <CaseStudy data={caseStudyContent} /> : null}
+
+      {showCTACursor && (
+        <div className="fullviewportslider__cursor row align-center justify-center center-text">
+          <Text size={TextSize.lg}>Read Case Study</Text>
+        </div>
+      )}
+
       <PageCounter data={""} />
     </section>
   );

@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import GlobalContext from "../../../contexts/GlobalContext/GlobalContext";
+import PageContext from "../../../contexts/PageContext/PageContext";
 import useViewportSize from "../../../hooks/useViewportSize/useViewportSize";
 import { Icons } from "../../base/button/Button";
 import Icon from "../../base/Icon/Icon";
@@ -15,6 +16,8 @@ interface IProps {
 
 const Header = ({ linkLabels }: IProps) => {
   const { setContactFormVisible } = useContext(GlobalContext);
+
+  const { setShowCTACursor } = useContext(PageContext);
   // if (true) {
   //   return (
 
@@ -31,7 +34,11 @@ const Header = ({ linkLabels }: IProps) => {
   //   );
   // }
   return (
-    <header className={`row padding-4 justify-between header`}>
+    <header
+      className={`row padding-4 justify-between header`}
+      onMouseEnter={() => setShowCTACursor(false)}
+      onMouseLeave={() => setShowCTACursor(true)}
+    >
       <nav className="row align-center justify-between width-100">
         <NavLink to={`/`} className={"row header__logo"} key={"HomeLogoLink"}>
           {/* <a className="header__home row"> */}
@@ -51,16 +58,7 @@ const Header = ({ linkLabels }: IProps) => {
           {/* </a> */}
         </NavLink>
 
-        {isMobile ? // <div className="row header__navigation--mobile">
-        //   <div className="header__mobileMenu">
-        //     {linkLabels.map((link) => {
-        //       return (
-        //         <NavLink
-        //           to={`${link.urlPath}`}
-        //           className={({ isActive }) =>
-        //             isActive
-        //               ? "navlink row between-xs link--active"
-        //               : "navlink between-xs row"
+        {isMobile ? //               : "navlink between-xs row" //               ? "navlink row between-xs link--active" //             isActive //           className={({ isActive }) => //           to={`${link.urlPath}`} //         <NavLink //       return ( //     {linkLabels.map((link) => { //   <div className="header__mobileMenu"> // <div className="row header__navigation--mobile">
         //           }
         //           key={link.label}
         //         >
@@ -104,6 +102,11 @@ const Header = ({ linkLabels }: IProps) => {
                 </NavLink>
               );
             })}
+            {/* <NavLinkNative
+              download={`${process.env.PUBLIC_URL}/assets/EddieTierneyLogo.svg`}
+            >
+              Download CV
+            </NavLinkNative> */}
             <NavLinkNative handleClick={() => setContactFormVisible(true)}>
               Contact
             </NavLinkNative>

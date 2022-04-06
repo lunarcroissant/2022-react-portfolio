@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "./styles/stylesystem.css";
+import "./styles/fractal.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import WelcomePageBackground from "./components/WelcomePageBackground/WelcomePageBackground";

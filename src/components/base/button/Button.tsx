@@ -25,11 +25,12 @@ interface IProps {
   buttonVariant: ButtonType;
   children: string;
   icon?: Icons;
+  handleClick?: (value: any) => void;
 }
 
-const Button = ({ buttonVariant, icon, children }: IProps) => {
+const Button = ({ buttonVariant, icon, children, handleClick }: IProps) => {
   return (
-    <button className={`btn ${buttonVariant}`}>
+    <button className={`btn ${buttonVariant}`} onClick={handleClick}>
       {icon ? <Icon size="md" icon={icon} /> : null}
       {children}
     </button>

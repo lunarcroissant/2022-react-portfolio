@@ -1,0 +1,23 @@
+.caseStudyHeader {
+  &__content {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    grid-template-columns: 40vw 20vw min-content;
+
+    & div.col {
+      // margin-right: 2rem;
+    }
+  }
+
+  &__backButton {
+    all: unset;
+    text-decoration: underline;
+    white-space: nowrap;
+    height: min-content;
+    cursor: pointer;
+    transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

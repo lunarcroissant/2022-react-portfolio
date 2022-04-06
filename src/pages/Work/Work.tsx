@@ -44,6 +44,8 @@ const Work = ({ data }: IProps) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(projectsArray.length);
   const [scrollProjects, setScrollProjects] = useState(0);
+  const [showCaseStudy, setShowCaseStudy] = useState(false);
+  const [showCTACursor, setShowCTACursor] = useState(true);
 
   return (
     <PageContext.Provider
@@ -54,6 +56,10 @@ const Work = ({ data }: IProps) => {
         setTotalPages,
         scrollProjects,
         setScrollProjects,
+        showCaseStudy,
+        setShowCaseStudy,
+        showCTACursor,
+        setShowCTACursor,
       }}
     >
       <div className="pageContainer col" onScroll={(e: any) => handleScroll(e)}>

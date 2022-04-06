@@ -39,6 +39,8 @@ export enum TextColour {
   white = "#fff",
   greyBlue = "var(--grey-blue)",
   deepBlue = "var(--deep-blue)",
+  darkBlack = "var(--dark-black)",
+  lightBlack = "var(--light-black)",
   primaryDark = "var(--dark-primary)",
   primaryBlue = "var(--primary-blue)",
   primaryGreen = "var(--primary-green)",

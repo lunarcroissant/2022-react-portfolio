@@ -7,7 +7,64 @@
       "UI Design", "React", "Figma"
     ],
     "backgroundColour": "#507775",
-    "heroImage": "EE_4000x2000.png"
+    "heroImage": "EE_4000x2000.png",
+    "caseStudyContent": {
+      "heading": "EE Product Page Redesign",
+      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "team": [{
+        "name": "Eddie Tierney",
+        "role": "Product Designer"
+      }, {
+        "name": "Jordan Joseph",
+        "role": "Content Designer"
+      }, {
+        "name": "Stefano Chiesa",
+        "role": "Product Designer"
+      }],
+      "tools": [{
+        "name": "React",
+        "icon": "icons_react--dark"
+      }, {
+        "name": "CSS3",
+        "icon": "icons_css3--dark"
+      }, {
+        "name": "Figma",
+        "icon": "icons_figma--dark"
+      }],
+      "goals": {
+        "heading": "Goals",
+        "subHeading": null,
+        "goals": [
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          }
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        }
+      ] 
+
+    }
   },
   {
     "title": "iOS Clock App",
@@ -16,7 +73,64 @@
       "UI Design", "Figma"
     ],
     "backgroundColour": "#1F2531",
-    "heroImage": "iOSAlarms_4000x2001.png"
+    "heroImage": "iOSAlarms_4000x2001.png",
+    "caseStudyContent": {
+      "heading": "iOS Clock App",
+      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "team": [{
+        "name": "Eddie Tierney",
+        "role": "Product Designer"
+      }, {
+        "name": "Jordan Joseph",
+        "role": "Content Designer"
+      }, {
+        "name": "Stefano Chiesa",
+        "role": "Product Designer"
+      }],
+      "tools": [{
+        "name": "React",
+        "icon": "icons_react--dark"
+      }, {
+        "name": "CSS3",
+        "icon": "icons_css3--dark"
+      }, {
+        "name": "Figma",
+        "icon": "icons_figma--dark"
+      }],
+      "goals": {
+        "heading": "Goals",
+        "subHeading": null,
+        "goals": [
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          }
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        }
+      ] 
+
+    }
   },
   {
     "title": "Food Swiper",
@@ -25,7 +139,64 @@
       "UI Design", "App", "Figma"
     ],
     "backgroundColour": "#61ADAD",
-    "heroImage": "Shelf_1000x2000.png"
+    "heroImage": "Shelf_1000x2000.png",
+    "caseStudyContent": {
+      "heading": "Food Swiper",
+      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "team": [{
+        "name": "Eddie Tierney",
+        "role": "Product Designer"
+      }, {
+        "name": "Jordan Joseph",
+        "role": "Content Designer"
+      }, {
+        "name": "Stefano Chiesa",
+        "role": "Product Designer"
+      }],
+      "tools": [{
+        "name": "React",
+        "icon": "icons_react--dark"
+      }, {
+        "name": "CSS3",
+        "icon": "icons_css3--dark"
+      }, {
+        "name": "Figma",
+        "icon": "icons_figma--dark"
+      }],
+      "goals": {
+        "heading": "Goals",
+        "subHeading": null,
+        "goals": [
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          }
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        }
+      ] 
+
+    }
   },
   {
     "title": "Evopack",
@@ -34,7 +205,64 @@
       "Front-end dev", "React", "Figma"
     ],
     "backgroundColour": "#594DE9",
-    "heroImage": "Evopack_2000x1000.png"
+    "heroImage": "Evopack_2000x1000.png",
+    "caseStudyContent": {
+      "heading": "Evopack",
+      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "team": [{
+        "name": "Eddie Tierney",
+        "role": "Product Designer"
+      }, {
+        "name": "Jordan Joseph",
+        "role": "Content Designer"
+      }, {
+        "name": "Stefano Chiesa",
+        "role": "Product Designer"
+      }],
+      "tools": [{
+        "name": "React",
+        "icon": "icons_react--dark"
+      }, {
+        "name": "CSS3",
+        "icon": "icons_css3--dark"
+      }, {
+        "name": "Figma",
+        "icon": "icons_figma--dark"
+      }],
+      "goals": {
+        "heading": "Goals",
+        "subHeading": null,
+        "goals": [
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          }
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        }
+      ] 
+
+    }
   },
   {
     "title": "Atiq",
@@ -43,7 +271,64 @@
       "Front-end dev", "React", "Figma"
     ],
     "backgroundColour": "#26272C",
-    "heroImage": "Atiq_4000x2001.png"
+    "heroImage": "Atiq_4000x2001.png",
+    "caseStudyContent": {
+      "heading": "Atiq.Studio",
+      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "team": [{
+        "name": "Eddie Tierney",
+        "role": "Product Designer"
+      }, {
+        "name": "Jordan Joseph",
+        "role": "Content Designer"
+      }, {
+        "name": "Stefano Chiesa",
+        "role": "Product Designer"
+      }],
+      "tools": [{
+        "name": "React",
+        "icon": "icons_react--dark"
+      }, {
+        "name": "CSS3",
+        "icon": "icons_css3--dark"
+      }, {
+        "name": "Figma",
+        "icon": "icons_figma--dark"
+      }],
+      "goals": {
+        "heading": "Goals",
+        "subHeading": null,
+        "goals": [
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          },
+          {
+            "heading": "Improve the speed",
+            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+          }
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Shelf_1000x2000.png",
+        "imageAlt": "This is a case study image"
+        }
+      ] 
+
+    }
   }
   ]
 }

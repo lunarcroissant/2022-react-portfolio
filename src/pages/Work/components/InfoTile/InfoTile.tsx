@@ -13,6 +13,7 @@ import useViewportSize from "../../../../hooks/useViewportSize/useViewportSize";
 import Header from "../../../../components/global/Header/Header";
 import MobileMenu from "../../../../components/global/MobileMenu/MobileMenu";
 import GlobalContext from "../../../../contexts/GlobalContext/GlobalContext";
+import PageContext from "../../../../contexts/PageContext/PageContext";
 
 interface IProps {
   title: string;
@@ -35,6 +36,7 @@ const InfoTile = ({
   const [showMenu, setShowMenu] = useState(true);
 
   const { setMobileMenuVisible } = useContext(GlobalContext);
+  const { setShowCaseStudy } = useContext(PageContext);
 
   const isMobile = useViewportSize(768);
 
@@ -65,7 +67,12 @@ const InfoTile = ({
         </div>
         <VerticalSpacing size="md" />
         <div className="row infoTile__actions">
-          <Button buttonVariant={ButtonType.primary}>Read Case Study</Button>
+          <Button
+            buttonVariant={ButtonType.primary}
+            handleClick={() => setShowCaseStudy(true)}
+          >
+            Read Case Study
+          </Button>
           <Icon
             isButton
             size="md"
@@ -158,7 +165,12 @@ const InfoTile = ({
       <VerticalSpacing size="lg" />
       <HorizontalDivider />
       <VerticalSpacing size="sm" />
-      <Button buttonVariant={ButtonType.primary}>View Case Study</Button>
+      <Button
+        buttonVariant={ButtonType.primary}
+        handleClick={() => setShowCaseStudy(true)}
+      >
+        View Case Study
+      </Button>
     </div>
   );
 };

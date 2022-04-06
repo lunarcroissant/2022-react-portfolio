@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import PageContext from "../../../../contexts/PageContext/PageContext";
 import InfoTile from "../InfoTile/InfoTile";
+import Text, { TextSize } from "../../../../components/base/Text/Text";
 import ProjectImage from "../ProjectImage/ProjectImage";
 
 import "./Project.css";
@@ -20,12 +21,19 @@ const Project = ({
   imageSource,
   backgroundColour,
 }: IProps) => {
-  const { currentPage, setCurrentPage, setTotalPages, totalPages } =
-    useContext(PageContext);
+  const {
+    currentPage,
+    setCurrentPage,
+    setTotalPages,
+    totalPages,
+    setShowCaseStudy,
+  } = useContext(PageContext);
+
   return (
-    <section
+    <a
       className="project"
       onScroll={() => setCurrentPage(currentPage + 1)}
+      onClick={() => setShowCaseStudy(true)}
     >
       {/* <InfoTile
         title={title}
@@ -34,8 +42,9 @@ const Project = ({
         imageSource={imageSource}
         backgroundColour={backgroundColour}
       /> */}
+
       <ProjectImage source={imageSource} backgroundColour={backgroundColour} />
-    </section>
+    </a>
   );
 };
 
