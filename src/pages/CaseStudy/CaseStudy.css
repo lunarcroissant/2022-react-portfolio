@@ -25,6 +25,7 @@
   left: 0;
   right: 0;
   overflow: hidden;
+  cursor: default;
 }
 .caseStudy__scrollHeader {
   transform: translateY(-75px);
