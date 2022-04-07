@@ -2,13 +2,9 @@ import { useEffect, useState } from "react";
 import Heading, { TextColour } from "../../components/base/Heading/Heading";
 import Text, { LineHeight, TextSize } from "../../components/base/Text/Text";
 import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpacing";
-import Divider from "../../components/Divider/Divider";
 import Header from "../../components/global/Header/Header";
-import SplitScreen from "../../components/SplitScreen/SplitScreen";
-import TabsContent from "../../components/TabsGallery/TabsContent/TabsContent";
 import TabsGallery from "../../components/TabsGallery/TabsGallery";
-import ItemsGrid from "./components/ItemsGrid/ItemsGrid";
-import ItemTile from "./components/ItemTile/ItemTile";
+import Footer from "./components/Footer/Footer";
 
 import "./Profile.css";
 
@@ -161,7 +157,8 @@ const Profile = ({ data }: IProps) => {
         ]}
         heading="What I help with"
       />
-      <VerticalSpacing size="xxl" />
+      {/* <VerticalSpacing size="xxl" /> */}
+      <Footer />
       {/* <Divider>
         <Text size={TextSize.md}>More coming soon</Text>
       </Divider> */}

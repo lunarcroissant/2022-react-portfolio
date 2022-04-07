@@ -6,7 +6,8 @@
   // overflow-x: scroll;
   /* overflow-y: hidden; */
   // background: var(--primary);
-  background: linear-gradient(90deg, #237c97, #115a71);
+  // background: linear-gradient(90deg, #237c97, #115a71);
+  background: linear-gradient(96.98deg, #286685 1.7%, #508A99 96.33%);
   // background: #252651;
   // background: url(/public/assets/profileImage.jpg) no-repeat;
   background-size: cover;
@@ -20,7 +21,7 @@
     left: 0;
     height: 20vw;
     width: 100%;
-    background: linear-gradient(180deg, transparent, #15627a 100%);
+    // background: linear-gradient(180deg, transparent, #15627a 100%);
     z-index: 25;
   }
 

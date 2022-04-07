@@ -37,7 +37,11 @@ const CaseStudyHeader = ({
       <VerticalSpacing size="xl" />
       <div className="caseStudyHeader__content justify-between">
         <div className="col">
-          <a className="row caseStudyHeader__liveLink" href={projectLink}>
+          <a
+            className="row caseStudyHeader__liveLink"
+            href={projectLink}
+            target="_blank"
+          >
             <Heading
               colour={TextColour.darkBlack}
               weight={HeadingWeight.light}

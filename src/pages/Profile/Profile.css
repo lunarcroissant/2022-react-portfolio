@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   /* overflow-y: hidden; */
-  background: linear-gradient(90deg, #237c97, #115a71);
+  background: linear-gradient(96.98deg, #286685 1.7%, #508A99 96.33%);
   background-size: cover;
   position: relative;
 }
@@ -14,7 +14,6 @@
   left: 0;
   height: 20vw;
   width: 100%;
-  background: linear-gradient(180deg, transparent, #15627a 100%);
   z-index: 25;
 }
 .profile__contentColumn {
