@@ -22,8 +22,6 @@ const PageCounter = ({ data }: IProps) => {
   const activePage = currentPage + 1;
   const activePageString = activePage.toString();
 
-  console.log(activePageString);
-
   const changeToPage = (changeAmount: number) => {
     setCurrentPage(currentPage + changeAmount);
   };

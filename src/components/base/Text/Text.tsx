@@ -84,10 +84,10 @@ const Text = ({
     let positionInRelationToUser =
       verticalOffset - textItem.current.getBoundingClientRect().y;
 
-    console.log(
-      (textItem.current.getBoundingClientRect().y * 100) /
-        textItem.current.getBoundingClientRect().y
-    );
+    // console.log(
+    //   (textItem.current.getBoundingClientRect().y * 100) /
+    //     textItem.current.getBoundingClientRect().y
+    // );
     // if (tabs.current && tabs.current.offsetTop) {
     //   setScrolledDistance(tabs.current.offsetTop);
     // }

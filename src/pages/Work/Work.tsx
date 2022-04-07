@@ -34,7 +34,6 @@ const Work = ({ data }: IProps) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    console.log("firing");
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

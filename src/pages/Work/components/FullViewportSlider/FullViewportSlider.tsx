@@ -231,8 +231,10 @@ const FullViewportSlider = ({ children, data }: IProps) => {
       />
       {showCaseStudy ? <CaseStudy data={caseStudyContent} /> : null}
 
-      {showCTACursor && (
-        <div className="fullviewportslider__cursor row align-center justify-center center-text">
+      {showCTACursor && showCaseStudy ? null : (
+        <div
+          className={`fullviewportslider__cursor row align-center justify-center center-text`}
+        >
           <Text size={TextSize.lg}>Read Case Study</Text>
         </div>
       )}

@@ -6,8 +6,6 @@ const IntroScreen = () => {
   const numberOfMessages =
     document.getElementsByClassName("intro-message").length;
 
-  console.log(numberOfMessages);
-
   useEffect(() => {
     for (let i = 0; i < numberOfMessages; i++) {
       const message = document.getElementsByClassName("intro-message")[i];

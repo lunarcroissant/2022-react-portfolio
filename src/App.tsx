@@ -27,7 +27,6 @@ function App() {
       currentWindowInnerWidth !== windowInnerWidth
     ) {
       let innerWindowHeight = window.innerHeight;
-      console.log(innerWindowHeight);
       // Then we set the value in the --vh custom property to the root of the document
       document.documentElement.style.setProperty(
         "--vh",
