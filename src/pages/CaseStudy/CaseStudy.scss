@@ -53,6 +53,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  &__image {
+    min-width: 100%;
+    height: auto;
+  }
 }
 
 @keyframes slideUp {
