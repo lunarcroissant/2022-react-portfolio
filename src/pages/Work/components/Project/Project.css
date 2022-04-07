@@ -4,6 +4,9 @@
   position: relative;
   scroll-snap-align: start;
 }
+.project:hover {
+  cursor: pointer;
+}
 .project::-webkit-scrollbar, .project::-webkit-scrollbar {
   display: none;
 }

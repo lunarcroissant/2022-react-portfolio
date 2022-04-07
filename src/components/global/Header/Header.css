@@ -9,11 +9,13 @@
 }
 
 header {
-  cursor: default;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .header__homeIcon {
   margin-right: 0.5rem;
+  pointer-events: all;
 }
 
 .navlink {
@@ -28,6 +30,7 @@ header {
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
   text-decoration: none;
   backdrop-filter: blur(30px);
+  pointer-events: all;
 }
 
 .navlink:hover {

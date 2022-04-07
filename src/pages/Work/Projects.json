@@ -6,20 +6,21 @@
     "tags": [
       "UI Design", "React", "Figma"
     ],
-    "backgroundColour": "#507775",
+    "backgroundColour": "#068080",
     "heroImage": "EE_4000x2000.png",
     "caseStudyContent": {
       "heading": "EE Product Page Redesign",
-      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "subHeading": "Combining business goals, such as increased user log ins, increased conversation, and UX improvments, this project simplifies a complex checkout process, increases upsell possibilities and provides a supportive journey to customers.",
+      "projectLink": null,
       "team": [{
         "name": "Eddie Tierney",
-        "role": "Product Designer"
+        "role": ["Product Designer"]
       }, {
         "name": "Jordan Joseph",
-        "role": "Content Designer"
+        "role": ["Content Designer"]
       }, {
         "name": "Stefano Chiesa",
-        "role": "Product Designer"
+        "role": ["Product Designer"]
       }],
       "tools": [{
         "name": "React",
@@ -76,16 +77,11 @@
     "heroImage": "iOSAlarms_4000x2001.png",
     "caseStudyContent": {
       "heading": "iOS Clock App",
-      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "subHeading": "This conceptual feature is focused on improving an app used by millions - the iOS Clock app. Conversations with a wide range of users revealed a recurring issue for people wanting to easily set alarms that fit around their varying needs.",
+      "projectLink": null,
       "team": [{
         "name": "Eddie Tierney",
-        "role": "Product Designer"
-      }, {
-        "name": "Jordan Joseph",
-        "role": "Content Designer"
-      }, {
-        "name": "Stefano Chiesa",
-        "role": "Product Designer"
+        "role": ["Product Designer"]
       }],
       "tools": [{
         "name": "React",
@@ -102,16 +98,16 @@
         "subHeading": null,
         "goals": [
           {
-            "heading": "Improve the speed",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Ease of use",
+            "copy": "Setting an alarm should be a quick action that allows users to manage their day within a tap or two. One of the largest user complaints revolved around the tedious setting and toggling of many alarms just to wake up in the morning. I made it a priority to improve this aspect."
           },
           {
-            "heading": "Improve the speed",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Tailored around people",
+            "copy": "Most of us hit snooze. Some of us accidentally fall back asleep. None of us live the same day every day. The grouped alarm functionality needed to provide flexibility without sacrificing the core functionality of an alarm."
           },
           {
-            "heading": "Improve the speed",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Familiarity",
+            "copy": "An app with a user base as large and diverse as the iOS Clock requires new features to be easily understood. I made it a priority to work within the current Apple Design Language of the time."
           }
         ]
       },
@@ -143,15 +139,16 @@
     "caseStudyContent": {
       "heading": "Food Swiper",
       "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "projectLink": null,
       "team": [{
         "name": "Eddie Tierney",
-        "role": "Product Designer"
+        "role": ["Product Designer"]
       }, {
         "name": "Jordan Joseph",
-        "role": "Content Designer"
+        "role": ["Content Designer"]
       }, {
         "name": "Stefano Chiesa",
-        "role": "Product Designer"
+        "role": ["Product Designer"]
       }],
       "tools": [{
         "name": "React",
@@ -208,16 +205,11 @@
     "heroImage": "Evopack_2000x1000.png",
     "caseStudyContent": {
       "heading": "Evopack",
-      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "subHeading": "Evopack, a Swiss/German start-up, asked me to build a brand and website to represent their revolutionary and sustainable packaging solutions. As part of this, I created a custom design system and built their web app using React, SCSS, Figma and TypeScript.",
+      "projectLink": null,
       "team": [{
         "name": "Eddie Tierney",
-        "role": "Product Designer"
-      }, {
-        "name": "Jordan Joseph",
-        "role": "Content Designer"
-      }, {
-        "name": "Stefano Chiesa",
-        "role": "Product Designer"
+        "role": [["Product Designer"], "Front-end Developer", "Branding"] 
       }],
       "tools": [{
         "name": "React",
@@ -234,15 +226,15 @@
         "subHeading": null,
         "goals": [
           {
-            "heading": "Improve the speed",
+            "heading": "Recognisable and accessible",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Improve the speed",
+            "heading": "Modern and scalable",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Improve the speed",
+            "heading": "Maintainable",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           }
         ]
@@ -274,16 +266,14 @@
     "heroImage": "Atiq_4000x2001.png",
     "caseStudyContent": {
       "heading": "Atiq.Studio",
-      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "subHeading": "Atiq.Studio is a small e-commerce business selling creative projects, such as photography, clothing and digital products. I worked on the website and logo design as well as the final development of the e-commerce store.",
+      "projectLink": "https://atiq.studio",
       "team": [{
         "name": "Eddie Tierney",
-        "role": "Product Designer"
+        "role": ["Product Designer", "Front-end Developer"]
       }, {
-        "name": "Jordan Joseph",
-        "role": "Content Designer"
-      }, {
-        "name": "Stefano Chiesa",
-        "role": "Product Designer"
+        "name": "Will Browne",
+        "role": ["Marketing"]
       }],
       "tools": [{
         "name": "React",
@@ -304,7 +294,7 @@
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Improve the speed",
+            "heading": "Purpose built",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {

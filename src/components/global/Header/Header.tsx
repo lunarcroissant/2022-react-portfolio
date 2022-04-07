@@ -36,11 +36,17 @@ const Header = ({ linkLabels }: IProps) => {
   return (
     <header
       className={`row padding-4 justify-between header`}
-      onMouseEnter={() => setShowCTACursor(false)}
+      // onMouseEnter={() => setShowCTACursor(false)}
       onMouseLeave={() => setShowCTACursor(true)}
     >
       <nav className="row align-center justify-between width-100">
-        <NavLink to={`/`} className={"row header__logo"} key={"HomeLogoLink"}>
+        <NavLink
+          to={`/`}
+          className={"row header__logo"}
+          key={"HomeLogoLink"}
+          onMouseEnter={() => setShowCTACursor(false)}
+          onMouseLeave={() => setShowCTACursor(true)}
+        >
           {/* <a className="header__home row"> */}
           <img
             src={`${process.env.PUBLIC_URL}/assets/EddieTierneyLogo.svg`}
@@ -58,13 +64,7 @@ const Header = ({ linkLabels }: IProps) => {
           {/* </a> */}
         </NavLink>
 
-        {isMobile ? //               : "navlink between-xs row" //               ? "navlink row between-xs link--active" //             isActive //           className={({ isActive }) => //           to={`${link.urlPath}`} //         <NavLink //       return ( //     {linkLabels.map((link) => { //   <div className="header__mobileMenu"> // <div className="row header__navigation--mobile">
-        //           }
-        //           key={link.label}
-        //         >
-        //           <Text
-        //             size={TextSize.sm}
-        //             weight={TextWeight.light}
+        {isMobile ? //             weight={TextWeight.light} //             size={TextSize.sm} //           <Text //         > //           key={link.label} //           } //               : "navlink between-xs row" //               ? "navlink row between-xs link--active" //             isActive //           className={({ isActive }) => //           to={`${link.urlPath}`} //         <NavLink //       return ( //     {linkLabels.map((link) => { //   <div className="header__mobileMenu"> // <div className="row header__navigation--mobile">
         //             colour={TextColour.white}
         //           >
         //             {link.label}
@@ -90,6 +90,8 @@ const Header = ({ linkLabels }: IProps) => {
                       : "navlink between-xs row"
                   }
                   key={link.label}
+                  onMouseEnter={() => setShowCTACursor(false)}
+                  onMouseLeave={() => setShowCTACursor(true)}
                 >
                   <Text
                     size={TextSize.sm}
@@ -107,7 +109,11 @@ const Header = ({ linkLabels }: IProps) => {
             >
               Download CV
             </NavLinkNative> */}
-            <NavLinkNative handleClick={() => setContactFormVisible(true)}>
+            <NavLinkNative
+              handleClick={() => setContactFormVisible(true)}
+              handleMouseEnter={() => setShowCTACursor(false)}
+              handleMouseLeave={() => setShowCTACursor(true)}
+            >
               Contact
             </NavLinkNative>
           </div>

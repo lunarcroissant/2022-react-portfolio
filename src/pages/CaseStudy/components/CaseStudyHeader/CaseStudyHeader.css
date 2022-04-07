@@ -2,6 +2,13 @@
   display: grid;
   grid-template-columns: 40vw 20vw min-content;
 }
+.caseStudyHeader__liveLink {
+  cursor: pointer;
+  text-decoration: none;
+}
+.caseStudyHeader__liveLink:hover {
+  text-decoration: underline;
+}
 .caseStudyHeader__backButton {
   all: unset;
   text-decoration: underline;

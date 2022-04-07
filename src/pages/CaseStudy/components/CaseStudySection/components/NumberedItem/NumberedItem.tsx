@@ -2,7 +2,10 @@ import Heading, {
   HeadingWeight,
   TextColour,
 } from "../../../../../../components/base/Heading/Heading";
-import Text, { TextSize } from "../../../../../../components/base/Text/Text";
+import Text, {
+  LineHeight,
+  TextSize,
+} from "../../../../../../components/base/Text/Text";
 import VerticalSpacing from "../../../../../../components/base/VerticalSpacing/VerticalSpacing";
 
 import "./NumberedItem.css";
@@ -28,7 +31,11 @@ const NumberedItem = ({ data, number }: IProps) => {
         {heading}
       </Heading>
       <VerticalSpacing size="xs" />
-      <Text size={TextSize.sm} colour={TextColour.lightBlack}>
+      <Text
+        size={TextSize.sm}
+        colour={TextColour.lightBlack}
+        lineHeight={LineHeight.standard}
+      >
         {copy}
       </Text>
       {/* <VerticalSpacing size="lg" /> */}

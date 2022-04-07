@@ -6,6 +6,8 @@ interface IProps {
   theme?: string;
   icon?: string;
   handleClick?: (value: any) => void;
+  handleMouseEnter?: (value: any) => void;
+  handleMouseLeave?: (value: any) => void;
   download?: string;
 }
 
@@ -14,6 +16,8 @@ const NavLinkNative = ({
   theme,
   icon,
   handleClick,
+  handleMouseEnter,
+  handleMouseLeave,
   download,
 }: IProps) => {
   function handleBackClick(ref: any) {
@@ -26,6 +30,8 @@ const NavLinkNative = ({
     <a
       className={`navlink navlink--${theme}`}
       onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       {...(download ? download : null)}
       href={download ? download : undefined}
     >

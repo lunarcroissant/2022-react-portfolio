@@ -1,1 +1,13 @@
-
+.itemsList__teamMemberName {
+  flex: 0;
+  display: grid;
+  grid-template-columns: 10em min-content;
+  grid-template-rows: auto;
+  white-space: nowrap;
+}
+.itemsList__teamMember {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: auto;
+  white-space: nowrap;
+}

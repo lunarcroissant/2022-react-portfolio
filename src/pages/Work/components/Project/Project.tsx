@@ -26,6 +26,7 @@ const Project = ({
     setCurrentPage,
     setTotalPages,
     totalPages,
+    showCaseStudy,
     setShowCaseStudy,
   } = useContext(PageContext);
 
@@ -33,7 +34,7 @@ const Project = ({
     <a
       className="project"
       onScroll={() => setCurrentPage(currentPage + 1)}
-      onClick={() => setShowCaseStudy(true)}
+      onClick={() => setShowCaseStudy(!showCaseStudy)}
     >
       {/* <InfoTile
         title={title}
@@ -42,7 +43,6 @@ const Project = ({
         imageSource={imageSource}
         backgroundColour={backgroundColour}
       /> */}
-
       <ProjectImage source={imageSource} backgroundColour={backgroundColour} />
     </a>
   );

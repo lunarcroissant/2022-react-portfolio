@@ -1,8 +1,6 @@
 import CaseStudyHeader from "./components/CaseStudyHeader/CaseStudyHeader";
 import CaseStudySection from "./components/CaseStudySection/CaseStudySection";
 import NumberedItem from "./components/CaseStudySection/components/NumberedItem/NumberedItem";
-
-import "./CaseStudy.css";
 import AutoFitRow from "../../components/base/AutoFitRow/AutoFitRow";
 import Text, {
   LineHeight,
@@ -12,13 +10,23 @@ import Text, {
 import { useContext, useEffect, useState } from "react";
 import PageContext from "../../contexts/PageContext/PageContext";
 
+import "./CaseStudy.css";
+
 interface IProps {
   data: any;
 }
 
 const CaseStudy = ({ data }: IProps) => {
-  const { heading, subHeading, image, goals, team, tools, articleSections } =
-    data;
+  const {
+    heading,
+    subHeading,
+    image,
+    goals,
+    team,
+    tools,
+    articleSections,
+    projectLink,
+  } = data;
 
   const [scrollingHeader, setScrollingHeader] = useState(false);
 
@@ -74,6 +82,7 @@ const CaseStudy = ({ data }: IProps) => {
           bodyText={subHeading}
           teamMates={team}
           toolsUsed={tools}
+          projectLink={projectLink}
         />
         <CaseStudySection heading={goals.heading} bodyText={goals.subHeading}>
           <div className="caseStudy__goals">

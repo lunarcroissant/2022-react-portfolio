@@ -3,6 +3,7 @@ import Heading, {
 } from "../../../../../../components/base/Heading/Heading";
 import Icon from "../../../../../../components/base/Icon/Icon";
 import Text, {
+  LineHeight,
   TextSize,
   TextWeight,
 } from "../../../../../../components/base/Text/Text";
@@ -12,7 +13,7 @@ import "./ItemsList.css";
 
 interface CopyItem {
   name: string;
-  role: string;
+  role: string[];
 }
 
 interface IProps {
@@ -43,13 +44,26 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
       ) : (
         copy?.map((copy) => {
           return (
-            <div className="row" key={Math.random()}>
-              <span className="margin-right-1 bold-text">
-                <Text size={TextSize.md} weight={TextWeight.bold}>
+            <div className="row itemsList__teamMember" key={Math.random()}>
+              <span className="margin-right-1 bold-text col itemsList__teamMemberName">
+                <Text
+                  size={TextSize.md}
+                  weight={TextWeight.bold}
+                  lineHeight={LineHeight.standard}
+                >
                   {copy.name}
                 </Text>
               </span>
-              <Text size={TextSize.md}>{copy.role}</Text>
+              <div className="col">
+                {copy.role.length &&
+                  copy.role.map((role) => {
+                    return (
+                      <Text size={TextSize.md} lineHeight={LineHeight.standard}>
+                        {role}
+                      </Text>
+                    );
+                  })}
+              </div>
             </div>
           );
         })

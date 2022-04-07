@@ -20,6 +20,7 @@ interface IProps {
   bodyText: string;
   teamMates: any;
   toolsUsed: any;
+  projectLink?: string;
 }
 
 const CaseStudyHeader = ({
@@ -28,6 +29,7 @@ const CaseStudyHeader = ({
   bodyText,
   teamMates,
   toolsUsed,
+  projectLink,
 }: IProps) => {
   const { setShowCaseStudy } = useContext(PageContext);
   return (
@@ -35,7 +37,7 @@ const CaseStudyHeader = ({
       <VerticalSpacing size="xl" />
       <div className="caseStudyHeader__content justify-between">
         <div className="col">
-          <div className="row">
+          <a className="row caseStudyHeader__liveLink" href={projectLink}>
             <Heading
               colour={TextColour.darkBlack}
               weight={HeadingWeight.light}
@@ -44,7 +46,7 @@ const CaseStudyHeader = ({
               {heading}
             </Heading>
             <Icon size="md" icon="icons_45degArrow" />
-          </div>
+          </a>
 
           <VerticalSpacing size="md" />
           <Text

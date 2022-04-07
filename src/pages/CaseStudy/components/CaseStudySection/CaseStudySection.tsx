@@ -3,7 +3,10 @@ import Heading, {
   HeadingWeight,
   TextColour,
 } from "../../../../components/base/Heading/Heading";
-import Text, { TextSize } from "../../../../components/base/Text/Text";
+import Text, {
+  LineHeight,
+  TextSize,
+} from "../../../../components/base/Text/Text";
 import VerticalSpacing from "../../../../components/base/VerticalSpacing/VerticalSpacing";
 
 import "./CaseStudySection.css";
@@ -36,7 +39,11 @@ const CaseStudySection = ({
       {bodyText && (
         <>
           <VerticalSpacing size="md" />
-          <Text size={TextSize.lg} colour={TextColour.lightBlack}>
+          <Text
+            size={TextSize.lg}
+            colour={TextColour.lightBlack}
+            lineHeight={LineHeight.standard}
+          >
             {bodyText}
           </Text>
         </>

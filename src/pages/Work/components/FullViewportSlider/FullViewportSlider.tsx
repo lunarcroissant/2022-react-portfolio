@@ -98,12 +98,6 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   ) as HTMLElement;
   // const balls = cursorTag?.querySelectorAll("div");
 
-  const determineMouseLocation = (e: any) => {
-    var initialX = e.clientX;
-    var initialY = e.clientY;
-    setMouseLocation({ x: initialX, y: initialY });
-  };
-
   // window.addEventListener("load", determineMouseLocation);
 
   // window.removeEventListener("load", determineMouseLocation);
@@ -143,20 +137,49 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   //   };
   // }, [showCaseStudy, showCTACursor]);
 
-  let aimX = window.innerWidth / 2;
-  let aimY = window.innerHeight / 2;
+  document.addEventListener("mouseenter", function (event) {
+    aimX = event.pageX;
+    aimY = event.pageY;
+  });
+
+  document.addEventListener("mouseover", function (event) {
+    aimX = event.pageX;
+    aimY = event.pageY;
+  });
+
+  let aimX = window.innerWidth * 0.5;
+  let aimY = window.innerHeight * 0.5;
 
   // let currentX = mouseLocation.x;
   // let currentY = mouseLocation.y;
 
-  let currentX = window.innerWidth / 2;
-  let currentY = window.innerHeight / 2;
+  let currentX = 0;
+  let currentY = 0;
 
   let speed = 0.2;
+
+  const determineMouseLocation = (event: any) => {
+    var aimX = event.pageX;
+    var aimY = event.pageY;
+    setMouseLocation({ x: aimX, y: aimY });
+    showCTACursor(true);
+
+    if (projectCursor) {
+      projectCursor.style.left = aimX + "px";
+      projectCursor.style.top = aimY + "px";
+    }
+  };
 
   const animate = function () {
     currentX += (aimX - currentX) * speed;
     currentY += (aimY - currentY) * speed;
+
+    // alert(window.innerWidth);
+
+    // currentX += aimX;
+    // currentY += aimY;
+
+    // alert(`${currentX}, ${currentY}`);
 
     if (projectCursor) {
       projectCursor.style.left = currentX + "px";
@@ -173,13 +196,23 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     aimY = event.pageY;
   });
 
-  document.addEventListener("mouseenter", function (event) {
-    aimX = currentX;
-    aimY = currentY;
-  });
+  // document.addEventListener("pageload", function (event) {
+  //   aimX = event.target?.dispatchEvent.prototype.;
+  //   aimY = event.pageY;
+  //   showCTACursor(true);
+  // });
+
+  // document.addEventListener("mouseleave", function (event) {
+  //   showCTACursor(false);
+  // });
 
   return (
-    <section className="fullviewportslider row">
+    <section
+      className="fullviewportslider row"
+      onMouseEnter={(e) => determineMouseLocation(e)}
+      onMouseLeave={() => showCTACursor(false)}
+      // onMouseOver={(e) => setMouseLocation({ x: e.pageX, y: e.pageY })}
+    >
       <div
         className="fullviewportslider__content"
         id="fullviewportslider__content"
