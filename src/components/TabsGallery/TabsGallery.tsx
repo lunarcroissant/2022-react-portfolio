@@ -178,6 +178,12 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
       icon: "icons_jest--white",
     },
     {
+      skill: "SASS",
+      status: "Intermediate",
+      categories: ["All", "Code"],
+      icon: "icons_sass--white",
+    },
+    {
       skill: "jQuery",
       status: "Advanced",
       categories: ["All", "Code"],
@@ -247,7 +253,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
       skill: "Adobe XD",
       status: "Experienced",
       categories: ["All", "Design"],
-      icon: "icons_adobe-xd--white",
+      icon: "icons_adobeXd--white",
     },
     {
       skill: "Spline",

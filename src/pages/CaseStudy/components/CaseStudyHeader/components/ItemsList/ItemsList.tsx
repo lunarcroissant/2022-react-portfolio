@@ -38,7 +38,15 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
       {icons ? (
         <div className="row">
           {icons.map((icon: any) => {
-            return <Icon size="md" icon={icon.icon} label={icon.name} />;
+            return (
+              <Icon
+                size="lg"
+                icon={icon.icon}
+                label={icon.name}
+                hoverText={icon.name}
+                noleftMargin
+              />
+            );
           })}
         </div>
       ) : (

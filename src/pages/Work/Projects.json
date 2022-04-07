@@ -23,15 +23,21 @@
         "role": ["Product Designer"]
       }],
       "tools": [{
-        "name": "React",
-        "icon": "icons_react--dark"
-      }, {
-        "name": "CSS3",
-        "icon": "icons_css3--dark"
-      }, {
         "name": "Figma",
         "icon": "icons_figma--dark"
-      }],
+      },{
+        "name": "Prototyping",
+        "icon": "icons_prototype--dark"
+      }, {
+        "name": "UX Research",
+        "icon": "icons_users--dark"
+      }, {
+        "name": "Wireframing",
+        "icon": "icons_wireframe--dark"
+      }, {
+        "name": "Photoshop",
+        "icon": "icons_adobe-photoshop--dark"
+      } ],
       "goals": {
         "heading": "Goals",
         "subHeading": null,
@@ -84,14 +90,20 @@
         "role": ["Product Designer"]
       }],
       "tools": [{
-        "name": "React",
-        "icon": "icons_react--dark"
-      }, {
-        "name": "CSS3",
-        "icon": "icons_css3--dark"
-      }, {
         "name": "Figma",
         "icon": "icons_figma--dark"
+      },{
+        "name": "Prototyping",
+        "icon": "icons_prototype--dark"
+      }, {
+        "name": "UX Research",
+        "icon": "icons_users--dark"
+      }, {
+        "name": "Wireframing",
+        "icon": "icons_wireframe--dark"
+      }, {
+        "name": "Photoshop",
+        "icon": "icons_adobe-photoshop--dark"
       }],
       "goals": {
         "heading": "Goals",
@@ -143,22 +155,16 @@
       "team": [{
         "name": "Eddie Tierney",
         "role": ["Product Designer"]
-      }, {
-        "name": "Jordan Joseph",
-        "role": ["Content Designer"]
-      }, {
-        "name": "Stefano Chiesa",
-        "role": ["Product Designer"]
       }],
       "tools": [{
-        "name": "React",
-        "icon": "icons_react--dark"
+        "name": "Prototyping",
+        "icon": "icons_prototype--dark"
       }, {
-        "name": "CSS3",
-        "icon": "icons_css3--dark"
+        "name": "UX Research",
+        "icon": "icons_users--dark"
       }, {
-        "name": "Figma",
-        "icon": "icons_figma--dark"
+        "name": "AdobeXD",
+        "icon": "icons_adobeXd--dark"
       }],
       "goals": {
         "heading": "Goals",
@@ -215,8 +221,23 @@
         "name": "React",
         "icon": "icons_react--dark"
       }, {
+        "name": "TypeScript",
+        "icon": "icons_typescript--dark"
+      },{
+        "name": "SASS",
+        "icon": "icons_sass--dark"
+      }, {
         "name": "CSS3",
         "icon": "icons_css3--dark"
+      }, {
+        "name": "Git",
+        "icon": "icons_git--dark"
+      },{
+        "name": "HTML5",
+        "icon": "icons_html5--dark"
+      },{
+        "name": "JavaScript",
+        "icon": "icons_javascript--dark"
       }, {
         "name": "Figma",
         "icon": "icons_figma--dark"
@@ -284,6 +305,18 @@
       }, {
         "name": "Figma",
         "icon": "icons_figma--dark"
+      },{
+        "name": "SASS",
+        "icon": "icons_sass--dark"
+      }, {
+        "name": "Git",
+        "icon": "icons_git--dark"
+      },{
+        "name": "HTML5",
+        "icon": "icons_html5--dark"
+      },{
+        "name": "JavaScript",
+        "icon": "icons_javascript--dark"
       }],
       "goals": {
         "heading": "Goals",

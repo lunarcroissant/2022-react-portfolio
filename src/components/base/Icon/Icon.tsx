@@ -13,6 +13,7 @@ interface IProps {
   isButton?: boolean;
   label?: string;
   hoverText?: string;
+  noleftMargin?: boolean;
 }
 
 export enum Backgrounds {
@@ -32,6 +33,7 @@ const Icon = ({
   isButton,
   label,
   hoverText,
+  noleftMargin,
 }: IProps) => {
   if (isButton) {
     return (
@@ -63,13 +65,23 @@ const Icon = ({
           border || isButton ? `icon icon-button icon--${border}-white` : `icon`
         }
         onClick={handleClick}
-        style={{ opacity: `${opacity}` }}
+        style={{
+          opacity: `${opacity}`,
+          paddingLeft: noleftMargin ? 0 : undefined,
+        }}
       >
         <img
           src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}
           alt={icon}
           className={`icon--${size}`}
         />
+        {hoverText ? (
+          <div className="icon__text">
+            <Text size={TextSize.md} colour={TextColour.lightBlack}>
+              {label}
+            </Text>
+          </div>
+        ) : null}
       </div>
     </span>
   );
