@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 import Heading, {
   HeadingWeight,
   TextColour,
@@ -42,11 +42,11 @@ const CaseStudySection = ({
         </>
       )}
 
-      <VerticalSpacing size="xl" />
+      <VerticalSpacing size="lg" />
       {children}
-      <VerticalSpacing size="xl" />
+      <VerticalSpacing size="xxl" />
     </div>
   );
 };
 
-export default CaseStudySection;
+export default memo(CaseStudySection);

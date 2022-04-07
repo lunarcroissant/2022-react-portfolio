@@ -29,7 +29,7 @@ const CaseStudy = ({ data }: IProps) => {
     const eventTarget = event.target as HTMLDivElement;
     let scrollDistance = eventTarget.scrollTop;
 
-    if (scrollDistance! > 75) {
+    if (scrollDistance! > 0) {
       setScrollingHeader(true);
     } else {
       setScrollingHeader(false);

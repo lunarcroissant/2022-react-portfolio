@@ -31,7 +31,7 @@ const NumberedItem = ({ data, number }: IProps) => {
       <Text size={TextSize.sm} colour={TextColour.lightBlack}>
         {copy}
       </Text>
-      <VerticalSpacing size="lg" />
+      {/* <VerticalSpacing size="lg" /> */}
     </div>
   );
 };
