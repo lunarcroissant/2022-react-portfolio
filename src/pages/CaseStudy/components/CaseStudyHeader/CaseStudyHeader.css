@@ -8,6 +8,11 @@
 }
 .caseStudyHeader__liveLink:hover {
   text-decoration: underline;
+  text-decoration-color: var(--dark-black);
+}
+.caseStudyHeader__liveLink:visited {
+  text-decoration: underline;
+  text-decoration-color: var(--dark-black);
 }
 .caseStudyHeader__backButton {
   all: unset;

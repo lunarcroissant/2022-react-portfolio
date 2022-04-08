@@ -15,7 +15,13 @@
 
     &:hover {
       text-decoration: underline;
+      text-decoration-color: var(--dark-black);
       // border-bottom: 2px solid var(--dark-black);
+    }
+
+    &:visited {
+      text-decoration: underline;
+      text-decoration-color: var(--dark-black);
     }
   }
 
