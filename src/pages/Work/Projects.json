@@ -125,15 +125,21 @@
       },
       "articleSections": [
         {
-          "heading": "A sleek mobile experience",
+          "heading": "Existing friticion",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
+        "image": "iOSAlarms_OriginalScreens_6000x4000.jpg",
         "imageAlt": "This is a case study image"
         },
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_EEPDPOnGreyBackground.jpg",
+        "image": "iOSAlarms_TwoScreenSolution_6000x4000.jpg",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "iOSAlarms_FirstSolutionUseCase_6000x4000.jpg",
         "imageAlt": "This is a case study image"
         }
       ] 
