@@ -218,7 +218,7 @@
     "caseStudyContent": {
       "heading": "Evopack",
       "subHeading": "Evopack, a Swiss/German start-up, asked me to build a brand and website to represent their revolutionary and sustainable packaging solutions. As part of this, I created a custom design system and built their web app using React, SCSS, Figma and TypeScript.",
-      "projectLink": null,
+      "projectLink": "https://practical-hypatia-0164f0.netlify.app/",
       "team": [{
         "name": "Eddie Tierney",
         "role": [["Product Designer"], "Front-end Developer", "Branding"] 
@@ -270,13 +270,14 @@
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
+        
+        "image": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
         "imageAlt": "This is a case study image"
         },
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
+        "image": "Evopack_LaptopStack_6000x4000.jpg",
         "imageAlt": "This is a case study image"
         }
       ] 
@@ -353,6 +354,18 @@
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
         "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Atiq_ClothingPageTop_6000x4000.jpg",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "A sleek mobile experience",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "image": "Atiq_HomePageTop_6000x4000.jpg",
         "imageAlt": "This is a case study image"
         }
       ] 
