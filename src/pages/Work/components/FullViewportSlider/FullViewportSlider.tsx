@@ -231,13 +231,14 @@ const FullViewportSlider = ({ children, data }: IProps) => {
       />
       {showCaseStudy ? <CaseStudy data={caseStudyContent} /> : null}
 
-      {showCTACursor && showCaseStudy ? null : (
-        <div
-          className={`fullviewportslider__cursor row align-center justify-center center-text`}
-        >
-          <Text size={TextSize.lg}>Read Case Study</Text>
-        </div>
-      )}
+      {showCTACursor && showCaseStudy
+        ? null
+        : // <div
+          //   className={`fullviewportslider__cursor row align-center justify-center center-text`}
+          // >
+          //   <Text size={TextSize.lg}>Read Case Study</Text>
+          // </div>
+          null}
 
       <PageCounter data={""} />
     </section>
