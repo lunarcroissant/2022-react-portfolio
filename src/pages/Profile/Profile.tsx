@@ -37,10 +37,7 @@ const Profile = ({ data }: IProps) => {
     };
   });
   return (
-    <div
-      className="profile col align-center justify-c"
-      onScroll={(e: any) => handleScroll(e)}
-    >
+    <div className="profile col" onScroll={(e: any) => handleScroll(e)}>
       <span className="profile__fade1"></span>
       <span className="profile__fade2"></span>
       <Header

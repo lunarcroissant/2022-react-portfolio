@@ -7,7 +7,8 @@
   /* overflow-y: hidden; */
   // background: var(--primary);
   // background: linear-gradient(90deg, #237c97, #115a71);
-  background: linear-gradient(96.98deg, #286685 1.7%, #508A99 96.33%);
+  // background: linear-gradient(96.98deg, #286685 1.7%, #508A99 96.33%);
+  background: linear-gradient(84deg,#09466a 1.7%,#32959d 96.33%);
   // background: #252651;
   // background: url(/public/assets/profileImage.jpg) no-repeat;
   background-size: cover;
@@ -26,7 +27,7 @@
   }
 
   &__contentColumn {
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 0 2rem;
 
     & p {
@@ -36,7 +37,7 @@
 
   &__heading {
     font-family: "Junicode";
-    font-size: 6rem;
+    font-size: 4.5rem;
     color: #f8f8f8;
     letter-spacing: -0.05em;
     line-height: 1.2em;
