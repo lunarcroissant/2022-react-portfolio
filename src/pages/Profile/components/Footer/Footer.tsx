@@ -12,7 +12,7 @@ const Footer = ({}) => {
     <footer className="footer width-100 padding-horizontal-4">
       <VerticalSpacing size="xl" />
       <div className="footer__divider"></div>
-      <VerticalSpacing size="sm" />
+      <VerticalSpacing size="md" />
       <div className="row width-100 justify-between align-center">
         <Text
           size={TextSize.sm}
