@@ -7,6 +7,23 @@
 .header__logo {
   text-decoration: none;
 }
+.header__scrollingDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  z-index: 100;
+  top: 109px;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 1500ms;
+  transform-origin: center;
+  opacity: 0;
+}
+.header .isScrolling {
+  width: 100%;
+  opacity: 1;
+}
 
 header {
   cursor: pointer;
@@ -42,6 +59,28 @@ header {
   box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.4);
 }
 
+.nonScrollingGlobalHeader {
+  transform-origin: center;
+}
+
+.scrollingGlobalHeader {
+  position: fixed;
+  z-index: 111;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transform-origin: center;
+  backdrop-filter: blur(4rem);
+}
+
+@keyframes fillWidthFromLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .header {
     position: fixed;

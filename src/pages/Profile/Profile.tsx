@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import Heading, { TextColour } from "../../components/base/Heading/Heading";
-import Text, { LineHeight, TextSize } from "../../components/base/Text/Text";
+import Text, {
+  LineHeight,
+  TextSize,
+  TextWeight,
+} from "../../components/base/Text/Text";
 import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpacing";
 import Header from "../../components/global/Header/Header";
 import TabsGallery from "../../components/TabsGallery/TabsGallery";
@@ -19,6 +23,7 @@ const Profile = ({ data }: IProps) => {
 
   const [scrolledDistance, setScrolledDistance] = useState(window.screenY);
   const [blur, setBlur] = useState("0px");
+  const [autoScrolling, setAutoScrolling] = useState(false);
 
   const handleScroll = (e: Event) => {
     const verticalOffset =
@@ -28,6 +33,60 @@ const Profile = ({ data }: IProps) => {
     setScrolledDistance(verticalOffset);
     setBlur(`${(verticalOffset / percentageVerticalOffset) * 50}px`);
   };
+
+  const scrollingZone = document.querySelector(
+    "profile__glowBallAnimationWrapper"
+  ) as HTMLElement;
+
+  let currentY = 0;
+
+  let aimY = 400;
+
+  let speed = 0.2;
+
+  const animateScrollingOnHover = function () {
+    var distancePerSec = 1000;
+
+    var h = document.body.getBoundingClientRect().height;
+    var targetScrollTop = h - window.screenY;
+    var distanceToTravel = targetScrollTop - window.scrollY;
+
+    currentY += (targetScrollTop - window.screenY) * speed;
+
+    if (scrollingZone) {
+      // scrollingZone.style. = currentY + "px";
+      window.scrollTo({ top: currentY });
+      window.screenTop = currentY;
+    }
+
+    requestAnimationFrame(animateScrollingOnHover);
+  };
+
+  // document.addEventListener("mouseover", function () {
+  //   var distancePerSec = 1000;
+
+  //   var h = document.body.getBoundingClientRect().height;
+  //   var targetScrollTop = h - window.screenY;
+  //   var distanceToTravel = targetScrollTop - window.scrollY;
+  //   var animationDuration = (distanceToTravel / distancePerSec) * 1000;
+  // });
+
+  function startScrolling() {
+    if (!autoScrolling) {
+      setAutoScrolling(true);
+      window.scroll({
+        top: 1000,
+        behavior: "smooth",
+      });
+    }
+  }
+
+  // function stopScrolling() {
+  //   setAutoScrolling(false);
+  //   // window.scroll(0, 1000);
+  // }
+
+  animateScrollingOnHover();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -40,22 +99,27 @@ const Profile = ({ data }: IProps) => {
     <div className="profile col" onScroll={(e: any) => handleScroll(e)}>
       <span className="profile__fade1"></span>
       <span className="profile__fade2"></span>
+      <div className="profile__glowBallAnimationWrapper">
+        <div className="profile__glowballWrapper">
+          <div
+            className="profile__glowball"
+            onMouseOver={() => startScrolling()}
+          ></div>
+        </div>
+        <div className="profile__glowballWrapper1">
+          <div
+            className="profile__glowball1"
+            onMouseOver={() => startScrolling()}
+          ></div>
+        </div>
+      </div>
+
       <Header
         linkLabels={[
           { label: "Work", urlPath: "/" },
           { label: "Profile", urlPath: "/profile" },
-          // { label: "Testimonials", urlPath: "/testimonials" },
-          // { label: "Contact", urlPath: "/contact" },
         ]}
       />
-      {/* <SplitScreen
-        heading=" Hallo, I'm Eddie"
-        copy="I’m a British/German UI/UX Designer and Front-End Developer that loves
-          to bridge the gap between amazing design and technical implementation."
-        imageURL="profileImage.jpg"
-        primaryCTA="See skills overview"
-        secondaryCTA="Read Testimonials"
-      /> */}
 
       {/* <svg viewBox="0 0 5vw 5vw">
         <path
@@ -119,6 +183,8 @@ const Profile = ({ data }: IProps) => {
           lineHeight={LineHeight.standard}
           size={TextSize.lg}
           colour={TextColour.offWhite}
+          weight={TextWeight.light}
+          opacity={"0.8"}
           blur={blur}
         >
           I’m a British/German UI/UX Designer and Front-End Developer that loves
@@ -131,6 +197,8 @@ const Profile = ({ data }: IProps) => {
           lineHeight={LineHeight.standard}
           size={TextSize.lg}
           colour={TextColour.offWhite}
+          weight={TextWeight.light}
+          opacity={"0.8"}
           blur={blur}
         >
           Having worked in Marketing, Product Management and Sales, I make sure

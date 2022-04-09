@@ -34,8 +34,6 @@ const MobileMenu = ({ links }: IProps) => {
     (link) => link.urlPath !== window.location.pathname
   );
 
-  console.log(activeLink);
-
   const { mobileMenuVisible, setMobileMenuVisible } = useContext(GlobalContext);
   return (
     <nav className={`mobileMenu ${mobileMenuVisible ? "active" : null}`}>
