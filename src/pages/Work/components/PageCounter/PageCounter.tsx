@@ -28,6 +28,39 @@ const PageCounter = ({ data }: IProps) => {
 
   const isMobile = useViewportSize(768);
 
+  const sliderParentComponent = document.querySelector(
+    ".fullviewportslider__content"
+  );
+
+  function scrollNextProject() {
+    if (sliderParentComponent && currentPage < totalPages - 1) {
+      setCurrentPage(currentPage + 1);
+      sliderParentComponent.scroll({
+        top: window.innerHeight * (currentPage + 1),
+        behavior: "smooth",
+      });
+    }
+  }
+
+  function scrollPrevProject() {
+    if (sliderParentComponent && currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+      sliderParentComponent.scroll({
+        top: window.innerHeight * (currentPage - 1),
+        behavior: "smooth",
+      });
+    } else {
+      //
+    }
+  }
+
+  // function scrollDownOneProject() {
+  //   window.scroll({
+  //     top: window.,
+  //     behavior: "smooth",
+  //   });
+  // }
+
   if (isMobile) {
     return (
       <div className="pageCounter--mobile row">
@@ -65,7 +98,7 @@ const PageCounter = ({ data }: IProps) => {
         size="sm"
         icon="icons_chevron-up--white"
         isButton
-        handleClick={() => setCurrentPage(currentPage - 1)}
+        handleClick={() => scrollPrevProject()}
       />
       <div className="row">
         <Text
@@ -98,7 +131,7 @@ const PageCounter = ({ data }: IProps) => {
         size="sm"
         icon="icons_chevron-down--white"
         isButton
-        handleClick={() => setCurrentPage(currentPage + 1)}
+        handleClick={() => scrollNextProject()}
       />
     </div>
   );
