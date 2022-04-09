@@ -11,6 +11,8 @@ interface IProps {
   icon?: string;
   handleClick?: any;
   isButton?: boolean;
+  isLink?: boolean;
+  href?: string;
   label?: string;
   hoverText?: string;
   noleftMargin?: boolean;
@@ -31,10 +33,37 @@ const Icon = ({
   icon,
   handleClick,
   isButton,
+  isLink,
+  href,
   label,
   hoverText,
   noleftMargin,
 }: IProps) => {
+  if (isLink) {
+    return (
+      <a
+        className={`icon icon-button icon-link col justify-center align-center`}
+        onClick={handleClick}
+        style={background ? { background: `${background}` } : undefined}
+        href={href}
+        target="_blank"
+      >
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}
+          alt={icon}
+          className={`icon--${size}`}
+        />
+        {label ? (
+          <>
+            <VerticalSpacing size="sm" />
+            <Text size={TextSize.md} colour={TextColour.offWhite}>
+              {label}
+            </Text>
+          </>
+        ) : null}
+      </a>
+    );
+  }
   if (isButton) {
     return (
       <button

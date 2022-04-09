@@ -60,11 +60,15 @@
   white-space: nowrap;
 }
 
+.icon-link {
+  text-decoration: none;
+}
+
 .icon:hover > .icon__text {
   opacity: 1;
 }
 
-button.icon {
+button.icon, a.icon {
   all: unset;
   padding: 1rem;
   width: min-content;
@@ -77,10 +81,11 @@ button.icon {
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
   cursor: pointer;
 }
-button.icon img {
+button.icon img, a.icon img {
   transition: 400ms ease-in-out all;
 }
-button.icon:hover {
+
+button.icon:hover, a.icon:hover {
   background: rgba(240, 240, 240, 0.2);
   transform: scale(1.1);
 }

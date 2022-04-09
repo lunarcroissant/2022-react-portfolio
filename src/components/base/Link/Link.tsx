@@ -1,7 +1,7 @@
 import Icon from "../Icon/Icon";
-import "./Button.css";
+import "./Link.css";
 
-export enum ButtonType {
+export enum LinkType {
   primary = "btn-primary",
   primaryWhite = "btn-primary--light",
   secondary = "btn-secondary",
@@ -20,19 +20,20 @@ export enum Icons {
 }
 
 interface IProps {
-  buttonVariant: ButtonType;
+  linkVariant: LinkType;
   children: string;
   icon?: Icons;
   handleClick?: (value: any) => void;
+  href?: string;
 }
 
-const Button = ({ buttonVariant, icon, children, handleClick }: IProps) => {
+const Link = ({ linkVariant, icon, children, handleClick, href }: IProps) => {
   return (
-    <button className={`btn ${buttonVariant}`} onClick={handleClick}>
+    <a className={`btn ${linkVariant}`} onClick={handleClick} href={href}>
       {icon ? <Icon size="md" icon={icon} /> : null}
       {children}
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default Link;
