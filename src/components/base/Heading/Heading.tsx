@@ -5,6 +5,7 @@ interface IProps {
   colour: string;
   weight?: HeadingWeight;
   headingLevel: string;
+  isSerifFont?: boolean;
 }
 export enum HeadingWeight {
   thin = "200",
@@ -27,11 +28,17 @@ export enum TextColour {
   lightGrey = "var(--light-grey)",
 }
 
-const Heading = ({ children, colour, weight, headingLevel }: IProps) => {
+const Heading = ({
+  children,
+  colour,
+  weight,
+  headingLevel,
+  isSerifFont,
+}: IProps) => {
   if (headingLevel === "h4") {
     return (
       <h2
-        className="headingH4"
+        className={`headingH4 ${isSerifFont && "serifHeading"}`}
         style={{
           color: `${colour}`,
           fontWeight: `${weight}`,
@@ -44,7 +51,7 @@ const Heading = ({ children, colour, weight, headingLevel }: IProps) => {
   if (headingLevel === "h3") {
     return (
       <h2
-        className="headingH3"
+        className={`headingH3 ${isSerifFont && "serifHeading"}`}
         style={{
           color: `${colour}`,
           fontWeight: `${weight}`,
@@ -57,7 +64,7 @@ const Heading = ({ children, colour, weight, headingLevel }: IProps) => {
   if (headingLevel === "h2") {
     return (
       <h2
-        className="headingH2"
+        className={`headingH2 ${isSerifFont && "serifHeading"}`}
         style={{
           color: `${colour}`,
           fontWeight: `${weight}`,
@@ -69,7 +76,7 @@ const Heading = ({ children, colour, weight, headingLevel }: IProps) => {
   }
   return (
     <h1
-      className="headingH1"
+      className={`headingH1 ${isSerifFont && "serifHeading"}`}
       style={{
         color: `${colour}`,
         fontWeight: `${weight}`,

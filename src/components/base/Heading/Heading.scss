@@ -1,19 +1,32 @@
 .headingH2 {
   font-size: 4rem;
   z-index: 1;
+
+  &.serifHeading {
+    font-family: "Junicode";
+  }
 }
 
 .headingH1 {
   font-size: 6rem;
   // font-size: 4.5rem;
+  &.serifHeading {
+    font-family: "Junicode";
+  }
 }
 
 .headingH3 {
   font-size: 2.25rem;
   z-index: 1;
+  &.serifHeading {
+    font-family: "Junicode";
+  }
 }
 
 .headingH4 {
   font-size: 1.5rem;
   z-index: 1;
+  &.serifHeading {
+    font-family: "Junicode";
+  }
 }

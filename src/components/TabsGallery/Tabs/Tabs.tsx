@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import CheckboxItem from "../../base/CheckboxItem/CheckboxItem";
-import Heading, { TextColour } from "../../base/Heading/Heading";
+import Heading, { HeadingWeight, TextColour } from "../../base/Heading/Heading";
 import VerticalSpacing from "../../base/VerticalSpacing/VerticalSpacing";
 import TabsContext from "../contexts/TabsContext";
 
@@ -119,7 +119,12 @@ const Tabs = ({ data, heading }: IProps) => {
               //       }
               // }
             >
-              <Heading headingLevel="h2" colour={TextColour.white}>
+              <Heading
+                headingLevel="h2"
+                colour={TextColour.white}
+                isSerifFont
+                weight={HeadingWeight.regular}
+              >
                 What I help with
               </Heading>
               <VerticalSpacing size="xl" />
