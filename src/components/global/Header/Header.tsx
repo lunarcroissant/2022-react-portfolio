@@ -15,7 +15,8 @@ interface IProps {
 }
 
 const Header = ({ linkLabels }: IProps) => {
-  const { setContactFormVisible } = useContext(GlobalContext);
+  const { setContactFormVisible, setMobileMenuVisible } =
+    useContext(GlobalContext);
 
   const { setShowCTACursor } = useContext(PageContext);
   const [scrolling, setScrolling] = useState(false);
@@ -109,6 +110,7 @@ const Header = ({ linkLabels }: IProps) => {
           key={"HomeLogoLink"}
           onMouseEnter={() => setShowCTACursor(false)}
           onMouseLeave={() => setShowCTACursor(true)}
+          onClick={() => setMobileMenuVisible(false)}
         >
           {/* <a className="header__home row"> */}
           <img

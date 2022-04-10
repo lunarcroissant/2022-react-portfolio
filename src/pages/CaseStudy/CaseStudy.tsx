@@ -14,6 +14,7 @@ import "./CaseStudy.css";
 import { NavLink } from "react-router-dom";
 import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 import Icon from "../../components/base/Icon/Icon";
+import GlobalContext from "../../contexts/GlobalContext/GlobalContext";
 
 interface IProps {
   data: any;
@@ -36,6 +37,7 @@ const CaseStudy = ({ data }: IProps) => {
 
   const isMobile = useViewportSize(1024);
 
+  const { setMobileMenuVisible } = useContext(GlobalContext);
   const { setShowCaseStudy } = useContext(PageContext);
 
   const measureScrolledDistance = (event: React.UIEvent<HTMLDivElement>) => {
@@ -91,6 +93,7 @@ const CaseStudy = ({ data }: IProps) => {
               to={`/`}
               className={"row header__logo"}
               key={"HomeLogoLink"}
+              onClick={() => setShowCaseStudy(false)}
             >
               {/* <a className="header__home row"> */}
               {/* <img
