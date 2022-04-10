@@ -131,7 +131,7 @@ const CaseStudy = ({ data }: IProps) => {
             onClick={() => setShowCaseStudy(false)}
           >
             {isMobile ? (
-              <Text size={TextSize.xs} colour={TextColour.lightBlack}>
+              <Text size={TextSize.xs} colour={TextColour.white}>
                 Back to projects
               </Text>
             ) : (
