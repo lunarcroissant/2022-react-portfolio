@@ -147,20 +147,20 @@ const Profile = ({ data }: IProps) => {
             Hey! I'm{" "}
             <a href="" className="profile__headingLink">
               Eddie
-            </a>
-            , a British/German{" "}
+            </a>{" "}
+            , a{" "}
           </span>
           <span
             className="profile__headingStandOut"
             style={{ filter: `blur(0)` }}
           >
-            UI/UX Designer and Front-End Developer{" "}
+            Product Designer and Front-End Developer{" "}
           </span>
           <span
             className="profile__headingStandBack"
             style={{ filter: `blur(${blur})` }}
           >
-            {""}based{" "}
+            {""}originally from Germany based{" "}
             {/* <a href="" className="profile__headingLink">
               London
             </a> */}
