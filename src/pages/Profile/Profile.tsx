@@ -8,6 +8,7 @@ import Text, {
 import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpacing";
 import Header from "../../components/global/Header/Header";
 import TabsGallery from "../../components/TabsGallery/TabsGallery";
+import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 import Footer from "./components/Footer/Footer";
 
 import "./Profile.css";
@@ -24,6 +25,8 @@ const Profile = ({ data }: IProps) => {
   const [scrolledDistance, setScrolledDistance] = useState(window.screenY);
   const [blur, setBlur] = useState("0px");
   const [autoScrolling, setAutoScrolling] = useState(false);
+
+  const isMobile = useViewportSize(1024);
 
   const handleScroll = (e: Event) => {
     const verticalOffset =
@@ -134,7 +137,11 @@ const Profile = ({ data }: IProps) => {
           <textPath xlinkHref="#curve">Dangerous Curves Ahead</textPath>
         </text>
       </svg> */}
-      <VerticalSpacing size="xl" />
+      {isMobile ? null : (
+        <>
+          <VerticalSpacing size="xl" />
+        </>
+      )}
       <VerticalSpacing size="xl" />
       <VerticalSpacing size="xl" />
 

@@ -198,12 +198,16 @@
   .profile {
     &__heading {
       font-family: "Junicode";
-      font-size: 4rem;
+      font-size: 2rem;
       color: #f8f8f8;
       letter-spacing: -0.05em;
       line-height: 1.2em;
       font-style: normal;
       font-weight: 400;
+    }
+
+    &__headingLink {
+      border-bottom: solid 2px white;
     }
 
     &__contentColumn {

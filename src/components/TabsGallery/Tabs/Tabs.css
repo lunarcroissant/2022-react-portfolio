@@ -1,7 +1,7 @@
 .tabs {
   overflow-x: scroll;
   overflow: visible;
-  padding: 0 1rem 0 0;
+  padding: 0 0 0 0;
   transition: 400ms ease-in-out;
 }
 .tabs::-webkit-scrollbar, .tabs::-webkit-scrollbar {
@@ -17,6 +17,9 @@
   width: 100%;
   white-space: nowrap;
   flex-wrap: nowrap;
+}
+.tabs__container div {
+  margin-right: 1rem;
 }
 .tabs__container > * {
   margin-right: 1rem;
@@ -39,7 +42,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .tabs__container {
-    justify-content: flex-start;
+  .tabs__container div:last-of-type {
+    margin-right: 0;
   }
 }

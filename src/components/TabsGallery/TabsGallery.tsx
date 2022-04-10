@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
+import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 import ItemsGrid from "../../pages/Profile/components/ItemsGrid/ItemsGrid";
 // import useInnerScrollDistance from "../../hooks/useInnerScrollDistance/useInnerScrollDistance";
 import CheckboxItem from "../base/CheckboxItem/CheckboxItem";
@@ -21,6 +22,8 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
   const [filter, setFilter] = useState(data[0].label);
   const [scrolledDistance, setScrolledDistance] = useState(window.screenY);
   const [blur, setBlur] = useState("0px");
+
+  const isMobile = useViewportSize(1024);
 
   // var pagePosition = useInnerScrollDistance();
 
@@ -322,7 +325,8 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
         {children}
         <ItemsGrid filter={filter} data={getRelevantSkills} />
         <VerticalSpacing size="xl" />
-        <VerticalSpacing size="xl" />
+        {isMobile ? <VerticalSpacing size="xl" /> : null}
+
         {/* {content[filter].map((content: any) => {
         return (
 
