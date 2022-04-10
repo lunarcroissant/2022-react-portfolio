@@ -37,7 +37,7 @@ const CaseStudyHeader = ({
 
   return (
     <div className="caseStudyHeader width-100">
-      <VerticalSpacing size={"xl"} />
+      <VerticalSpacing size={isMobile ? "undefined" : "xl"} />
       <div className="caseStudyHeader__content justify-between">
         <div className="col">
           <a
