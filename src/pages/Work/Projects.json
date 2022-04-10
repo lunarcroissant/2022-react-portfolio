@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-    "title": "EE Product Page Redesign",
+    "title": "EE Product Page",
     "description": "Overhauling an e-commerce page to optimise customer satisfaction",
     "tags": [
       "UI Design", "React", "Figma"
@@ -9,7 +9,7 @@
     "backgroundColour": "#068080",
     "heroImage": "EE_4000x2000.png",
     "caseStudyContent": {
-      "heading": "EE Product Page Redesign",
+      "heading": "EE Product Page",
       "subHeading": "Combining business goals, such as increased user log ins, increased conversation, and UX improvments, this project simplifies a complex checkout process, increases upsell possibilities and provides a supportive journey to customers.",
       "projectLink": null,
       "team": [{
@@ -43,15 +43,15 @@
         "subHeading": null,
         "goals": [
           {
-            "heading": "Improve the speed",
+            "heading": "Quick and supportive",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Improve the speed",
+            "heading": "Improve turnover",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Improve the speed",
+            "heading": "Minimise excess content work",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           }
         ]
@@ -253,7 +253,7 @@
         "subHeading": null,
         "goals": [
           {
-            "heading": "Recognisable and accessible",
+            "heading": "Brand recognition and contact",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
@@ -262,7 +262,7 @@
           },
           {
             "heading": "Maintainable",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "copy": "Evopack is a multi-national company, operating in English, German and French. They needed a digital estate that they can easily update, including allowing customers to translate content between different languages."
           }
         ]
       },
@@ -330,15 +330,15 @@
         "subHeading": null,
         "goals": [
           {
-            "heading": "Improve the speed",
+            "heading": "Scalable and maintainable",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Purpose built",
+            "heading": "Learn React, Sass and TypeScript",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           },
           {
-            "heading": "Improve the speed",
+            "heading": "Exploration with a swift route to purchase",
             "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
           }
         ]
