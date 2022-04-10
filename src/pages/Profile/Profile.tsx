@@ -184,7 +184,7 @@ const Profile = ({ data }: IProps) => {
           size={TextSize.lg}
           colour={TextColour.offWhite}
           weight={TextWeight.light}
-          opacity={"0.8"}
+          opacity={"0.9"}
           blur={blur}
         >
           I’m a British/German UI/UX Designer and Front-End Developer that loves
@@ -198,7 +198,7 @@ const Profile = ({ data }: IProps) => {
           size={TextSize.lg}
           colour={TextColour.offWhite}
           weight={TextWeight.light}
-          opacity={"0.8"}
+          opacity={"0.9"}
           blur={blur}
         >
           Having worked in Marketing, Product Management and Sales, I make sure
