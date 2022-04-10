@@ -112,3 +112,31 @@ header {
     top: 0;
   }
 }
+@media screen and (max-width: 1024px) {
+  .navlink {
+    padding: 0rem 0rem;
+    background: transparent;
+    border-radius: 0.5rem;
+    color: var(--off-white);
+    font-weight: var(--font--medium);
+    margin-left: 0rem;
+    height: min-content;
+    cursor: pointer;
+    transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+  }
+
+  .navlink:hover {
+    background: none;
+  }
+
+  .navlink__mobileMenuLink {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+  }
+
+  .header__content {
+    padding: 1rem var(--container-padding-width);
+  }
+}

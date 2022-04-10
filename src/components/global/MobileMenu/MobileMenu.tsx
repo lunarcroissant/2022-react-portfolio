@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import GlobalContext from "../../../contexts/GlobalContext/GlobalContext";
 import Icon from "../../base/Icon/Icon";
+import NavLinkNative from "../../base/NavLinkNative/NavLinkNative";
 import Text, { TextColour, TextSize, TextWeight } from "../../base/Text/Text";
 import VerticalSpacing from "../../base/VerticalSpacing/VerticalSpacing";
 
@@ -15,7 +16,6 @@ const MobileMenu = ({ links }: IProps) => {
   const globalLinks = [
     { label: "Work", urlPath: "/" },
     { label: "Profile", urlPath: "/profile" },
-    { label: "Contact", urlPath: "/contact" },
   ];
   const linksS = [
     { label: "Profile", urlPath: "google.com" },
@@ -34,7 +34,12 @@ const MobileMenu = ({ links }: IProps) => {
     (link) => link.urlPath !== window.location.pathname
   );
 
-  const { mobileMenuVisible, setMobileMenuVisible } = useContext(GlobalContext);
+  const {
+    mobileMenuVisible,
+    setMobileMenuVisible,
+    setContactFormVisible,
+    contactFormVisible,
+  } = useContext(GlobalContext);
   return (
     <nav className={`mobileMenu ${mobileMenuVisible ? "active" : null}`}>
       {/* <Icon isButton size="md" icon="icons_hamburgerMenu--darkPrimary" /> */}
@@ -117,6 +122,20 @@ const MobileMenu = ({ links }: IProps) => {
                 </NavLink>
               );
             })}
+            <NavLinkNative handleClick={() => setContactFormVisible(true)}>
+              <Text
+                size={TextSize.xxl}
+                weight={TextWeight.regular}
+                colour={TextColour.white}
+              >
+                Contact
+              </Text>
+              <Icon
+                size="md"
+                icon="icons_chevron-right--white"
+                // padding="0rem"
+              />
+            </NavLinkNative>
           </div>
 
           <VerticalSpacing size="lg" />

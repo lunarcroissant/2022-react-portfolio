@@ -25,3 +25,13 @@
 .caseStudyHeader__backButton:hover {
   text-decoration: none;
 }
+
+@media screen and (max-width: 1024px) {
+  .caseStudyHeader__content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .caseStudyHeader__backButton {
+    color: white;
+    text-decoration-color: #fff;
+  }
+}

@@ -102,7 +102,7 @@ const Header = ({ linkLabels }: IProps) => {
       onMouseLeave={() => setShowCTACursor(true)}
       onScroll={measureScrolledDistance}
     >
-      <nav className="row padding-4 align-center justify-between width-100">
+      <nav className="row padding-4 align-center justify-between width-100 header__content">
         <NavLink
           to={`/`}
           className={"row header__logo"}

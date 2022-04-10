@@ -1,5 +1,5 @@
 .fullpagemodal {
-  z-index: 100;
+  z-index: 9000;
   height: 100vh;
   background: rgba(40, 42, 51, 0);
 }
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 100;
+  z-index: 9000;
 }
 .fullpagemodal__content {
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 .fullpagemodal {
-  z-index: 100;
+  z-index: 9000;
   height: 100vh;
   background: rgba(255, 255, 255, 0);
 }
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 100;
+  z-index: 9000;
 }
 .fullpagemodal > * {
   color: var(--dark-grey);
@@ -69,6 +69,7 @@
   position: fixed;
   top: 3rem;
   right: 3rem;
+  z-index: 10000;
 }
 
 @keyframes fadeInUp {
@@ -87,5 +88,15 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .fullpagemodal__content--light {
+    padding: 1rem;
+  }
+  .fullpagemodal__closeButton--light {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
   }
 }

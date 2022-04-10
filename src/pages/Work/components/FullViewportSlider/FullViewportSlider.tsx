@@ -206,6 +206,11 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   //   showCTACursor(false);
   // });
 
+  const caseStudyInfo = {
+    ...caseStudyContent,
+    backgroundColour: backgroundColour,
+  };
+
   return (
     <section
       className="fullviewportslider row"
@@ -229,7 +234,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
         imageSource={imageSource}
         backgroundColour={backgroundColour}
       />
-      {showCaseStudy ? <CaseStudy data={caseStudyContent} /> : null}
+      {showCaseStudy ? <CaseStudy data={caseStudyInfo} /> : null}
 
       {showCTACursor && showCaseStudy
         ? null

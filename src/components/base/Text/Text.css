@@ -53,3 +53,9 @@
   opacity: 1;
   transition: 400ms ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+  .text--lg {
+    font-size: 1rem;
+  }
+}

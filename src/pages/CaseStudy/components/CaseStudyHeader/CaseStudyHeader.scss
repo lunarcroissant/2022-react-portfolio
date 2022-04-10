@@ -40,3 +40,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+
+  .caseStudyHeader {
+
+    &__content {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+
+    &__backButton {
+      color: white;
+      text-decoration-color: #fff;
+    }
+
+  }
+  
+}

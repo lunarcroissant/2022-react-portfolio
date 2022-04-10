@@ -16,6 +16,7 @@ interface IProps {
   label?: string;
   hoverText?: string;
   noleftMargin?: boolean;
+  padding?: string;
 }
 
 export enum Backgrounds {
@@ -38,6 +39,7 @@ const Icon = ({
   label,
   hoverText,
   noleftMargin,
+  padding,
 }: IProps) => {
   if (isLink) {
     return (
@@ -88,31 +90,32 @@ const Icon = ({
     );
   }
   return (
-    <span className="display-inline">
-      <div
-        className={
-          border || isButton ? `icon icon-button icon--${border}-white` : `icon`
-        }
-        onClick={handleClick}
-        style={{
-          opacity: `${opacity}`,
-          paddingLeft: noleftMargin ? 0 : undefined,
-        }}
-      >
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}
-          alt={icon}
-          className={`icon--${size}`}
-        />
-        {hoverText ? (
-          <div className="icon__text">
-            <Text size={TextSize.md} colour={TextColour.lightBlack}>
-              {label}
-            </Text>
-          </div>
-        ) : null}
-      </div>
-    </span>
+    // <span className="display-inline">
+    <div
+      className={
+        border || isButton ? `icon icon-button icon--${border}-white` : `icon`
+      }
+      onClick={handleClick}
+      style={{
+        opacity: `${opacity}`,
+        padding: padding ? `${padding}` : "1rem",
+        paddingLeft: noleftMargin ? 0 : undefined,
+      }}
+    >
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}
+        alt={icon}
+        className={`icon--${size}`}
+      />
+      {hoverText ? (
+        <div className="icon__text">
+          <Text size={TextSize.md} colour={TextColour.lightBlack}>
+            {label}
+          </Text>
+        </div>
+      ) : null}
+    </div>
+    // </span>
   );
 };
 

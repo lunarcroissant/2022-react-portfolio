@@ -16,8 +16,13 @@ interface IProps {
 const PageCounter = ({ data }: IProps) => {
   // const [currentPage, setCurrentPage] = useState(0);
 
-  const { currentPage, setCurrentPage, setTotalPages, totalPages } =
-    useContext(PageContext);
+  const {
+    currentPage,
+    setCurrentPage,
+    showCaseStudy,
+    setTotalPages,
+    totalPages,
+  } = useContext(PageContext);
 
   const activePage = currentPage + 1;
   const activePageString = activePage.toString();
@@ -63,7 +68,11 @@ const PageCounter = ({ data }: IProps) => {
 
   if (isMobile) {
     return (
-      <div className="pageCounter--mobile row">
+      <div
+        className={`pageCounter--mobile row ${
+          showCaseStudy ? "fadeAway" : null
+        }`}
+      >
         <Text
           colour={TextColour.white}
           size={TextSize.xxxl}

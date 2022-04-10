@@ -8,6 +8,8 @@
   height: min-content;
   cursor: pointer;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
+
+  
 }
 
 .navlink:hover {
@@ -15,6 +17,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
   .navlink {
     padding: 0rem 0rem;
     background: transparent;
@@ -25,16 +28,18 @@
     height: min-content;
     cursor: pointer;
     transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
-  }
-
+   }
+  
   .navlink:hover {
     background: none;
   }
-
   .navlink__mobileMenuLink {
     text-decoration: none;
     display: flex;
+    
     justify-content: space-between;
     background: none;
+
   }
 }
+

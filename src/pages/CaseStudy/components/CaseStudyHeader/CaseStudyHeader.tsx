@@ -13,6 +13,7 @@ import ItemsList from "./components/ItemsList/ItemsList";
 
 import "./CaseStudyHeader.css";
 import PageContext from "../../../../contexts/PageContext/PageContext";
+import useViewportSize from "../../../../hooks/useViewportSize/useViewportSize";
 
 interface IProps {
   heading: string;
@@ -32,9 +33,11 @@ const CaseStudyHeader = ({
   projectLink,
 }: IProps) => {
   const { setShowCaseStudy } = useContext(PageContext);
+  const isMobile = useViewportSize(1024);
+
   return (
     <div className="caseStudyHeader width-100">
-      <VerticalSpacing size="xl" />
+      <VerticalSpacing size={"xl"} />
       <div className="caseStudyHeader__content justify-between">
         <div className="col">
           <a
@@ -61,8 +64,11 @@ const CaseStudyHeader = ({
             {bodyText}
           </Text>
         </div>
+
         <div className="col">
+          {isMobile ? <VerticalSpacing size="md" /> : null}
           <ItemsList title="Team" copy={teamMates} key={Math.random()} />
+          {isMobile ? <VerticalSpacing size="md" /> : null}
           <ItemsList
             title="Tools"
             copy={toolsUsed}
@@ -70,14 +76,17 @@ const CaseStudyHeader = ({
             key={Math.random()}
           />
         </div>
-        <button
-          className="caseStudyHeader__backButton"
-          onClick={() => setShowCaseStudy(false)}
-        >
-          <Text size={TextSize.md} colour={TextColour.lightBlack}>
-            Back to projects
-          </Text>
-        </button>
+
+        {!isMobile ? (
+          <button
+            className="caseStudyHeader__backButton"
+            onClick={() => setShowCaseStudy(false)}
+          >
+            <Text size={TextSize.md} colour={TextColour.lightBlack}>
+              Back to projects
+            </Text>
+          </button>
+        ) : null}
       </div>
       <VerticalSpacing size="lg" />
       {/* <Heading colour={TextColour.primary} headingLevel="h1">

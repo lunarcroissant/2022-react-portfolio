@@ -109,7 +109,7 @@ const Work = ({ data }: IProps) => {
             ></Icon>
           </div>
         </FullPageModal> */}
-        {true ? <MobileMenu links={["Profile", "Contact"]} /> : null}
+        {true ? <MobileMenu links={["Profile"]} /> : null}
         <FullViewportSlider data={projectsArray}>
           {projectsArray.map((project: any) => {
             return (

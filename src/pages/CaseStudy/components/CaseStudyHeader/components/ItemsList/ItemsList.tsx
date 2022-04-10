@@ -8,6 +8,7 @@ import Text, {
   TextWeight,
 } from "../../../../../../components/base/Text/Text";
 import VerticalSpacing from "../../../../../../components/base/VerticalSpacing/VerticalSpacing";
+import useViewportSize from "../../../../../../hooks/useViewportSize/useViewportSize";
 
 import "./ItemsList.css";
 
@@ -25,10 +26,11 @@ interface IProps {
 }
 
 const ItemsList = ({ title, copy, icons }: IProps) => {
+  const isMobile = useViewportSize(1024);
   return (
     <div className="itemsList col">
       <Text
-        size={TextSize.md}
+        size={isMobile ? TextSize.sm : TextSize.md}
         colour={TextColour.lightGrey}
         weight={TextWeight.bold}
       >
@@ -40,7 +42,7 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
           {icons.map((icon: any) => {
             return (
               <Icon
-                size="lg"
+                size={`${isMobile ? "md" : "lg"}`}
                 icon={icon.icon}
                 label={icon.name}
                 hoverText={icon.name}
@@ -55,7 +57,7 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
             <div className="row itemsList__teamMember" key={Math.random()}>
               <span className="margin-right-1 bold-text col itemsList__teamMemberName">
                 <Text
-                  size={TextSize.md}
+                  size={isMobile ? TextSize.sm : TextSize.md}
                   weight={TextWeight.bold}
                   lineHeight={LineHeight.standard}
                 >
@@ -66,7 +68,10 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
                 {copy.role.length &&
                   copy.role.map((role) => {
                     return (
-                      <Text size={TextSize.md} lineHeight={LineHeight.standard}>
+                      <Text
+                        size={isMobile ? TextSize.sm : TextSize.md}
+                        lineHeight={LineHeight.standard}
+                      >
                         {role}
                       </Text>
                     );

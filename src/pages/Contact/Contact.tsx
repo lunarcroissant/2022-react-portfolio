@@ -7,9 +7,10 @@ import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpaci
 import Divider from "../../components/Divider/Divider";
 import FullPageModal from "../../components/FullPageModal/FullPageModal";
 import GlobalContext from "../../contexts/GlobalContext/GlobalContext";
+import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 
 const Contact = () => {
-  const { contactFormVisible } = useContext(GlobalContext);
+  const isMobile = useViewportSize(1024);
   return (
     <FullPageModal>
       <VerticalSpacing size="lg" />
@@ -25,7 +26,7 @@ const Contact = () => {
       </Button> */}
       <Link
         linkVariant={LinkType.secondary}
-        icon={Icons.mailLight}
+        icon={isMobile ? undefined : Icons.mailLight}
         href="mailto:edwardtierney35@gmail.com"
       >
         edwardtierney35@gmail.com

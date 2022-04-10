@@ -7,6 +7,7 @@ import Text, {
   TextSize,
 } from "../../../../../../components/base/Text/Text";
 import VerticalSpacing from "../../../../../../components/base/VerticalSpacing/VerticalSpacing";
+import useViewportSize from "../../../../../../hooks/useViewportSize/useViewportSize";
 
 import "./NumberedItem.css";
 
@@ -17,8 +18,10 @@ interface IProps {
 
 const NumberedItem = ({ data, number }: IProps) => {
   const { heading, copy } = data;
+  const isMobile = useViewportSize(1024);
   return (
     <div className="col numberedItem">
+      {isMobile ? <VerticalSpacing size="md" /> : null}
       <Text size={TextSize.lg} colour={TextColour.lightGrey}>
         {number}
       </Text>

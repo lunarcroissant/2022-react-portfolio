@@ -4,6 +4,7 @@
   right: 0;
   bottom: 0;
   height: calc(100vh - 110px);
+  width: 100vw;
   z-index: 99;
   background: #fff;
   backdrop-filter: blur(15vmax);
@@ -53,5 +54,38 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .caseStudy {
+    height: calc(100vh);
+  }
+  .caseStudy__scrollHeaderContainer {
+    position: absolute;
+    z-index: 111;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: auto;
+    overflow: hidden;
+    cursor: default;
+  }
+  .caseStudy__scrollHeader {
+    transform: translateY(-200px);
+    transform: translateY(0) !important;
+    border-bottom: rgba(0, 0, 0, 0.16) solid 1px;
+    padding: 1rem var(--container-padding-width);
+    transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
+    backdrop-filter: blur(20px);
+    animation-name: fadeIn;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+  }
+  .caseStudyHeader__backButton {
+    color: white;
+    text-decoration-color: #fff;
+  }
+  .caseStudy.visibleOnScroll {
+    transform: translateY(-200px) !important;
   }
 }

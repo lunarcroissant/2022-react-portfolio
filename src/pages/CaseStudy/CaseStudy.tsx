@@ -11,6 +11,9 @@ import { useContext, useEffect, useState } from "react";
 import PageContext from "../../contexts/PageContext/PageContext";
 
 import "./CaseStudy.css";
+import { NavLink } from "react-router-dom";
+import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
+import Icon from "../../components/base/Icon/Icon";
 
 interface IProps {
   data: any;
@@ -26,9 +29,12 @@ const CaseStudy = ({ data }: IProps) => {
     tools,
     articleSections,
     projectLink,
+    backgroundColour,
   } = data;
 
   const [scrollingHeader, setScrollingHeader] = useState(false);
+
+  const isMobile = useViewportSize(1024);
 
   const { setShowCaseStudy } = useContext(PageContext);
 
@@ -48,6 +54,23 @@ const CaseStudy = ({ data }: IProps) => {
 
   // useEffect(() => {}, [scrollingHeader]);
 
+  function hexToRgbA(hex: string) {
+    var c: any;
+    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+      c = hex.substring(1).split("");
+      if (c.length == 3) {
+        c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+      }
+      c = "0x" + c.join("");
+      return (
+        "rgba(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") + ",0.8)"
+      );
+    }
+    throw new Error("Bad Hex");
+  }
+
+  hexToRgbA(backgroundColour);
+
   return (
     <>
       <div className="caseStudy__scrollHeaderContainer width-100">
@@ -55,21 +78,67 @@ const CaseStudy = ({ data }: IProps) => {
           className={`caseStudy__scrollHeader width-100 row align-center justify-between ${
             scrollingHeader ? "visibleOnScroll" : null
           }`}
+          style={{
+            backgroundColor: `${
+              isMobile
+                ? hexToRgbA(backgroundColour)
+                : "rgba(255, 255, 255, 0.8)"
+            }`,
+          }}
         >
-          <Text
-            size={TextSize.lg}
-            colour={TextColour.lightBlack}
-            lineHeight={LineHeight.standard}
-          >
-            {heading}
-          </Text>
+          {isMobile ? (
+            <NavLink
+              to={`/`}
+              className={"row header__logo"}
+              key={"HomeLogoLink"}
+            >
+              {/* <a className="header__home row"> */}
+              {/* <img
+                src={`${process.env.PUBLIC_URL}/assets/EddieTierneyLogo.svg`}
+                alt=""
+                className="header__homeIcon"
+              /> */}
+              <span className="margin-right-1">
+                <Icon
+                  size="xl"
+                  icon="EddieTierneyLogo"
+                  padding={"0rem"}
+                  noleftMargin
+                />
+              </span>
+
+              <div className="col">
+                <Text size={TextSize.sm} colour={TextColour.white}>
+                  Eddie
+                </Text>
+                <Text size={TextSize.sm} colour={TextColour.white}>
+                  Tierney
+                </Text>
+              </div>
+              {/* </a> */}
+            </NavLink>
+          ) : (
+            <Text
+              size={TextSize.lg}
+              colour={TextColour.lightBlack}
+              lineHeight={LineHeight.standard}
+            >
+              {heading}
+            </Text>
+          )}
           <button
             className="caseStudyHeader__backButton"
             onClick={() => setShowCaseStudy(false)}
           >
-            <Text size={TextSize.md} colour={TextColour.lightBlack}>
-              Back to projects
-            </Text>
+            {isMobile ? (
+              <Text size={TextSize.xs} colour={TextColour.lightBlack}>
+                Back to projects
+              </Text>
+            ) : (
+              <Text size={TextSize.md} colour={TextColour.lightBlack}>
+                Back to projects
+              </Text>
+            )}
           </button>
         </div>
       </div>
