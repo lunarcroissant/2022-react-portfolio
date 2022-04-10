@@ -7,7 +7,7 @@
   position: relative;
 }
 .profile__glowBallAnimationWrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
