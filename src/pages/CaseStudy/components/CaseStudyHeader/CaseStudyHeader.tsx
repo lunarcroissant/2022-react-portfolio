@@ -40,11 +40,22 @@ const CaseStudyHeader = ({
       <VerticalSpacing size={isMobile ? "undefined" : "xl"} />
       <div className="caseStudyHeader__content justify-between">
         <div className="col">
-          <a
-            className="row caseStudyHeader__liveLink"
-            href={projectLink}
-            target="_blank"
-          >
+          {projectLink ? (
+            <a
+              className="row caseStudyHeader__liveLink"
+              href={projectLink}
+              target="_blank"
+            >
+              <Heading
+                colour={TextColour.darkBlack}
+                weight={HeadingWeight.light}
+                headingLevel="h1"
+              >
+                {heading}
+              </Heading>
+              <Icon size="md" icon="icons_45degArrow" />
+            </a>
+          ) : (
             <Heading
               colour={TextColour.darkBlack}
               weight={HeadingWeight.light}
@@ -52,8 +63,7 @@ const CaseStudyHeader = ({
             >
               {heading}
             </Heading>
-            <Icon size="md" icon="icons_45degArrow" />
-          </a>
+          )}
 
           <VerticalSpacing size="md" />
           <Text
