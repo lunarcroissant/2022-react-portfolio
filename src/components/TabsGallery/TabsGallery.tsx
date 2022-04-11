@@ -324,8 +324,11 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
         <VerticalSpacing size="lg" />
         {children}
         <ItemsGrid filter={filter} data={getRelevantSkills} />
-        <VerticalSpacing size="xl" />
-        {isMobile ? <VerticalSpacing size="xl" /> : null}
+        {isMobile ? (
+          <VerticalSpacing size="lg" />
+        ) : (
+          <VerticalSpacing size="xxl" />
+        )}
 
         {/* {content[filter].map((content: any) => {
         return (

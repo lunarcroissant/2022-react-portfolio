@@ -100,8 +100,6 @@ const Profile = ({ data }: IProps) => {
   });
   return (
     <div className="profile col" onScroll={(e: any) => handleScroll(e)}>
-      <span className="profile__fade1"></span>
-      <span className="profile__fade2"></span>
       <div className="profile__glowBallAnimationWrapper">
         <div className="profile__glowballWrapper">
           <div
@@ -154,7 +152,7 @@ const Profile = ({ data }: IProps) => {
             Hey! I'm{" "}
             <a href="" className="profile__headingLink">
               Eddie
-            </a>{" "}
+            </a>
             , a{" "}
           </span>
           <span
