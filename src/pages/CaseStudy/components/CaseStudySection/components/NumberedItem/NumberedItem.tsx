@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Heading, {
   HeadingWeight,
   TextColour,
@@ -46,4 +47,4 @@ const NumberedItem = ({ data, number }: IProps) => {
   );
 };
 
-export default NumberedItem;
+export default memo(NumberedItem);

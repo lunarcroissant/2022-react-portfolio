@@ -1,4 +1,4 @@
-import { ReactNode, useContext } from "react";
+import { memo, ReactNode, useContext } from "react";
 import Heading, {
   HeadingWeight,
   TextColour,
@@ -109,4 +109,4 @@ const CaseStudyHeader = ({
   );
 };
 
-export default CaseStudyHeader;
+export default memo(CaseStudyHeader);

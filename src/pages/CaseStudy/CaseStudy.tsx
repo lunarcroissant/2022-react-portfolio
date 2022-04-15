@@ -1,20 +1,18 @@
 import CaseStudyHeader from "./components/CaseStudyHeader/CaseStudyHeader";
 import CaseStudySection from "./components/CaseStudySection/CaseStudySection";
 import NumberedItem from "./components/CaseStudySection/components/NumberedItem/NumberedItem";
-import AutoFitRow from "../../components/base/AutoFitRow/AutoFitRow";
 import Text, {
   LineHeight,
   TextColour,
   TextSize,
 } from "../../components/base/Text/Text";
-import { useContext, useEffect, useState } from "react";
+import { memo, useContext, useEffect, useState } from "react";
 import PageContext from "../../contexts/PageContext/PageContext";
 
 import "./CaseStudy.css";
 import { NavLink } from "react-router-dom";
 import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 import Icon from "../../components/base/Icon/Icon";
-import GlobalContext from "../../contexts/GlobalContext/GlobalContext";
 
 interface IProps {
   data: any;
@@ -24,8 +22,8 @@ const CaseStudy = ({ data }: IProps) => {
   const {
     heading,
     subHeading,
-    image,
     goals,
+    challenges,
     team,
     tools,
     articleSections,
@@ -37,14 +35,26 @@ const CaseStudy = ({ data }: IProps) => {
 
   const isMobile = useViewportSize(1024);
 
-  const { setMobileMenuVisible } = useContext(GlobalContext);
   const { setShowCaseStudy } = useContext(PageContext);
 
   const measureScrolledDistance = (event: React.UIEvent<HTMLDivElement>) => {
     // let scrollDistance = document.querySelector("caseStudy")?.scrollTop;
     const eventTarget = event.target as HTMLDivElement;
     let scrollDistance = eventTarget.scrollTop;
+    var flag;
 
+    let isScrollingForHeader = eventTarget.scrollTop > 0;
+
+    // if (flag !== isScrollingForHeader && scrollDistance < 50) {
+    //   setScrollingHeader(isScrollingForHeader);
+    //   console.log(isScrollingForHeader);
+    //   flag = isScrollingForHeader;
+    // }
+    // if (!isScrollingForHeader) {
+    //   setScrollingHeader(!scrollingHeader);
+    //   console.log(isScrollingForHeader);
+    //   flag = isScrollingForHeader;
+    // }
     if (scrollDistance! > 0) {
       setScrollingHeader(true);
     } else {
@@ -52,15 +62,11 @@ const CaseStudy = ({ data }: IProps) => {
     }
   };
 
-  // document.addEventListener("scroll", measureScrolledDistance);
-
-  // useEffect(() => {}, [scrollingHeader]);
-
   function hexToRgbA(hex: string) {
     var c: any;
     if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
       c = hex.substring(1).split("");
-      if (c.length == 3) {
+      if (c.length === 3) {
         c = [c[0], c[0], c[1], c[1], c[2], c[2]];
       }
       c = "0x" + c.join("");
@@ -163,6 +169,21 @@ const CaseStudy = ({ data }: IProps) => {
             })}
           </div>
         </CaseStudySection>
+        {challenges && (
+          <CaseStudySection
+            heading={challenges.heading}
+            bodyText={challenges.subHeading}
+          >
+            <div className="caseStudy__goals">
+              {challenges.challenges.map((challenges: any, index: number) => {
+                return (
+                  <NumberedItem data={challenges} number={`0${index + 1}`} />
+                );
+              })}
+            </div>
+          </CaseStudySection>
+        )}
+
         {articleSections &&
           articleSections.map((section: any) => {
             return (
@@ -196,4 +217,4 @@ const CaseStudy = ({ data }: IProps) => {
   );
 };
 
-export default CaseStudy;
+export default memo(CaseStudy);

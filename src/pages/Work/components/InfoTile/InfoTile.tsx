@@ -10,8 +10,6 @@ import HorizontalDivider from "../../../../components/base/HorizontalDivider/Hor
 import Icon, { Backgrounds } from "../../../../components/base/Icon/Icon";
 import { useContext, useState } from "react";
 import useViewportSize from "../../../../hooks/useViewportSize/useViewportSize";
-import Header from "../../../../components/global/Header/Header";
-import MobileMenu from "../../../../components/global/MobileMenu/MobileMenu";
 import GlobalContext from "../../../../contexts/GlobalContext/GlobalContext";
 import PageContext from "../../../../contexts/PageContext/PageContext";
 
@@ -33,7 +31,6 @@ const InfoTile = ({
   // const projects = data.map((project: any) => {
   //   return project;
   // });
-  const [showMenu, setShowMenu] = useState(true);
 
   const { setMobileMenuVisible } = useContext(GlobalContext);
   const { setShowCaseStudy } = useContext(PageContext);
@@ -90,7 +87,9 @@ const InfoTile = ({
       className={`col infoTile ${showInfoTile ? null : "hidden"} `}
       key={imageSource}
     >
-      {false ? <img className="infoTile__image" /> : null}
+      {false ? (
+        <img className="infoTile__image" alt="This is a placeholder" />
+      ) : null}
       <div className="row justify-between align-start">
         <div className="col width-90">
           <Text
@@ -124,21 +123,6 @@ const InfoTile = ({
             }}
           />
         )}
-        {/* <Icon
-          size="sm"
-          icon={"arrow"}
-          isButton
-          handleClick={() => {
-            setShowInfoTile(!showInfoTile);
-          }}
-        /> */}
-        {/* <button>
-          <img
-            src={`${process.env.PUBLIC_URL}/arrow.svg`}
-            alt=""
-            className="infoTile__hideIcon"
-          />
-        </button> */}
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
@@ -158,7 +142,7 @@ const InfoTile = ({
         <VerticalSpacing size="xs" />
         <div className="row">
           {tags.map((tag) => {
-            return <Tag text={tag} />;
+            return <Tag text={tag} key={tag} />;
           })}
         </div>
       </div>

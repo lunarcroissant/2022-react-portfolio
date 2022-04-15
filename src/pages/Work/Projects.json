@@ -331,41 +331,53 @@
         "goals": [
           {
             "heading": "Scalable and maintainable",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "copy": "As a storefront for creatives, Atiq needed to be easily scalable as the business grows. In order to focus on the running of the shop and creation of projects, the store’s structure also needed to accommodate a wide variety of different products."
           },
           {
             "heading": "Learn React, Sass and TypeScript",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "copy": "Having built several websites using HTML, CSS and Vanilla JavaScript, I wanted to use this project as an opportunity to expand my skillset and understand how JS frameworks function. This included related syntaxes, such as JSX and GraphQL."
           },
           {
             "heading": "Exploration with a swift route to purchase",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "copy": "Atiq aims to promote independent artists and encourage users to discover unique projects. A priority was therefore maximising conversion for the artists by offering a swift journey to checkout whilst also introducing an aspect of exploration and novelty to the store."
+          }
+        ]
+      },
+      "challenges": {
+        "heading": "Challenges",
+        "subHeading": null,
+        "challenges": [
+          {
+            "heading": "Varied product lines",
+            "copy": "Accommodating a large and unknown variety of products and styles meant that the design and code needed to the flexible. Creating a distinctive and bold brand is made more difficult when the contents vary."
+          },
+          {
+            "heading": "Transitioning to a virtual DOM mindset",
+            "copy": "Learning React and how the components are rendered was one of the key learning curves in this project. Not only understanding how to break up components to maximise the atomic design benefits but also the use of React’s in-built hooks to optimise performance and minimise rerendering."
+          },
+          {
+            "heading": "Brand new brand",
+            "copy": "Without an existing design system or brand guidelines to follow, I had to develop a unique design language and appropriate brand. This included motion guidelines, brand guidelines, photographic style, iconography and a UI/design system."
           }
         ]
       },
       "articleSections": [
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+          "heading": "A content-led brand",
+        "copy": "The chosen brand colours and aesthetic was purposefully understated so that the varied product lines could stand out. This included the choice to minimise the amount of Atiq-focused pages and multiple routes to purchase, so that the brand doesn’t get in the way of customers completing their purchase.",
         "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
         "imageAlt": "This is a case study image"
         },
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
-        "imageAlt": "This is a case study image"
-        },
-        {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "Atiq_ClothingPageTop_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
-        },
-        {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+          "heading": "DRY approach to development",
+        "copy": "The design and codebase of Atiq should be as small and maintainable as possible. In order to achieve this, everything was designed with the DRY approach in mind. This meant that designs focused on components that would be reusable, which in turn allowed the React components to minimise repetitive code by mapping over these pragmatic components. This applied from the individual design atoms, such as headings and buttons, right up to large components, such as the product carousels and the pages themselves. For instance, instead of repeatedly coding <p></p> tags and adding the desired styles to each instance, I created a <Text /> component which took props to set specific styles and could be used globally throughout the web app. Larger components, such as the product line carousels and product pages are also agnostic to the content within it, allowing them to be reused and development time to be sort.",
         "image": "Atiq_HomePageTop_6000x4000.jpg",
+        "imageAlt": "This is a case study image"
+        },
+        {
+          "heading": "Learning React",
+        "copy": "Coming from a more ‘traditional’ web development level, I needed to learn how the single page application (SPA) structure of a framework like React works. I began by building several components, including complex ones, within the App.tsx file before breaking them out into smaller components and a more sophisticated file structure. This allowed me to understand how and where React imports the components into the final root div to render in a way the browser can understand. During this process, I also learned about and applied frequently used javascript methods in React, such as mapping, Object destructuring, types of variables (const, let, var), states, hooks, and interfaces. ",
+        "image": "Atiq_ClothingPageTop_6000x4000.jpg",
         "imageAlt": "This is a case study image"
         }
       ] 

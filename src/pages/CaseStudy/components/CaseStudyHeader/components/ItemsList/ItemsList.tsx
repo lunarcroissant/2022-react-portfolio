@@ -1,6 +1,5 @@
-import Heading, {
-  TextColour,
-} from "../../../../../../components/base/Heading/Heading";
+import { memo } from "react";
+import { TextColour } from "../../../../../../components/base/Heading/Heading";
 import Icon from "../../../../../../components/base/Icon/Icon";
 import Text, {
   LineHeight,
@@ -45,6 +44,7 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
                 size={`${isMobile ? "md" : "lg"}`}
                 icon={icon.icon}
                 label={icon.name}
+                key={icon.name}
                 hoverText={icon.name}
                 noleftMargin
               />
@@ -54,7 +54,7 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
       ) : (
         copy?.map((copy) => {
           return (
-            <div className="row itemsList__teamMember" key={Math.random()}>
+            <div className="row itemsList__teamMember" key={copy.name}>
               <span className="margin-right-1 bold-text col itemsList__teamMemberName">
                 <Text
                   size={isMobile ? TextSize.sm : TextSize.md}
@@ -71,6 +71,7 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
                       <Text
                         size={isMobile ? TextSize.sm : TextSize.md}
                         lineHeight={LineHeight.standard}
+                        key={role}
                       >
                         {role}
                       </Text>
@@ -86,4 +87,4 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
   );
 };
 
-export default ItemsList;
+export default memo(ItemsList);

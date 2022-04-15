@@ -17,10 +17,7 @@ const MobileMenu = ({ links }: IProps) => {
     { label: "Work", urlPath: "/" },
     { label: "Profile", urlPath: "/profile" },
   ];
-  const linksS = [
-    { label: "Profile", urlPath: "google.com" },
-    { label: "Contact", urlPath: "google.com" },
-  ];
+
   const socialLinks = [
     { label: "Dribble", urlPath: "google.com" },
     { label: "GitHub", urlPath: "google.com" },
@@ -34,15 +31,10 @@ const MobileMenu = ({ links }: IProps) => {
     (link) => link.urlPath !== window.location.pathname
   );
 
-  const {
-    mobileMenuVisible,
-    setMobileMenuVisible,
-    setContactFormVisible,
-    contactFormVisible,
-  } = useContext(GlobalContext);
+  const { mobileMenuVisible, setMobileMenuVisible, setContactFormVisible } =
+    useContext(GlobalContext);
   return (
     <nav className={`mobileMenu ${mobileMenuVisible ? "active" : null}`}>
-      {/* <Icon isButton size="md" icon="icons_hamburgerMenu--darkPrimary" /> */}
       <div className="col align-center justify-center mobileMenu__container">
         <button
           className={`row align-center justify-center mobileMenu__backButton ${
@@ -50,7 +42,6 @@ const MobileMenu = ({ links }: IProps) => {
           }`}
           onClick={() => setMobileMenuVisible(false)}
         >
-          {/* <Icon size="sm" icon="icons_arrow-left--white" /> */}
           <svg
             width="15"
             height="15"
@@ -82,7 +73,6 @@ const MobileMenu = ({ links }: IProps) => {
             mobileMenuVisible && "slideUp"
           }`}
         >
-          {/* <VerticalSpacing size="xxs" /> */}
           <div
             className="row width-100 align-center justify-center"
             onDrag={() => setMobileMenuVisible(false)}
@@ -122,7 +112,10 @@ const MobileMenu = ({ links }: IProps) => {
                 </NavLink>
               );
             })}
-            <NavLinkNative handleClick={() => setContactFormVisible(true)}>
+            <NavLinkNative
+              handleClick={() => setContactFormVisible(true)}
+              key={"MobileContactLink"}
+            >
               <Text
                 size={TextSize.xxl}
                 weight={TextWeight.regular}

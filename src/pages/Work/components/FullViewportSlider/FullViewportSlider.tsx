@@ -1,11 +1,4 @@
-import React, {
-  createRef,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import Text, { TextSize } from "../../../../components/base/Text/Text";
+import React, { createRef, memo, ReactNode, useContext, useState } from "react";
 import PageContext from "../../../../contexts/PageContext/PageContext";
 import CaseStudy from "../../../CaseStudy/CaseStudy";
 import InfoTile from "../InfoTile/InfoTile";
@@ -24,38 +17,15 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     totalPages,
     showCaseStudy,
     showCTACursor,
+    setShowCTACursor,
   } = useContext(PageContext);
 
   const [mouseLocation, setMouseLocation] = useState({ x: 0, y: 0 });
 
   const ref = createRef<HTMLDivElement>();
 
-  var initialDistanceFromLeft =
-    document.getElementById("fullviewportslider__content")?.scrollLeft || 0;
-
-  const ProjectsFullScrollWidth =
-    document.getElementById("fullviewportslider__content")?.scrollWidth || 0;
-
-  const ProjectsFullScrollHeight =
-    document.getElementById("fullviewportslider__content")?.scrollHeight || 0;
-
   const scrollHandler = (event: React.UIEvent<HTMLDivElement>) => {
     const eventTarget = event.target as HTMLDivElement;
-    // var fullXWidth = eventTarget.scrollWidth;
-    // const distanceFromLeft = eventTarget.scrollLeft;
-
-    // const proportionedProjectWidth = fullXWidth / totalPages;
-
-    // console.log(initialDistanceFromLeft - distanceFromLeft);
-    // console.log(proportionedProjectWidth);
-
-    // console.log(
-    //   (distanceFromLeft + proportionedProjectWidth) / proportionedProjectWidth
-    // );
-
-    // if (distanceFromLeft % proportionedProjectWidth === 0) {
-    //   setCurrentPage(distanceFromLeft / proportionedProjectWidth);
-    // }
 
     // Measuring via Height
 
@@ -73,14 +43,6 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     //   setCurrentPage(distanceFromTop / proportionedProjectHeight);
     // }
   };
-
-  useEffect(() => {
-    // document.getElementById("fullviewportslider__content").scrollLeft =
-    //   currentPage * (ProjectsFullScrollWidth / totalPages);
-    return () => {
-      // cleanup;
-    };
-  }, [currentPage]);
 
   const activeContent = data[currentPage];
 
@@ -137,15 +99,15 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   //   };
   // }, [showCaseStudy, showCTACursor]);
 
-  document.addEventListener("mouseenter", function (event) {
-    aimX = event.pageX;
-    aimY = event.pageY;
-  });
+  // document.addEventListener("mouseenter", function (event) {
+  //   aimX = event.pageX;
+  //   aimY = event.pageY;
+  // });
 
-  document.addEventListener("mouseover", function (event) {
-    aimX = event.pageX;
-    aimY = event.pageY;
-  });
+  // document.addEventListener("mouseover", function (event) {
+  //   aimX = event.pageX;
+  //   aimY = event.pageY;
+  // });
 
   let aimX = window.innerWidth * 0.5;
   let aimY = window.innerHeight * 0.5;
@@ -162,7 +124,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     var aimX = event.pageX;
     var aimY = event.pageY;
     setMouseLocation({ x: aimX, y: aimY });
-    showCTACursor(true);
+    // showCTACursor(true);
 
     if (projectCursor) {
       projectCursor.style.left = aimX + "px";
@@ -215,7 +177,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     <section
       className="fullviewportslider row"
       onMouseEnter={(e) => determineMouseLocation(e)}
-      onMouseLeave={() => showCTACursor(false)}
+      onMouseLeave={() => setShowCTACursor(false)}
       // onMouseOver={(e) => setMouseLocation({ x: e.pageX, y: e.pageY })}
     >
       <div
@@ -233,6 +195,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
         tags={tags}
         imageSource={imageSource}
         backgroundColour={backgroundColour}
+        key={`InfoTile_${title}`}
       />
       {showCaseStudy ? <CaseStudy data={caseStudyInfo} /> : null}
 
@@ -250,4 +213,4 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   );
 };
 
-export default FullViewportSlider;
+export default memo(FullViewportSlider);
