@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Text, { TextColour, TextSize } from "../Text/Text";
 import VerticalSpacing from "../VerticalSpacing/VerticalSpacing";
 import "./Icon.css";
@@ -119,4 +120,4 @@ const Icon = ({
   );
 };
 
-export default Icon;
+export default memo(Icon);

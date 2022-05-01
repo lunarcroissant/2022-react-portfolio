@@ -77,13 +77,13 @@ const CaseStudyHeader = ({
 
         <div className="col">
           {isMobile ? <VerticalSpacing size="md" /> : null}
-          <ItemsList title="Team" copy={teamMates} key={Math.random()} />
+          <ItemsList title="Team" copy={teamMates} key={"CaseStudyTeam"} />
           {isMobile ? <VerticalSpacing size="md" /> : null}
           <ItemsList
             title="Tools"
             copy={toolsUsed}
             icons={toolsUsed}
-            key={Math.random()}
+            key={"CaseStudyTools"}
           />
         </div>
 

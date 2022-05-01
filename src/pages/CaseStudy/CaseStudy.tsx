@@ -13,12 +13,13 @@ import "./CaseStudy.css";
 import { NavLink } from "react-router-dom";
 import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 import Icon from "../../components/base/Icon/Icon";
+import React from "react";
 
 interface IProps {
   data: any;
 }
 
-const CaseStudy = ({ data }: IProps) => {
+const CaseStudy = React.memo(({ data }: IProps) => {
   const {
     heading,
     subHeading,
@@ -43,23 +44,29 @@ const CaseStudy = ({ data }: IProps) => {
     let scrollDistance = eventTarget.scrollTop;
     var flag;
 
-    let isScrollingForHeader = eventTarget.scrollTop > 0;
+    let shouldShowScrollingHeader = eventTarget.scrollTop > 0;
 
-    // if (flag !== isScrollingForHeader && scrollDistance < 50) {
+    // if (flag !== isScrollingForHeader) {
     //   setScrollingHeader(isScrollingForHeader);
-    //   console.log(isScrollingForHeader);
+    //   console.log(scrollDistance);
     //   flag = isScrollingForHeader;
     // }
+
+    if (flag !== shouldShowScrollingHeader) {
+      setScrollingHeader(shouldShowScrollingHeader);
+      console.log(shouldShowScrollingHeader);
+      flag = shouldShowScrollingHeader;
+    }
     // if (!isScrollingForHeader) {
     //   setScrollingHeader(!scrollingHeader);
     //   console.log(isScrollingForHeader);
     //   flag = isScrollingForHeader;
     // }
-    if (scrollDistance! > 0) {
-      setScrollingHeader(true);
-    } else {
-      setScrollingHeader(false);
-    }
+    // if (scrollDistance! > 0) {
+    //   setScrollingHeader(true);
+    // } else {
+    //   setScrollingHeader(false);
+    // }
   };
 
   function hexToRgbA(hex: string) {
@@ -76,8 +83,6 @@ const CaseStudy = ({ data }: IProps) => {
     }
     throw new Error("Bad Hex");
   }
-
-  hexToRgbA(backgroundColour);
 
   return (
     <>
@@ -190,31 +195,13 @@ const CaseStudy = ({ data }: IProps) => {
               <CaseStudySection
                 heading={section.heading}
                 bodyText={section.copy}
-              >
-                {/* {section.list && (
-                  // <AutoFitRow minimumWidth={200} maximumWidth={"33%"}>
-                  <div className="caseStudy__goals">
-                    {section.list.map((goals: any, index: number) => {
-                      return (
-                        <NumberedItem data={goals} number={`0${index + 1}`} />
-                      );
-                    })}
-                  </div>
-                  // </AutoFitRow>
-                )} */}
-                {section.image && (
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/caseStudyImages/${section.image}`}
-                    alt={section.imageAlt}
-                    className="caseStudy__image"
-                  />
-                )}
-              </CaseStudySection>
+                image={section.image}
+              />
             );
           })}
       </section>
     </>
   );
-};
+});
 
-export default memo(CaseStudy);
+export default CaseStudy;

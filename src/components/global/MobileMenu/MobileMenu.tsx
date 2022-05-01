@@ -9,7 +9,7 @@ import VerticalSpacing from "../../base/VerticalSpacing/VerticalSpacing";
 import "./MobileMenu.css";
 
 interface IProps {
-  links: any[];
+  links?: any[];
 }
 
 const MobileMenu = ({ links }: IProps) => {
@@ -33,6 +33,7 @@ const MobileMenu = ({ links }: IProps) => {
 
   const { mobileMenuVisible, setMobileMenuVisible, setContactFormVisible } =
     useContext(GlobalContext);
+
   return (
     <nav className={`mobileMenu ${mobileMenuVisible ? "active" : null}`}>
       <div className="col align-center justify-center mobileMenu__container">
@@ -100,6 +101,7 @@ const MobileMenu = ({ links }: IProps) => {
                       : "mobileMenu__navlinkPrimary justify-between row"
                   }
                   key={link.label}
+                  onClick={() => setMobileMenuVisible(false)}
                 >
                   <Text
                     size={TextSize.xxl}
