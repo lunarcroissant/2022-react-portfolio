@@ -3,6 +3,7 @@
   width: 90%;
   opacity: 0.15;
   background: var(--off-white);
+  border-radius: 50rem;
 }
 .divider p {
   margin: 0 2rem;
