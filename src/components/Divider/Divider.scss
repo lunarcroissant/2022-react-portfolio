@@ -2,8 +2,9 @@
   // padding: 2rem 0;
   &__leftArm,
   &__rightArm {
-    height: 2px;
+    height: 1px;
     width: 90%;
+    opacity: 0.15;
     // min-width: 400px;
     background: var(--off-white);
   }

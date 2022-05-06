@@ -1,6 +1,7 @@
 .divider__leftArm, .divider__rightArm {
-  height: 2px;
+  height: 1px;
   width: 90%;
+  opacity: 0.15;
   background: var(--off-white);
 }
 .divider p {
