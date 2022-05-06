@@ -179,7 +179,7 @@ const Profile = ({ data }: IProps) => {
             className="profile__headingStandOut"
             style={{ filter: `blur(0)` }}
           >
-            Product Designer and Front-End Developer{" "}
+            Digital Product Designer and Front-End Developer{" "}
           </span>
           <span
             className="profile__headingStandBack"
@@ -212,10 +212,10 @@ const Profile = ({ data }: IProps) => {
           opacity={"0.9"}
           blur={blur}
         >
-          I’m a British/German UI/UX Designer and Front-End Developer that loves
-          to bridge the gap between amazing design and technical implementation.
-          I strive to create beautiful digital experiences that balance creative
-          design with practical needs.
+          I’m a British/German Digital Product Designer and Front-End Developer
+          that loves to bridge the gap between amazing design and technical
+          implementation. I strive to create beautiful digital experiences that
+          balance creative design with practical needs.
         </Text>
         <VerticalSpacing size="md" />
         <Text
