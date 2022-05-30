@@ -1,3 +1,4 @@
+import { indexOf } from "lodash";
 import { useContext, useState } from "react";
 import Icon from "../../../../components/base/Icon/Icon";
 import Text, {
@@ -15,6 +16,8 @@ interface IProps {
 
 const PageCounter = ({ data }: IProps) => {
   // const [currentPage, setCurrentPage] = useState(0);
+
+  const isExperimental = true;
 
   const {
     currentPage,
@@ -36,6 +39,8 @@ const PageCounter = ({ data }: IProps) => {
   const sliderParentComponent = document.querySelector(
     ".fullviewportslider__content"
   );
+
+  console.log(currentPage);
 
   function scrollNextProject() {
     if (sliderParentComponent && currentPage < totalPages - 1) {
@@ -65,6 +70,30 @@ const PageCounter = ({ data }: IProps) => {
   //     behavior: "smooth",
   //   });
   // }
+
+  if (isExperimental) {
+    return (
+      <div className="pageCounterExp col justify-center align-center">
+        {data.map((pages: any, index: number) => {
+          return (
+            <button
+              className={`pageCounterDot ${
+                activePage === index + 1 ? "active" : null
+              }`}
+              key={pages}
+            ></button>
+          );
+        })}
+        {/* {Array(totalPages).fill(
+          <button
+            className={`pageCounterDot ${
+              totalPages === currentPage - 1 ? "active" : null
+            }`}
+          ></button>
+        )} */}
+      </div>
+    );
+  }
 
   if (isMobile) {
     return (

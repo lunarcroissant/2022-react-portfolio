@@ -11,7 +11,7 @@ const ProjectImage = ({ source, backgroundColour }: IProps) => {
   const { showCaseStudy } = useContext(PageContext);
   return (
     <div
-      className={`projectImage__container row align-center justify-center`}
+      className={`projectImage__container row align-center justify-end`}
       style={{ background: `${backgroundColour}` }}
     >
       <img

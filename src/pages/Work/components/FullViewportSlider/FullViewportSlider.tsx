@@ -180,6 +180,18 @@ const FullViewportSlider = ({ children, data }: IProps) => {
       onMouseLeave={() => setShowCTACursor(false)}
       // onMouseOver={(e) => setMouseLocation({ x: e.pageX, y: e.pageY })}
     >
+      <div className="projectContext row justify-between align-center">
+        <InfoTile
+          title={title}
+          description={description}
+          tags={tags}
+          imageSource={imageSource}
+          backgroundColour={backgroundColour}
+          key={`InfoTile_${title}`}
+        />
+        <PageCounter data={data} />
+      </div>
+
       <div
         className="fullviewportslider__content"
         id="fullviewportslider__content"
@@ -189,14 +201,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
         {children}
       </div>
       {}
-      <InfoTile
-        title={title}
-        description={description}
-        tags={tags}
-        imageSource={imageSource}
-        backgroundColour={backgroundColour}
-        key={`InfoTile_${title}`}
-      />
+
       {showCaseStudy ? <CaseStudy data={caseStudyInfo} /> : null}
 
       {showCTACursor && showCaseStudy
@@ -207,8 +212,6 @@ const FullViewportSlider = ({ children, data }: IProps) => {
           //   <Text size={TextSize.lg}>Read Case Study</Text>
           // </div>
           null}
-
-      <PageCounter data={""} />
     </section>
   );
 };

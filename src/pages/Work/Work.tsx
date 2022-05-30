@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Header from "../../components/global/Header/Header";
 import MobileMenu from "../../components/global/MobileMenu/MobileMenu";
+import GlobalContext from "../../contexts/GlobalContext/GlobalContext";
 import PageContext from "../../contexts/PageContext/PageContext";
 import FullViewportSlider from "./components/FullViewportSlider/FullViewportSlider";
 import Project from "./components/Project/Project";
@@ -12,6 +13,8 @@ interface IProps {
 
 const Work = ({ data }: IProps) => {
   const projects: any = require("./Projects.json");
+
+  const { mobileMenuVisible } = useContext(GlobalContext);
 
   const projectsArray = projects.projects;
 
@@ -43,7 +46,7 @@ const Work = ({ data }: IProps) => {
             { label: "Profile", urlPath: "/profile" },
           ]}
         />
-        {true ? <MobileMenu links={["Profile"]} /> : null}
+        {mobileMenuVisible ? <MobileMenu links={["Profile"]} /> : null}
         <FullViewportSlider data={projectsArray}>
           {projectsArray.map((project: any) => {
             return (

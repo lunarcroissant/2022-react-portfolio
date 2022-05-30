@@ -1,14 +1,12 @@
 .infoTile {
-  position: absolute;
-  left: 2rem;
-  bottom: 3rem;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.69), rgba(255, 255, 255, 0.4));
+  height: 100%;
+  left: 0.25rem;
+  height: 100%;
   /* background-image: url(/public/assets/Noise.png); */
-  backdrop-filter: blur(30px);
-  box-shadow: 0 0.25rem 1rem 0.25rem rgba(83, 83, 83, 0.25);
   border-radius: 1.5rem;
-  max-width: 20rem;
-  padding: 1.5rem 1.5rem;
+  width: 30vw;
+  max-width: 55ch;
+  padding-right: 2rem;
   z-index: 99;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 400ms;
   cursor: default;
@@ -32,7 +30,9 @@
     left: 1rem;
     right: 1rem;
     bottom: 1rem;
+    width: 100%;
     max-width: 100%;
+    padding-right: 0;
     max-height: min-content;
     height: calc(min-content - (100vh - var(--vh)));
   }

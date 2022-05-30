@@ -2,11 +2,11 @@
   "projects": [
     {
     "title": "EE Product Page",
-    "description": "Overhauling an e-commerce page to optimise customer satisfaction",
+    "description": "Combining business goals, such as increased user log ins, increased conversation, and UX improvments, this project simplifies a complex checkout process, increases upsell possibilities and provides a supportive journey to customers.",
     "tags": [
       "UI Design", "React", "Figma"
     ],
-    "backgroundColour": "#068080",
+    "backgroundColour": "radial-gradient(79.83% 181.5% at 93.4% 2.72%, #7ABBB7 0%, #0F2D2B 100%)",
     "heroImage": "EE_4000x2000.png",
     "caseStudyContent": {
       "heading": "EE Product Page",
@@ -75,11 +75,11 @@
   },
   {
     "title": "iOS Clock App",
-    "description": "Taking the hassle out of alarms with a new grouped alarms functionality",
+    "description": "This conceptual feature is focused on improving an app used by millions - the iOS Clock app. Conversations with a wide range of users revealed a recurring issue for people wanting to easily set alarms that fit around their varying needs.",
     "tags": [
       "UI Design", "Figma"
     ],
-    "backgroundColour": "#1F2531",
+    "backgroundColour": "radial-gradient(79.83% 181.5% at 93.4% 2.72%, #655B8D 0%, #10112B 100%)",
     "heroImage": "iOSAlarms_4000x2001.png",
     "caseStudyContent": {
       "heading": "iOS Clock App",
@@ -148,11 +148,11 @@
   },
   {
     "title": "Food Swiper",
-    "description": "Creating a platform for easy food reservations",
+    "description": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
     "tags": [
       "UI Design", "App", "Figma"
     ],
-    "backgroundColour": "#61ADAD",
+    "backgroundColour": "radial-gradient(79.83% 181.5% at 93.4% 2.72%, #88CC86 0%, #2D7A68 100%)",
     "heroImage": "Shelf_2000x1000.png",
     "caseStudyContent": {
       "heading": "Food Swiper",
@@ -209,11 +209,11 @@
   },
   {
     "title": "Evopack",
-    "description": "Building a scalable and fast web app for a new packaging start up",
+    "description": "Evopack, a Swiss/German start-up, asked me to build a brand and website to represent their revolutionary and sustainable packaging solutions. As part of this, I created a custom design system and built their web app using React, SCSS, Figma and TypeScript.",
     "tags": [
       "Front-end dev", "React", "Figma"
     ],
-    "backgroundColour": "#161727",
+    "backgroundColour": "radial-gradient(110.21% 244.81% at 93.4% 2.72%, #7687C7 0%, #051732 100%)",
     "heroImage": "Evopack_2000x1000.png",
     "caseStudyContent": {
       "heading": "Evopack",
@@ -286,11 +286,11 @@
   },
   {
     "title": "Atiq.Studio",
-    "description": "Building an e-commerce presence from branding to the implementation in React.js",
+    "description": "Atiq.Studio is a small e-commerce business selling creative projects, such as photography, clothing and digital products. I worked on the website and logo design as well as the final development of the e-commerce store.",
     "tags": [
       "Front-end dev", "React", "Figma"
     ],
-    "backgroundColour": "#26272C",
+    "backgroundColour": "radial-gradient(79.83% 181.5% at 93.4% 2.72%, #1E6389 0%, #0A0000 100%)",
     "heroImage": "Atiq_4000x2001.png",
     "caseStudyContent": {
       "heading": "Atiq.Studio",

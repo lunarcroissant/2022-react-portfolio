@@ -10,7 +10,7 @@ interface IProps {
 const Tag = ({ text }: IProps) => {
   return (
     <div className="tag">
-      <Text colour={Colours.primary} size={TextSize.xs}>
+      <Text colour={Colours.white} size={TextSize.xs}>
         {text}
       </Text>
     </div>

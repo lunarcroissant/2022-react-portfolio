@@ -17,7 +17,6 @@
 }
 .project__cursor {
   position: absolute;
-  z-index: 10000;
   pointer-events: none;
   padding: 0.8rem 1.5rem;
   background: #f3f3f3;

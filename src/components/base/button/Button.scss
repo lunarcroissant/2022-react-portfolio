@@ -2,28 +2,29 @@
   all: unset;
   cursor: pointer;
   white-space: nowrap;
-  padding: 1rem 0rem;
-  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
   border-radius: 1rem;
-  width: 100%;
-  max-width: 100%;
+  // width: 100%;
+  // max-width: 100%;
 }
 
 .btn-primary {
-  color: #f3f3f3;
-  background: var(--dark-grey);
+  color: #333;
+  background: white;
   font-weight: var(--font--regular);
-  border-radius: 1rem;
-  max-width: 100%;
+  border-radius: 3rem;
+  width: max-content;
+  // max-width: 100%;
 }
 
 .btn-primary:hover {
   /* background: var(--medium-grey-full-opacity); */
-  background: #2f2f2f;
+  background: var(--off-white);
   /* color: var(--secondary-colour); */
 }
 

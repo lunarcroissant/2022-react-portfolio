@@ -84,6 +84,8 @@ const CaseStudy = React.memo(({ data }: IProps) => {
     throw new Error("Bad Hex");
   }
 
+  // hexToRgbA(backgroundColour)
+
   return (
     <>
       <div className="caseStudy__scrollHeaderContainer width-100">
@@ -93,9 +95,7 @@ const CaseStudy = React.memo(({ data }: IProps) => {
           }`}
           style={{
             backgroundColor: `${
-              isMobile
-                ? hexToRgbA(backgroundColour)
-                : "rgba(255, 255, 255, 0.8)"
+              isMobile ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.8)"
             }`,
           }}
         >

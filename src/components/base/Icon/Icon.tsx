@@ -72,7 +72,12 @@ const Icon = ({
       <button
         className={`icon icon-button col justify-center align-center`}
         onClick={handleClick}
-        style={background ? { background: `${background}` } : undefined}
+        style={{
+          opacity: `${opacity}`,
+          padding: padding ? `${padding}` : "1rem",
+          background: background ? `${background}` : undefined,
+          paddingLeft: noleftMargin ? 0 : undefined,
+        }}
       >
         <img
           src={`${process.env.PUBLIC_URL}/assets/${icon}.svg`}

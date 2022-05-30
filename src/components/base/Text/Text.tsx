@@ -20,6 +20,7 @@ export enum TextSize {
   xs = "text--xs",
   sm = "text--sm",
   md = "text--md",
+  size40 = "text--40",
   lg = "text--lg",
   xl = "text--xl",
   xxl = "text--xxl",

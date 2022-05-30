@@ -1,4 +1,5 @@
 import Text, {
+  LineHeight,
   TextColour,
   TextSize,
 } from "../../../../components/base/Text/Text";
@@ -44,47 +45,63 @@ const InfoTile = ({
       <div className="infoTile col">
         <div className="row justify-between infoTile__about">
           <div className="col infoTile__copy">
-            <Text
-              colour={TextColour.primaryDark}
-              size={TextSize.xl}
-              opacity="1"
-            >
+            <Text colour={TextColour.white} size={TextSize.xs} opacity="0.5">
+              Project
+            </Text>
+            <VerticalSpacing size="xs" />
+            <Text colour={TextColour.white} size={TextSize.size40} opacity="1">
               {title}
             </Text>
             <VerticalSpacing size="xs" />
             <Text
-              colour={TextColour.primaryDark}
+              colour={TextColour.offWhite}
               size={TextSize.sm}
-              opacity="0.8"
+              lineHeight={LineHeight.standard}
+              opacity="1"
             >
               {description}
             </Text>
           </div>
-          <Tag text={"UI"} />
+        </div>
+        <div className="col width-100">
+          <VerticalSpacing size="md" />
+          <div className="row">
+            {tags.map((tag) => {
+              return <Tag text={tag} key={tag} />;
+            })}
+          </div>
         </div>
         <VerticalSpacing size="md" />
-        <div className="row infoTile__actions">
+        <Button
+          buttonVariant={ButtonType.primary}
+          handleClick={() => setShowCaseStudy(true)}
+        >
+          View Case Study
+        </Button>
+        {/* <div className="row infoTile__actions">
           <Button
             buttonVariant={ButtonType.primary}
             handleClick={() => setShowCaseStudy(true)}
           >
             Read Case Study
-          </Button>
-          <Icon
-            isButton
-            size="md"
-            background={Backgrounds.transparentWhite}
-            icon="icons_hamburgerMenu--darkPrimary"
-            handleClick={() => setMobileMenuVisible(true)}
-          />
-        </div>
+          </Button> */}
+        {/* <Icon
+          isButton
+          size="md"
+          background={Backgrounds.transparentWhite}
+          icon="icons_hamburgerMenu--darkPrimary"
+          handleClick={() => setMobileMenuVisible(true)}
+        /> */}
+        {/* </div> */}
       </div>
     );
   }
 
   return (
     <div
-      className={`col infoTile ${showInfoTile ? null : "hidden"} `}
+      className={`col infoTile justify-center ${
+        showInfoTile ? null : "hidden"
+      } `}
       key={imageSource}
     >
       {false ? (
@@ -92,19 +109,15 @@ const InfoTile = ({
       ) : null}
       <div className="row justify-between align-start">
         <div className="col width-90">
-          <Text
-            colour={TextColour.primaryDark}
-            size={TextSize.xs}
-            opacity="0.5"
-          >
+          <Text colour={TextColour.white} size={TextSize.xs} opacity="0.5">
             Project
           </Text>
           <VerticalSpacing size="xs" />
-          <Text colour={TextColour.primaryDark} size={TextSize.lg} opacity="1">
+          <Text colour={TextColour.white} size={TextSize.size40} opacity="1">
             {title}
           </Text>
         </div>
-        {isMobile ? (
+        {/* {isMobile ? (
           <Icon
             size="sm"
             icon={"icons_chevron-up--darkPrimary"}
@@ -122,33 +135,28 @@ const InfoTile = ({
               setShowInfoTile(!showInfoTile);
             }}
           />
-        )}
+        )} */}
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
-        <Text colour={TextColour.primaryDark} size={TextSize.xs} opacity="0.5">
-          Overview
-        </Text>
-        <VerticalSpacing size="xs" />
-        <Text colour={TextColour.primaryDark} size={TextSize.lg} opacity="1">
+        <Text
+          colour={TextColour.offWhite}
+          size={TextSize.sm}
+          lineHeight={LineHeight.standard}
+          opacity="1"
+        >
           {description}
         </Text>
       </div>
       <div className="col width-100">
         <VerticalSpacing size="md" />
-        <Text colour={TextColour.primaryDark} size={TextSize.xs} opacity="0.5">
-          Tags
-        </Text>
-        <VerticalSpacing size="xs" />
         <div className="row">
           {tags.map((tag) => {
             return <Tag text={tag} key={tag} />;
           })}
         </div>
       </div>
-      <VerticalSpacing size="lg" />
-      <HorizontalDivider />
-      <VerticalSpacing size="sm" />
+      <VerticalSpacing size="xl" />
       <Button
         buttonVariant={ButtonType.primary}
         handleClick={() => setShowCaseStudy(true)}

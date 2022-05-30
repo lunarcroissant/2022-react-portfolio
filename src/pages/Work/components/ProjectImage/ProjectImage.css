@@ -1,5 +1,5 @@
 .projectImage {
-  width: 100vw;
+  width: 80vw;
   height: auto;
 }
 
@@ -11,12 +11,15 @@
 @media screen and (max-width: 768px) {
   .projectImage {
     position: absolute;
-    left: -10vw;
+    left: -70vw;
     width: auto;
-    height: 60vh;
+    height: 40vh;
   }
   .projectImage__container {
     position: relative;
     overflow: hidden;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
   }
 }

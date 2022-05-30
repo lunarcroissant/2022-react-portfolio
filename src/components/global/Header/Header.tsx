@@ -5,9 +5,10 @@ import GlobalContext from "../../../contexts/GlobalContext/GlobalContext";
 import PageContext from "../../../contexts/PageContext/PageContext";
 import useViewportSize from "../../../hooks/useViewportSize/useViewportSize";
 import { Icons } from "../../base/button/Button";
-import Icon from "../../base/Icon/Icon";
+import Icon, { Backgrounds } from "../../base/Icon/Icon";
 import NavLinkNative from "../../base/NavLinkNative/NavLinkNative";
 import Text, { TextColour, TextSize, TextWeight } from "../../base/Text/Text";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.css";
 
 interface IProps {
@@ -15,7 +16,7 @@ interface IProps {
 }
 
 const Header = ({ linkLabels }: IProps) => {
-  const { setContactFormVisible, setMobileMenuVisible } =
+  const { setContactFormVisible, mobileMenuVisible, setMobileMenuVisible } =
     useContext(GlobalContext);
 
   const { setShowCTACursor } = useContext(PageContext);
@@ -129,7 +130,16 @@ const Header = ({ linkLabels }: IProps) => {
           {/* </a> */}
         </NavLink>
 
-        {isMobile ? null : ( // </div> //   </div> //     </NavLinkNative> //       Contact //     <NavLinkNative handleClick={() => setContactFormVisible(true)}> //     })} //       ); //         </NavLink> //           {/* <Icon size="sm" icon="chevron-right--white" /> */} //           </Text> //             {link.label} //           > //             colour={TextColour.white} //             weight={TextWeight.light} //             size={TextSize.sm} //           <Text //         > //           key={link.label} //           } //               : "navlink between-xs row" //               ? "navlink row between-xs link--active" //             isActive //           className={({ isActive }) => //           to={`${link.urlPath}`} //         <NavLink //       return ( //     {linkLabels.map((link) => { //   <div className="header__mobileMenu"> // <div className="row header__navigation--mobile">
+        {isMobile ? (
+          <Icon
+            isButton
+            size="lg"
+            // background={Backgrounds.transparentWhite}
+            icon="icons_hamburgerMenuThreeLevel"
+            handleClick={() => setMobileMenuVisible(true)}
+            padding="0rem"
+          /> // </div> //   </div> //     </NavLinkNative> //       Contact //     <NavLinkNative handleClick={() => setContactFormVisible(true)}> //     })} //       ); //         </NavLink> //           {/* <Icon size="sm" icon="chevron-right--white" /> */} //           </Text> //             {link.label} //           > //             colour={TextColour.white} //             weight={TextWeight.light} //             size={TextSize.sm} //           <Text //         > //           key={link.label} //           } //               : "navlink between-xs row" //               ? "navlink row between-xs link--active" //             isActive //           className={({ isActive }) => //           to={`${link.urlPath}`} //         <NavLink //       return ( //     {linkLabels.map((link) => { //   <div className="header__mobileMenu"> // <div className="row header__navigation--mobile">
+        ) : (
           <div className="row header__navigation">
             {linkLabels.map((link) => {
               return (
@@ -169,6 +179,7 @@ const Header = ({ linkLabels }: IProps) => {
             </NavLinkNative>
           </div>
         )}
+        {mobileMenuVisible ? <MobileMenu links={["Profile"]} /> : null}
       </nav>
       <div
         className={`header__scrollingDivider ${
