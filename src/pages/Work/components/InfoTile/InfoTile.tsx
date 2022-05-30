@@ -45,11 +45,21 @@ const InfoTile = ({
       <div className="infoTile col">
         <div className="row justify-between infoTile__about">
           <div className="col infoTile__copy">
-            <Text colour={TextColour.white} size={TextSize.xs} opacity="0.5">
+            <Text
+              colour={TextColour.white}
+              size={TextSize.xs}
+              opacity="0.5"
+              animate
+            >
               Project
             </Text>
             <VerticalSpacing size="xs" />
-            <Text colour={TextColour.white} size={TextSize.size40} opacity="1">
+            <Text
+              colour={TextColour.white}
+              size={TextSize.size40}
+              opacity="1"
+              animate
+            >
               {title}
             </Text>
             <VerticalSpacing size="xs" />
@@ -58,6 +68,7 @@ const InfoTile = ({
               size={TextSize.sm}
               lineHeight={LineHeight.standard}
               opacity="1"
+              animate
             >
               {description}
             </Text>
@@ -109,11 +120,21 @@ const InfoTile = ({
       ) : null}
       <div className="row justify-between align-start">
         <div className="col width-90">
-          <Text colour={TextColour.white} size={TextSize.xs} opacity="0.5">
+          <Text
+            colour={TextColour.white}
+            size={TextSize.xs}
+            opacity="0.5"
+            animate
+          >
             Project
           </Text>
           <VerticalSpacing size="xs" />
-          <Text colour={TextColour.white} size={TextSize.size40} opacity="1">
+          <Text
+            colour={TextColour.white}
+            size={TextSize.size40}
+            opacity="1"
+            animate
+          >
             {title}
           </Text>
         </div>
@@ -144,6 +165,7 @@ const InfoTile = ({
           size={TextSize.sm}
           lineHeight={LineHeight.standard}
           opacity="1"
+          animate
         >
           {description}
         </Text>

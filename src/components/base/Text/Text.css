@@ -58,6 +58,28 @@
   transition: 400ms ease-in-out;
 }
 
+.text__curtain {
+  overflow: hidden;
+  margin: 0;
+  animation-delay: 0;
+}
+
+.text {
+  animation-delay: 600ms;
+}
+
+.slide-up {
+  animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media screen and (max-width: 768px) {
   .text--lg {
     font-size: 1rem;
