@@ -118,21 +118,6 @@ const Profile = ({ data }: IProps) => {
         <MobileMenu />
       )}
 
-      <div className="profile__glowBallAnimationWrapper">
-        <div className="profile__glowballWrapper">
-          <div
-            className="profile__glowball"
-            onMouseOver={() => startScrolling()}
-          ></div>
-        </div>
-        <div className="profile__glowballWrapper1">
-          <div
-            className="profile__glowball1"
-            onMouseOver={() => startScrolling()}
-          ></div>
-        </div>
-      </div>
-
       <Header
         linkLabels={[
           { label: "Work", urlPath: "/" },
@@ -155,15 +140,29 @@ const Profile = ({ data }: IProps) => {
           <textPath xlinkHref="#curve">Dangerous Curves Ahead</textPath>
         </text>
       </svg> */}
-      {isMobile ? null : (
-        <>
-          <VerticalSpacing size="xl" />
-        </>
-      )}
-      <VerticalSpacing size="xl" />
-      <VerticalSpacing size="xl" />
 
-      <div className="profile__contentColumn">
+      <div className="profile__contentColumn col justify-end">
+        {/* {isMobile ? null : (
+          <>
+            <VerticalSpacing size="xl" />
+          </>
+        )}
+        <VerticalSpacing size="xl" />
+        <VerticalSpacing size="xl" /> */}
+        <div className="profile__glowBallAnimationWrapper">
+          <div className="profile__glowballWrapper">
+            <div
+              className="profile__glowball"
+              onMouseOver={() => startScrolling()}
+            ></div>
+          </div>
+          <div className="profile__glowballWrapper1">
+            <div
+              className="profile__glowball1"
+              onMouseOver={() => startScrolling()}
+            ></div>
+          </div>
+        </div>
         <h1 className="profile__heading">
           <span
             className="profile__headingStandBack"
@@ -229,8 +228,9 @@ const Profile = ({ data }: IProps) => {
           Having worked in Marketing, Product Management and Sales, I make sure
           to understand and consider the business needs of every project.{" "}
         </Text>
+        <VerticalSpacing size="md" />
       </div>
-      <VerticalSpacing size="xxl" />
+
       {/* <VerticalSpacing size="xl" />
       <VerticalSpacing size="xl" />
       <VerticalSpacing size="xl" /> */}
@@ -238,7 +238,7 @@ const Profile = ({ data }: IProps) => {
         <Heading colour={TextColour.white}>What I help with</Heading>
         <VerticalSpacing size="xl" />
       </div> */}
-
+      <VerticalSpacing size="xxl" />
       <TabsGallery
         data={[
           { label: "All", active: true },
