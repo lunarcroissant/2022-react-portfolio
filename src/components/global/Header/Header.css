@@ -27,12 +27,10 @@
 
 header {
   cursor: pointer;
-  pointer-events: none;
 }
 
 .header__homeIcon {
   margin-right: 0.5rem;
-  pointer-events: all;
 }
 
 .navlink {

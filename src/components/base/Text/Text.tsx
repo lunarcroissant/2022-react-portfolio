@@ -163,35 +163,33 @@ const Text = ({
   }
 
   return (
-    <span className="text__curtain">
-      <p
-        className={`text ${size} text--${theme} ${
-          scrolledDistance > window.innerHeight * 0.7 && fadeIn
-            ? "hide"
-            : "visible"
-        }`}
-        style={{
-          opacity: `${opacity}`,
-          fontWeight: `${weight}`,
-          color: `${colour}`,
-          lineHeight: lineHeight,
-          filter: `${
-            blur &&
-            `blur(${
-              textItem.current.getBoundingClientRect().y > 1 &&
-              (textItem.current.getBoundingClientRect().y / 100) *
-                textItem.current.getBoundingClientRect().y >
-                0.9
-                ? 0
-                : scrolledDistance / window.innerHeight
-            }px)`
-          }`,
-        }}
-        ref={textItem}
-      >
-        {children}
-      </p>
-    </span>
+    <p
+      className={`text ${size} text--${theme} ${
+        scrolledDistance > window.innerHeight * 0.7 && fadeIn
+          ? "hide"
+          : "visible"
+      }`}
+      style={{
+        opacity: `${opacity}`,
+        fontWeight: `${weight}`,
+        color: `${colour}`,
+        lineHeight: lineHeight,
+        filter: `${
+          blur &&
+          `blur(${
+            textItem.current.getBoundingClientRect().y > 1 &&
+            (textItem.current.getBoundingClientRect().y / 100) *
+              textItem.current.getBoundingClientRect().y >
+              0.9
+              ? 0
+              : scrolledDistance / window.innerHeight
+          }px)`
+        }`,
+      }}
+      ref={textItem}
+    >
+      {children}
+    </p>
   );
 };
 

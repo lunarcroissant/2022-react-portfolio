@@ -12,7 +12,7 @@ const Divider = ({ children, dark }: IProps) => {
     return (
       <div className="divider--dark row justify-between align-center width-100">
         <div className="divider--dark__leftArm"></div>
-        <Text size={TextSize.lg} colour={TextColour.lightGrey}>
+        <Text size={TextSize.lg} colour={TextColour.lightGrey} animate={false}>
           {children}
         </Text>
         <div className="divider--dark__rightArm"></div>
@@ -22,7 +22,7 @@ const Divider = ({ children, dark }: IProps) => {
   return (
     <div className="divider row justify-center align-center width-100">
       <div className="divider__leftArm"></div>
-      <Text size={TextSize.lg} colour={TextColour.lightGrey}>
+      <Text size={TextSize.lg} colour={TextColour.lightGrey} animate={false}>
         {children}
       </Text>
       <div className="divider__rightArm"></div>

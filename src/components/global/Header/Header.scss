@@ -41,15 +41,11 @@ header {
   // backdrop-filter: blur(20px);
   // background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  pointer-events: none;
+  // pointer-events: none;
 }
 
 .header__homeIcon {
   margin-right: 0.5rem;
-  pointer-events:all;
-}
-
-.header__navigation {
 }
 
 // nav {
