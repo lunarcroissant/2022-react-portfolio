@@ -104,20 +104,6 @@ const Profile = ({ data }: IProps) => {
   });
   return (
     <div className="profile col" onScroll={(e: any) => handleScroll(e)}>
-      {!mobileMenuVisible && isMobile ? (
-        <div className="profile__menuWrapper">
-          <Icon
-            isButton
-            size="md"
-            background={Backgrounds.transparentWhite}
-            icon="icons_hamburgerMenu--darkPrimary"
-            handleClick={() => setMobileMenuVisible(true)}
-          />
-        </div>
-      ) : (
-        <MobileMenu />
-      )}
-
       <Header
         linkLabels={[
           { label: "Work", urlPath: "/" },
