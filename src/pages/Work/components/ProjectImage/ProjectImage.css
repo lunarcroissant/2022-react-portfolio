@@ -11,9 +11,9 @@
 @media screen and (max-width: 768px) {
   .projectImage {
     position: absolute;
-    left: -70vw;
-    width: auto;
-    height: 40vh;
+    top: 10rem;
+    width: 100vw;
+    height: auto;
   }
   .projectImage__container {
     position: relative;

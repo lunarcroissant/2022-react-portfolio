@@ -62,6 +62,7 @@
     padding-right: 0;
     max-height: min-content;
     height: calc(min-content - (100vh - var(--vh)));
+    pointer-events: none;
 
     &__actions {
       & button:first-child {

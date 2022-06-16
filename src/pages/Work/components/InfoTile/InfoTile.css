@@ -35,6 +35,7 @@
     padding-right: 0;
     max-height: min-content;
     height: calc(min-content - (100vh - var(--vh)));
+    pointer-events: none;
   }
   .infoTile__actions button:first-child {
     margin-right: 0.5rem;
