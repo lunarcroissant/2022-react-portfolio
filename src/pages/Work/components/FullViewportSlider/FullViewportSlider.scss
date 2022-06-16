@@ -31,6 +31,7 @@
 .projectContext {
   position: absolute;
   height: 100vh;
+  height: var(--vh, 100%);
   width: 100vw;
   padding: 2rem;
 }
