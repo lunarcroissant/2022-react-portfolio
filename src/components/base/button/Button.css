@@ -9,7 +9,6 @@
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
   border-radius: 1rem;
-  animation: popIn 2s ease-in-out;
 }
 
 .btn-primary {
@@ -18,6 +17,7 @@
   font-weight: var(--font--regular);
   border-radius: 3rem;
   width: max-content;
+  animation: popIn 2s ease-in-out;
 }
 
 .btn-primary:hover {
