@@ -197,10 +197,9 @@ const Profile = ({ data }: IProps) => {
           opacity={"0.9"}
           blur={blur}
         >
-          I’m a British/German Digital Product Designer and Front-End Developer
-          that loves to bridge the gap between amazing design and technical
-          implementation. I strive to create beautiful digital experiences that
-          balance creative design with practical needs.
+          I love bridging the gap between amazing design and technical
+          implementation with the ultimate goal of building useful, scalable and
+          beautiful digital experiences.
         </Text>
         <VerticalSpacing size="md" />
         <Text
@@ -211,8 +210,11 @@ const Profile = ({ data }: IProps) => {
           opacity={"0.9"}
           blur={blur}
         >
-          Having worked in Marketing, Product Management and Sales, I make sure
-          to understand and consider the business needs of every project.{" "}
+          I've been working in digital product design for four years, both
+          professionally, for companies ranging from BT Group to brand-new
+          start-ups, and through personal projects. Two years ago I decided to
+          learn web developement as well, not only to bring designs to life, but
+          also to keep improving as a designer.{" "}
         </Text>
         <VerticalSpacing size="md" />
       </div>

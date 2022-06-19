@@ -9,6 +9,7 @@
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
   border-radius: 1rem;
+  animation: popIn 2s ease-in-out;
 }
 
 .btn-primary {
@@ -52,5 +53,18 @@
   backdrop-filter: blur(2rem);
 }
 .btn-secondary:hover {
-  box-shadow: inset 0 0 0 2px white;
+  box-shadow: inset 0 0 0 50px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

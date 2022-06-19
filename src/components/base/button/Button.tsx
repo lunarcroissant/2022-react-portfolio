@@ -23,12 +23,23 @@ interface IProps {
   buttonVariant: ButtonType;
   children: string;
   icon?: Icons;
+  fontColour?: string;
   handleClick?: (value: any) => void;
 }
 
-const Button = ({ buttonVariant, icon, children, handleClick }: IProps) => {
+const Button = ({
+  buttonVariant,
+  icon,
+  fontColour,
+  children,
+  handleClick,
+}: IProps) => {
   return (
-    <button className={`btn ${buttonVariant}`} onClick={handleClick}>
+    <button
+      className={`btn ${buttonVariant}`}
+      onClick={handleClick}
+      style={{ color: fontColour }}
+    >
       {icon ? <Icon size="md" icon={icon} /> : null}
       {children}
     </button>

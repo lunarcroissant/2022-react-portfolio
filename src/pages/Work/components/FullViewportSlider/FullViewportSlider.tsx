@@ -52,6 +52,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     tags,
     imageSource,
     backgroundColour,
+    darkerColour,
     caseStudyContent,
   } = activeContent;
 
@@ -187,6 +188,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
           tags={tags}
           imageSource={imageSource}
           backgroundColour={backgroundColour}
+          darkerColour={darkerColour}
           key={`InfoTile_${title}`}
         />
         <PageCounter data={data} />

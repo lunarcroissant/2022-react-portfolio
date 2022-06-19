@@ -20,6 +20,7 @@ interface IProps {
   tags: string[];
   imageSource: string;
   backgroundColour: string;
+  darkerColour: string;
 }
 
 const InfoTile = ({
@@ -28,6 +29,7 @@ const InfoTile = ({
   tags,
   imageSource,
   backgroundColour,
+  darkerColour,
 }: IProps) => {
   // const projects = data.map((project: any) => {
   //   return project;
@@ -39,6 +41,10 @@ const InfoTile = ({
   const isMobile = useViewportSize(768);
 
   const [showInfoTile, setShowInfoTile] = useState(true);
+
+  const setBodyBackground = (backgroundColour: string) => {
+    document.body.style.backgroundColor = backgroundColour;
+  };
 
   if (isMobile) {
     return (
@@ -182,6 +188,7 @@ const InfoTile = ({
       <Button
         buttonVariant={ButtonType.primary}
         handleClick={() => setShowCaseStudy(true)}
+        fontColour={darkerColour}
       >
         View Case Study
       </Button>

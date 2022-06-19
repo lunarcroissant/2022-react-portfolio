@@ -9,6 +9,7 @@
   align-items: center;
   transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
   border-radius: 1rem;
+  animation: popIn 2s ease-in-out;
   // width: 100%;
   // max-width: 100%;
 }
@@ -59,12 +60,28 @@
 .btn-secondary {
   color: #f3f3f3;
   background: none;
+  // box-shadow: inset 0 0 0 2px rgb(255, 255, 255, 0.1);
   box-shadow: inset 0 0 0 50px rgb(255, 255, 255, 0.2);
   font-weight: var(--font--regular);
   backdrop-filter: blur(2rem);
 
   &:hover {
-    box-shadow: inset 0 0 0 2px white;
+    // box-shadow: inset 0 0 0 2px white;
+    box-shadow: inset 0 0 0 50px rgb(255, 255, 255, 0.2);
+    transform: scale(1.1);
     // background: rgb(255, 255, 255, 0.2);
   }
+}
+
+@keyframes popIn {
+0% {
+  opacity: 0;
+}
+75% {
+  opacity: 0;
+}
+
+100% {
+  opacity: 1;
+}
 }
