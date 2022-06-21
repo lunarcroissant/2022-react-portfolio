@@ -194,7 +194,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "Git",
-      status: "Advanced",
+      status: "Experienced",
       categories: ["All", "Code"],
       icon: "icons_git--white",
     },
@@ -266,7 +266,7 @@ const TabsGallery = ({ data, children, heading }: IProps) => {
     },
     {
       skill: "UX research",
-      status: "Beginner",
+      status: "Experienced",
       categories: ["All", "Design"],
       icon: "icons_users--white",
     },

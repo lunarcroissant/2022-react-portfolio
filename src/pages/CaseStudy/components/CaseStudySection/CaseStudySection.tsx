@@ -10,13 +10,15 @@ import Text, {
 import VerticalSpacing from "../../../../components/base/VerticalSpacing/VerticalSpacing";
 
 import "./CaseStudySection.css";
-import CaseImage from "./components/CaseImage/CaseImage";
+import CaseAsset from "./components/CaseAsset/CaseAsset";
 
 interface IProps {
   heading: string;
   subHeading?: string;
   bodyText: string;
-  image?: string;
+  asset?: string;
+  assetType?: string;
+  assetAlt?: string;
   children?: ReactNode;
 }
 
@@ -24,9 +26,12 @@ const CaseStudySection = ({
   heading,
   subHeading,
   bodyText,
-  image,
+  asset,
+  assetType,
+  assetAlt,
   children,
 }: IProps) => {
+  console.log(asset);
   return (
     <div
       className="caseStudySection width-100 col"
@@ -56,7 +61,9 @@ const CaseStudySection = ({
       )}
 
       <VerticalSpacing size="lg" />
-      {image && <CaseImage image={image} />}
+      {asset && (
+        <CaseAsset asset={asset} assetAlt={assetAlt} assetType={assetType} />
+      )}
       {children}
       <VerticalSpacing size="xxl" />
     </div>

@@ -2,7 +2,7 @@
   "projects": [
     {
     "title": "EE Product Page",
-    "description": "Combining business goals, such as increased user log ins, increased conversation, and UX improvments, this project simplifies a complex checkout process, increases upsell possibilities and provides a supportive journey to customers.",
+    "description": "Combining business goals, such as increased user log ins, increased conversation, and UX improvments, this project simplifies a complex configuration process, increases upsell possibilities and provides a supportive journey to customers.",
     "tags": [
       "UI Design", "React", "Figma"
     ],
@@ -45,30 +45,74 @@
         "goals": [
           {
             "heading": "Quick and supportive",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "copy": "Most customers are buying one of their most expensive purchases on a two year commitment, so a key goal was to make the process as simple and transparent as possible."
           },
           {
             "heading": "Improve turnover",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "copy": "Optional add ons and uptake of higher value options was lacking. Our aim with this project was to improve turnover by making the value clear to customers rather than disguising costs."
           },
           {
-            "heading": "Minimise excess content work",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Minimise content work",
+            "copy": "With 2-3 phone launches each week, in addition to various other devices, the load on content designers to create generic marketing copy and other product page content was unnecessarily high, resulting in hundreds of hours spent writing copy that the customer base may not read. Our aim was to maintain the information while saving customers and content designers time."
           }
         ]
       },
+      "challenges": {
+        "heading": "Challenges",
+        "subHeading": null,
+        "challenges": [
+          {
+            "heading": "Disjointed journey",
+            "copy": "The existing journey allowed the user to make some choices (device and plan) on the product page with the remaining configuration of the bundle (smart benefits/extras, trade-in, insurance, etc.) happening after the item had been added to the basket and the customer was checking out. User research had shown that this caused confusion and mismatched information at both stages."
+          },
+          {
+            "heading": "Complex product",
+            "copy": "The new product page not only aimed to allow a customer to configure all parts of the bundle directly on the product page but also needed to be product agonostic for future business areas and effecient use of dev resource."
+          },
+          {
+            "heading": "Merchandising requirements",
+            "copy": "As an e-commerce business, maintaining or ideally increasing the number of merchandising touchpoints was an important consideration."
+          }
+        ],
+        "asset": "EE_ExistingScreens_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+      },
       "articleSections": [
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
-        "imageAlt": "This is a case study image"
+          "heading": "Simplifying a complex bundle",
+        "copy": "The existing product page bundled several complex decisions, such as monthly data, number of smart benefits and pricing, into one by using plan cards. This caused not only a high cognitive load on the user but was also confusing as many customers weren't familiar with constituent parts of the decision, such as Smart Benefits. To reduce the cognitive load on users the major building blocks of their purchase are split into separate decisions with relative pricing displayed. The relative pricing aims to serve both price sensitive customers as well as business interests by encouraging users that might not typically select higher value options to do so.",
+        "asset": "EEPDP_PhoneConfig_Desktop_Compressed.mp4",
+        "assetType": "mp4",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Putting the benefit before the decision",
+        "copy": "The existing product pages asked customers to decide how many Smart Benefits (Premium subscriptions included in the price of more expensive plans) they want before they knew what they were, leaving the customer with a decision focused on cost rather than which benefits they would like to add to their plan. The solution was simple, create attractive and recognisable benefit cards that a customer can add directly from the product page rather than asking them how many they want.",
+        "asset": "EEPDP_SmartBenefits_Desktop_Compressed.mp4",
+        "assetType": "mp4",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Incorporating trade in seamlessly",
+        "copy": "In addition to extras, such as the smart benefits above, it also made sense to integrate trade in into the product page configurator. For existing customers, any devices registered to their account automatically appear, saving them time and hassle when trading in.",
+        "asset": "EEPDP_TradeIn_Desktop_Compressed.mp4",
+        "assetType": "mp4",
+        "assetAlt": "This is a case study image"
         },
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_EEPDPOnGreyBackground.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "EEPDP_Features_Desktop_Compressed.mp4",
+        "assetType": "mp4",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Time-saving features",
+        "copy": "With the aim of reducing content designer effort and marketing fluff from the features section, I started with the concept of a spec sheet. While this minimalist approach may suit tech enthusiasts, a weekly critique session offered a good suggestion in makign the specs more easily understandable by the average consumer. To accomodate for this as well as keep editing time to a minimum, the features section pulls the specifications from the back end while being surrounded by generic explanatory copy for those who prefer a non-technical view.",
+        "asset": "EE_FeaturesSections_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         }
       ] 
 
@@ -128,21 +172,24 @@
       "articleSections": [
         {
           "heading": "Existing friticion",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "iOSAlarms_OriginalScreens_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+        "copy": "The existing alarms app was limited in functionality by the layout and configuration options. From researching how people use the app, we knew that most alarms were set in group around key daily events, however, the alarms app did not allow grouped alarms to be create or even easily managed. In addition, the primary action, inputting time was far away from a comfortable thumb reach and was hard to accruately control with a swiping gesture due to the small input size.",
+        "asset": "iOSAlarms_OriginalScreens_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         },
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "iOSAlarms_TwoScreenSolution_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+          "heading": "Off'n'on in one step",
+        "copy": "Creating and managing a grouped alarm should be as simple as creating a one-off alarm. To achieve this, the existing UI was largely kept the same and an option to make it a grouped alarm was added. Using the existing component for the stopwatch, a user can quickly toggle and see the alarms added to the group. Once the alarm was saved, it would be visually identified by the layered icon showing the number of alarms in the group along with the option to toggle the whole group or individual alarms off or on.",
+        "asset": "iOSAlarms_TwoScreenSolution_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         },
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "iOSAlarms_FirstSolutionUseCase_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+          "heading": "Making it easy to plan your day",
+        "copy": "Once a grouped alarm has been created, users had expressed a desire to order their alarms, so we added the option (when editing) to hold and drag to reorder alarms and grouped alarms. In addition, by tapping the icon showing how many alarms sit within a grouped alarm, a user can view all included alarms and toggle each one off or on.",
+        "asset": "iOSAlarms_FirstSolutionUseCase_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         }
       ] 
 
@@ -150,7 +197,7 @@
   },
   {
     "title": "Food Swiper",
-    "description": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+    "description": "Aimed at reducing food waste and making high quality meals easier, Shelf is a conceptual app that combines food inventory management, recipie suggestions and smart shopping lists.",
     "tags": [
       "UI Design", "App", "Figma"
     ],
@@ -159,7 +206,7 @@
     "heroImage": "Shelf_2000x1000.png",
     "caseStudyContent": {
       "heading": "Food Swiper",
-      "subHeading": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+      "subHeading": "Aimed at reducing food waste and making high quality meals easier, Shelf is a conceptual app that combines food inventory management, recipie suggestions and smart shopping lists.",
       "projectLink": null,
       "team": [{
         "name": "Eddie Tierney",
@@ -197,14 +244,16 @@
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "TEMPORARY_AtiqOnGreyBackground.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         },
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "TEMPORARY_EEPDPOnGreyBackground.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "TEMPORARY_EEPDPOnGreyBackground.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         }
       ] 
 
@@ -272,17 +321,33 @@
       },
       "articleSections": [
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+          "heading": "Modular from the ground up",
+        "copy": "To minimise design and developement work, I used atomic design principles when creatign Evopack's scalable design system. Working up from a core colour pallette and atomic components, such as buttons, links and text, all higher order components are created with lower order components.",
         
-        "image": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Precision and humanity in one style",
+        "copy": "Evopack design style not only needed to be distinctive but also convey the human emotion and ingenuity in the effort to make big industry more sustainable. I used handwritten accents along with a soft, bright and rounded aestethic when designing components to make the brand more approachable and friendly to customers.",
+        "asset": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Content editable in multiple languages",
+        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "asset": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         },
         {
           "heading": "A sleek mobile experience",
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "image": "Evopack_LaptopStack_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "Evopack_LaptopStack_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         }
       ] 
 
@@ -370,20 +435,23 @@
         {
           "heading": "A content-led brand",
         "copy": "The chosen brand colours and aesthetic was purposefully understated so that the varied product lines could stand out. This included the choice to minimise the amount of Atiq-focused pages and multiple routes to purchase, so that the brand doesn’t get in the way of customers completing their purchase.",
-        "image": "TEMPORARY_AtiqOnGreyBackground.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "TEMPORARY_AtiqOnGreyBackground.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         },
         {
           "heading": "DRY approach to development",
-        "copy": "The design and codebase of Atiq should be as small and maintainable as possible. In order to achieve this, everything was designed with the DRY approach in mind. This meant that designs focused on components that would be reusable, which in turn allowed the React components to minimise repetitive code by mapping over these pragmatic components. This applied from the individual design atoms, such as headings and buttons, right up to large components, such as the product carousels and the pages themselves. For instance, instead of repeatedly coding <p></p> tags and adding the desired styles to each instance, I created a <Text /> component which took props to set specific styles and could be used globally throughout the web app. Larger components, such as the product line carousels and product pages are also agnostic to the content within it, allowing them to be reused and development time to be sort.",
-        "image": "Atiq_HomePageTop_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+        "copy": "The design and codebase of Atiq should be as small and maintainable as possible. In order to achieve this, everything was designed with the DRY approach in mind. This meant that designs focused on components that would be reusable, which in turn allowed the React components to minimise repetitive code by mapping over these pragmatic components. This applied from the individual design atoms, such as headings and buttons, right up to large components, such as the product carousels and the pages themselves. For instance, instead of repeatedly coding <p></p> tags and adding the desired styles to each instance, I created a <Text /> component which took props to set specific styles and could be used globally throughout the web app. Larger components, such as the product line carousels and product pages are also agnostic to the content within it, allowing them to be reused and development time to be short.",
+        "asset": "Atiq_HomePageTop_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         },
         {
           "heading": "Learning React",
         "copy": "Coming from a more ‘traditional’ web development level, I needed to learn how the single page application (SPA) structure of a framework like React works. I began by building several components, including complex ones, within the App.tsx file before breaking them out into smaller components and a more sophisticated file structure. This allowed me to understand how and where React imports the components into the final root div to render in a way the browser can understand. During this process, I also learned about and applied frequently used javascript methods in React, such as mapping, Object destructuring, types of variables (const, let, var), states, hooks, and interfaces. ",
-        "image": "Atiq_ClothingPageTop_6000x4000.jpg",
-        "imageAlt": "This is a case study image"
+        "asset": "Atiq_ClothingPageTop_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
         }
       ] 
 

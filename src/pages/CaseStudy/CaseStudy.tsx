@@ -14,6 +14,8 @@ import { NavLink } from "react-router-dom";
 import useViewportSize from "../../hooks/useViewportSize/useViewportSize";
 import Icon from "../../components/base/Icon/Icon";
 import React from "react";
+import CaseAsset from "./components/CaseStudySection/components/CaseAsset/CaseAsset";
+import VerticalSpacing from "../../components/base/VerticalSpacing/VerticalSpacing";
 
 interface IProps {
   data: any;
@@ -186,6 +188,16 @@ const CaseStudy = React.memo(({ data }: IProps) => {
                 );
               })}
             </div>
+            {challenges.asset && (
+              <>
+                <VerticalSpacing size="xl" />
+                <CaseAsset
+                  asset={challenges.asset}
+                  assetAlt={challenges.assetAlt}
+                  assetType={challenges.assetType}
+                />
+              </>
+            )}
           </CaseStudySection>
         )}
 
@@ -195,7 +207,9 @@ const CaseStudy = React.memo(({ data }: IProps) => {
               <CaseStudySection
                 heading={section.heading}
                 bodyText={section.copy}
-                image={section.image}
+                asset={section.asset}
+                assetAlt={section.assetAlt}
+                assetType={section.assetType}
               />
             );
           })}
