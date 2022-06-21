@@ -14,7 +14,7 @@
 .checkboxitem--active {
   box-shadow: inset 0 0 0 3px var(--primary-blue);
   background: white;
-  color: var(--primary);
+  color: #217286;
 }
 .checkboxitem:hover {
   box-shadow: inset 0 0 0 3px white;

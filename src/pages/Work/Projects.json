@@ -73,12 +73,23 @@
             "heading": "Merchandising requirements",
             "copy": "As an e-commerce business, maintaining or ideally increasing the number of merchandising touchpoints was an important consideration."
           }
-        ],
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "The starting point",
+        "copy": "The existing product page bundled several complex decisions, such as monthly data, number of smart benefits and pricing, into one by using plan cards. This caused not only a high cognitive load on the user but was also confusing as many customers weren't familiar with constituent parts of the decision, such as Smart Benefits. In addition, the current product page lacked a To reduce the cognitive load on users the major building blocks of their purchase are split into separate decisions with relative pricing displayed. The relative pricing aims to serve both price sensitive customers as well as business interests by encouraging users that might not typically select higher value options to do so.",
         "asset": "EE_ExistingScreens_4000x2001.jpg",
         "assetType": "jpg",
         "assetAlt": "This is a case study image"
-      },
-      "articleSections": [
+        },
+        {
+          "heading": "Wireframing and rapid iterations",
+        "copy": "The existing product page bundled several complex decisions, such as monthly data, number of smart benefits and pricing, into one by using plan cards. This caused not only a high cognitive load on the user but was also confusing as many customers weren't familiar with constituent parts of the decision, such as Smart Benefits. To reduce the cognitive load on users the major building blocks of their purchase are split into separate decisions with relative pricing displayed. The relative pricing aims to serve both price sensitive customers as well as business interests by encouraging users that might not typically select higher value options to do so.",
+        "asset": "EE_Ideation_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
         {
           "heading": "Simplifying a complex bundle",
         "copy": "The existing product page bundled several complex decisions, such as monthly data, number of smart benefits and pricing, into one by using plan cards. This caused not only a high cognitive load on the user but was also confusing as many customers weren't familiar with constituent parts of the decision, such as Smart Benefits. To reduce the cognitive load on users the major building blocks of their purchase are split into separate decisions with relative pricing displayed. The relative pricing aims to serve both price sensitive customers as well as business interests by encouraging users that might not typically select higher value options to do so.",
