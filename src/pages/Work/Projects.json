@@ -207,7 +207,7 @@
     }
   },
   {
-    "title": "Food Swiper",
+    "title": "Shelf",
     "description": "Aimed at reducing food waste and making high quality meals easier, Shelf is a conceptual app that combines food inventory management, recipie suggestions and smart shopping lists.",
     "tags": [
       "UI Design", "App", "Figma"
@@ -264,6 +264,138 @@
         "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
         "asset": "TEMPORARY_EEPDPOnGreyBackground.jpg",
         "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        }
+      ] 
+
+    }
+  },
+  {
+    "title": "EE Deal Zones",
+    "description": "Redesigning EE's deal pages with a focus on improving conversion whilst also creating a better and more visually appealing experience.",
+    "tags": [
+      "Figma", "UX Research"
+    ],
+    "backgroundColour": "radial-gradient(110.21% 244.81% at 93.4% 2.72%, #9466cb 0%, #270073 100%)",
+    "darkerColour": "#270073",
+    "heroImage": "DealZone_Hero_4000x2001.png",
+    "caseStudyContent": {
+      "heading": "EE Deal Zones",
+      "subHeading": "Redesigning EE's deal pages with a focus on improving conversion whilst also creating a better and more visually appealing experience. Challenges of limited developer resource and presenting complex deal information had to be overcome to ensure success.",
+      "projectLink": null,
+      "team": [{
+        "name": "Eddie Tierney",
+        "role": ["Product Designer"] 
+      }],
+      "tools": [{
+        "name": "React",
+        "icon": "icons_react--dark"
+      }, {
+        "name": "TypeScript",
+        "icon": "icons_typescript--dark"
+      },{
+        "name": "SASS",
+        "icon": "icons_sass--dark"
+      }, {
+        "name": "CSS3",
+        "icon": "icons_css3--dark"
+      }, {
+        "name": "Git",
+        "icon": "icons_git--dark"
+      },{
+        "name": "HTML5",
+        "icon": "icons_html5--dark"
+      },{
+        "name": "JavaScript",
+        "icon": "icons_javascript--dark"
+      }, {
+        "name": "Figma",
+        "icon": "icons_figma--dark"
+      }],
+      "goals": {
+        "heading": "Goals",
+        "subHeading": null,
+        "goals": [
+          {
+            "heading": "Improve conversion",
+            "copy": "The existing deals page was suffering from low conversion. From the start, a lack of context for users and lacking UX stood out as major reasons for why many potential customers, often via paid media, would bounce from the page."
+          },
+          {
+            "heading": "Better UX",
+            "copy": "The business not only wanted to improve conversion, but also provide a more seamless and refined experience. The idea was that well-designed digital experiences not only look good but also increase customer trust and, in turn, conversion rates."
+          },
+          {
+            "heading": "Increase merchandising",
+            "copy": "For an e-commerce company, merchanising on deal pages is of course a priority. The aim for this project was to increase the merchansing opportunities without cluttering the UI."
+          }
+        ]
+      },
+      "challenges": {
+        "heading": "Challenges",
+        "subHeading": null,
+        "challenges": [
+          {
+            "heading": "Limited developer resource",
+            "copy": "Our team did not have developers directly within the team, so we had to design components and an overall experience that minimised the number of hours and lines of code that needed to be written."
+          },
+          {
+            "heading": "Complex information",
+            "copy": "The deals displayed on this page are all for specific configurations and often feature additional propositions, such as free headphones, network benefits or extra data."
+          }
+        ]
+      },
+      "articleSections": [
+        {
+          "heading": "The starting point",
+        "copy": "The existing deals page was functional but fell short on fullfilling its use as a place to quickly find the right deal. It lacked a clear purpose for customers landing on the page, often coming straight from paid media, such as an email or MMS. In addition, the tabs provided very limited filtering for customers with specific requirements and the large, inefficient deal cards prevented customers from viewing other deals when the first landed on the page, thereby reducing the chance that a customer would find a deal they would be interested in.",
+        
+        "asset": "DealZone_ExistingScreens_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Thinking too small",
+        "copy": "Initial wireframes and high-fidelity designs focused on 'repackaging' the existing experience and functionality. This meant maintaining the ability to configure the device and plan directly from the deals page. This not only increased the difficulty of the project, as more needed to fit in the same space, it also failed to consider that we already have a page dedicated to configuring these things - the product page. Therefore, to minimise developer effort and encourage the reuse of React components, we changed our approach to focus on letting customers find the right deal first. That being said, the initial designs did feature some quick wins, such as reducing repetition by summarising repeated information at the top of the page, adding explanatory subcopy to the page heading, reducing the size of the deal components to surface more deals at the same time and aligning related information along one axis for easier comparison between deals. Many of these changes focused on reducing the cognitive load on customers either by prominently summarising information that was previously repeated on each deal or by making the large amount of deals more easily digestable.",
+        
+        "asset": "DealZone_Ideation_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "One component to rule them all",
+        "copy": "Throughout the project, I focused on reuse of existing components and/or minimal additional developement requirement. For the chosen design, the same component is used for the inactive and active deal state, for both mobile and desktop. The only difference between the active and inactive state is one line of CSS, which regulates the increased size of the active deal.",
+        
+        "asset": "DealZone_MobilePhones_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Look, compare, buy",
+        "copy": "From existing user insights and unmoderated testing we knew that many customers already knew roughly what they wanted but preferred the option to compare similar devices and filter them to see how the deals stack up. To address this user need, chips for popular categories (e.g. iPhone or Samsung) and filters were introduced. More generally, the deals page now functioned as a comparison tool that linked to the product page rather than being a configurator in itself.",
+        
+        "asset": "DealZone_PreUserTesting_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "User testing the concept",
+        "copy": "Our first in depth round of user testing produced very positive results. 5 out of 5 users were able to effectively use the design and the overall satisfaction rating was 6.2/7 (88.9%). Qualitatively, all users immediately understood what kind of page they were on, how to navigate the page using swipe and tap gestures and stated that they found it easy to find a device that they wanted. 4 out of 5 users liked the imagery-led approach and the level of information, with one user emphasising that if he couldn't easily browse the deals, he would go elsewhere.",
+        "asset": "DealZone_MobileOldVsNew_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Iterating on the results",
+        "copy": "While the testing results were positive, I wanted to implement some of the iteration ideas that I had noted as a result of the research. These improvements included making the whole deal component a link (allowing the user to intuitively tap the device to visit the product page), ordering the deals in a logical order (e.g. by release date) and showing key device selling points while browsing the deals (e.g. battery life).",
+        "asset": "DealZone_MobilePhones_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "The latest version",
+        "copy": "As of writing this case study, the deal zone page ",
+        "asset": "DealZones_DesktopBrowsing.mp4",
+        "assetType": "mp4",
         "assetAlt": "This is a case study image"
         }
       ] 
@@ -335,14 +467,30 @@
           "heading": "Modular from the ground up",
         "copy": "To minimise design and developement work, I used atomic design principles when creatign Evopack's scalable design system. Working up from a core colour pallette and atomic components, such as buttons, links and text, all higher order components are created with lower order components.",
         
-        "asset": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
+        "asset": "Evopack_Homepage_4000x2001.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Modular from the ground up",
+        "copy": "To minimise design and developement work, I used atomic design principles when creatign Evopack's scalable design system. Working up from a core colour pallette and atomic components, such as buttons, links and text, all higher order components are created with lower order components.",
+        
+        "asset": "Evopack_LaptopStack_6000x4000.jpg",
+        "assetType": "jpg",
+        "assetAlt": "This is a case study image"
+        },
+        {
+          "heading": "Modular from the ground up",
+        "copy": "To minimise design and developement work, I used atomic design principles when creatign Evopack's scalable design system. Working up from a core colour pallette and atomic components, such as buttons, links and text, all higher order components are created with lower order components.",
+        
+        "asset": "Evopack_ServicesAndContact_4000x2001.jpg",
         "assetType": "jpg",
         "assetAlt": "This is a case study image"
         },
         {
           "heading": "Precision and humanity in one style",
         "copy": "Evopack design style not only needed to be distinctive but also convey the human emotion and ingenuity in the effort to make big industry more sustainable. I used handwritten accents along with a soft, bright and rounded aestethic when designing components to make the brand more approachable and friendly to customers.",
-        "asset": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
+        "asset": "Evopack_Applications_4000x2001.jpg",
         "assetType": "jpg",
         "assetAlt": "This is a case study image"
         },
