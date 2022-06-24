@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 1024px) {
   .caseStudyHeader {
-    padding-top: 168px;
+    padding-top: 236px;
   }
   .caseStudyHeader__content {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -17,6 +17,7 @@ const Work = ({ data }: IProps) => {
   const { mobileMenuVisible } = useContext(GlobalContext);
 
   const projectsArray = projects.projects;
+  window.screen.orientation.lock("portrait");
 
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(projectsArray.length);
