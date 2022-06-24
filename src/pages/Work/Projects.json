@@ -201,7 +201,7 @@
     }
   },
   {
-    "title": "Shelf",
+    "title": "Shelf (Coming soon)",
     "description": "Aimed at reducing food waste and making high quality meals easier, Shelf is a conceptual app that combines food inventory management, recipie suggestions and smart shopping lists.",
     "tags": [
       "UI Design", "App", "Figma"
@@ -232,31 +232,24 @@
         "subHeading": null,
         "goals": [
           {
-            "heading": "Improve the speed",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Remove the hassle",
+            "copy": "I came up with Shelf to reduce the 33% of fresh food that gets thrown away. The app aims to make planning and managing food on a daily basis as simple as modern mobile banking."
           },
           {
-            "heading": "Improve the speed",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Foster social interaction",
+            "copy": "Cooking and talking about food is inherently social. Leveraging this for both the benefit of the users as well as the growth of the app was very important."
           },
           {
-            "heading": "Improve the speed",
-            "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand."
+            "heading": "Increase transparency",
+            "copy": "We didn't just want to make managing food easier, we also wanted to improve the relationshio between retailers and consumers by offering simple ways to purchase and transparent post-purchase product information directly in the app."
           }
         ]
       },
       "articleSections": [
         {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "asset": "TEMPORARY_AtiqOnGreyBackground.jpg",
-        "assetType": "jpg",
-        "assetAlt": "This is a case study image"
-        },
-        {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "asset": "TEMPORARY_EEPDPOnGreyBackground.jpg",
+          "heading": "Case study coming soon",
+        "copy": "Check back again soon for the full case study.",
+        "asset": "Shelf_HeroWithBackground.jpg",
         "assetType": "jpg",
         "assetAlt": "This is a case study image"
         }
