@@ -468,16 +468,16 @@
         "assetAlt": "This is a case study image"
         },
         {
-          "heading": "Modular from the ground up",
-        "copy": "To minimise design and developement work, I used atomic design principles when creatign Evopack's scalable design system. Working up from a core colour pallette and atomic components, such as buttons, links and text, all higher order components are created with lower order components.",
+          "heading": "Focused on developing connections",
+        "copy": "During the short term, Evopack's primary goal was to build connections with potential customers and investors. To support this goal, I designed and developed a streamlined contact section that uses email.js to communicate between the front-end applcation (React) and server. The contact form react component appears at the bottom of all relevant pages to encourage visitors to engage with it and other components, such as the quote section below, are designed to highlight the ambition and individuals driving the company.",
         
         "asset": "Evopack_LaptopStack_6000x4000.jpg",
         "assetType": "jpg",
         "assetAlt": "This is a case study image"
         },
         {
-          "heading": "Modular from the ground up",
-        "copy": "To minimise design and developement work, I used atomic design principles when creatign Evopack's scalable design system. Working up from a core colour pallette and atomic components, such as buttons, links and text, all higher order components are created with lower order components.",
+          "heading": "Reusable page structures",
+        "copy": "To leverage the power of reusable react components, I also focussed on designing and building higher order components, such as entire page structures, that can be easily reused. One example is the hub page for topics such as product applications and the services that Evopack provides. Each page features a custom tabs component that renders the data for the respective subsection (e.g. Hygiene Consulting within Services). This page structure also features information boxes, carousels and the aforementioned contact component to educate visitors and allow them to easily contact Evopack.",
         
         "asset": "Evopack_ServicesAndContact_4000x2001.jpg",
         "assetType": "jpg",
@@ -492,15 +492,8 @@
         },
         {
           "heading": "Content editable in multiple languages",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
+        "copy": "As Evopack operates in regions speaking German, English and French, they required a web app that allows users to quickly switch between languages. The solution I came up with avoided automatic translators as these can often misinterpret the nuances of languages, instead opting a custom solution involving content written in all required languages and using a toggle on the site to switch between the desired content language. To achieve this, I used the useContext hook in React to make the chosen language available throughout the application and organised the JSON file with the website content into language objects at the top level. On the page level components, the application fetches the JSON file and pulls in the content based on which lanuage is active in the react context.",
         "asset": "Evopack_LaptopWithPhoneView_6000x4000.jpg",
-        "assetType": "jpg",
-        "assetAlt": "This is a case study image"
-        },
-        {
-          "heading": "A sleek mobile experience",
-        "copy": "The challenge for this project was building a new brand and e-commerce site at the same time. Therefore I had to marry the emotional and technical requirements of a fledgling brand.",
-        "asset": "Evopack_LaptopStack_6000x4000.jpg",
         "assetType": "jpg",
         "assetAlt": "This is a case study image"
         }
