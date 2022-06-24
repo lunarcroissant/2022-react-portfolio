@@ -58,7 +58,8 @@
     right: 1rem;
     bottom: 1rem;
     width: 100%;
-    max-width: 100%;
+    // max-width: 100%;
+    max-width: 80vw;
     padding-right: 0;
     max-height: min-content;
     height: calc(min-content - (100vh - var(--vh)));

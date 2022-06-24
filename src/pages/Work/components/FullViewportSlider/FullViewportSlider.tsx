@@ -172,6 +172,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
   const caseStudyInfo = {
     ...caseStudyContent,
     backgroundColour: backgroundColour,
+    darkerColour: darkerColour,
   };
 
   return (

@@ -169,8 +169,11 @@ header {
 
   }
   .header {
+    height: 81px;
+
     &__content {
-      padding: 1rem var(--container-padding-width);
+      // padding: 1rem var(--container-padding-width);
+      padding: 1rem var(--mobile-standard-horizontal-padding);
     }
   }
 }

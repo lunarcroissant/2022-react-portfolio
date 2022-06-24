@@ -32,6 +32,7 @@ const CaseStudy = React.memo(({ data }: IProps) => {
     articleSections,
     projectLink,
     backgroundColour,
+    darkerColour,
   } = data;
 
   const [scrollingHeader, setScrollingHeader] = useState(false);
@@ -88,6 +89,8 @@ const CaseStudy = React.memo(({ data }: IProps) => {
 
   // hexToRgbA(backgroundColour)
 
+  var rgbDarkerColour = hexToRgbA(darkerColour);
+
   return (
     <>
       <div className="caseStudy__scrollHeaderContainer width-100">
@@ -97,7 +100,7 @@ const CaseStudy = React.memo(({ data }: IProps) => {
           }`}
           style={{
             backgroundColor: `${
-              isMobile ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.8)"
+              isMobile ? `${rgbDarkerColour}` : "rgba(255, 255, 255, 0.8)"
             }`,
           }}
         >

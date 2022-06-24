@@ -43,6 +43,7 @@ const CaseStudySection = ({
         colour={TextColour.darkBlack}
         weight={HeadingWeight.regular}
         headingLevel="h2"
+        animate
       >
         {heading}
       </Heading>
@@ -54,6 +55,7 @@ const CaseStudySection = ({
             size={TextSize.lg}
             colour={TextColour.lightBlack}
             lineHeight={LineHeight.standard}
+            animate
           >
             {bodyText}
           </Text>

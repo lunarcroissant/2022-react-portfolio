@@ -6,6 +6,7 @@ interface IProps {
   weight?: HeadingWeight;
   headingLevel: string;
   isSerifFont?: boolean;
+  animate?: boolean;
 }
 export enum HeadingWeight {
   thin = "200",
@@ -34,11 +35,14 @@ const Heading = ({
   weight,
   headingLevel,
   isSerifFont,
+  animate,
 }: IProps) => {
   if (headingLevel === "h4") {
     return (
       <h2
-        className={`headingH4 ${isSerifFont && "serifHeading"}`}
+        className={`headingH4 ${isSerifFont && "serifHeading"} ${
+          animate ? "slide-up" : undefined
+        }`}
         style={{
           color: `${colour}`,
           fontWeight: `${weight}`,
@@ -51,7 +55,9 @@ const Heading = ({
   if (headingLevel === "h3") {
     return (
       <h2
-        className={`headingH3 ${isSerifFont && "serifHeading"}`}
+        className={`headingH3 ${isSerifFont && "serifHeading"} ${
+          animate ? "slide-up" : undefined
+        }`}
         style={{
           color: `${colour}`,
           fontWeight: `${weight}`,
@@ -64,7 +70,9 @@ const Heading = ({
   if (headingLevel === "h2") {
     return (
       <h2
-        className={`headingH2 ${isSerifFont && "serifHeading"}`}
+        className={`headingH2 ${isSerifFont && "serifHeading"} ${
+          animate ? "slide-up" : undefined
+        }`}
         style={{
           color: `${colour}`,
           fontWeight: `${weight}`,
@@ -76,7 +84,9 @@ const Heading = ({
   }
   return (
     <h1
-      className={`headingH1 ${isSerifFont && "serifHeading"}`}
+      className={`headingH1 ${isSerifFont && "serifHeading"} ${
+        animate ? "slide-up" : undefined
+      }`}
       style={{
         color: `${colour}`,
         fontWeight: `${weight}`,

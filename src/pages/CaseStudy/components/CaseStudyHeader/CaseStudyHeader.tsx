@@ -50,6 +50,7 @@ const CaseStudyHeader = ({
                 colour={TextColour.darkBlack}
                 weight={HeadingWeight.light}
                 headingLevel="h1"
+                animate
               >
                 {heading}
               </Heading>
@@ -60,6 +61,7 @@ const CaseStudyHeader = ({
               colour={TextColour.darkBlack}
               weight={HeadingWeight.light}
               headingLevel="h1"
+              animate
             >
               {heading}
             </Heading>
@@ -70,6 +72,7 @@ const CaseStudyHeader = ({
             size={TextSize.lg}
             colour={TextColour.lightBlack}
             lineHeight={LineHeight.standard}
+            animate
           >
             {bodyText}
           </Text>

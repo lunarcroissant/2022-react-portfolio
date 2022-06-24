@@ -136,7 +136,10 @@ header {
     background: none;
   }
 
+  .header {
+    height: 81px;
+  }
   .header__content {
-    padding: 1rem var(--container-padding-width);
+    padding: 1rem var(--mobile-standard-horizontal-padding);
   }
 }

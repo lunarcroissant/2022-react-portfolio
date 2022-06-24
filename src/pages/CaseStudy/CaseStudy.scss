@@ -13,12 +13,15 @@
   backdrop-filter: blur(15vmax);
   overflow: scroll;
   // padding: 0 2rem;
-  padding: 0 var(--container-padding-width);
+  // padding: 0 var(--container-padding-width);
+  padding: 0 1rem;
   cursor: default;
-  overflow: overlay;
+  // overflow: overlay;
   animation-name: slideUp;
   animation-duration: 1000ms;
   animation-timing-function: cubic-bezier(0.3, 0.4, 0.2, 0.4);
+  // overflow-x: overlay;
+  scrollbar-gutter: stable both-edges;
 
   &__container {
     height: auto;
@@ -40,10 +43,12 @@
   &__scrollHeader {
     transform: translateY(-75px);
     border-bottom: rgba(0, 0, 0, 0.16) solid 1px;
-    padding: 1rem var(--container-padding-width);
+    // padding: 1rem var(--container-padding-width);
+    padding: 1rem 2rem;
     transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
+    overflow: hidden;
 
     &.visibleOnScroll {
       transform: translateY(0) !important;
@@ -71,10 +76,24 @@
   }
 }
 
+@keyframes popIn {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+  }
+
 @media screen and (max-width: 1024px) {
 
   .caseStudy {
     height: calc(100vh);
+    padding: 0 1rem;
     &__scrollHeaderContainer {
       position: absolute;
       z-index: 111;
@@ -93,7 +112,8 @@
     transform: translateY(-200px);
     transform: translateY(0) !important;
     border-bottom: rgba(0, 0, 0, 0.16) solid 1px;
-    padding: 1rem var(--container-padding-width);
+    // padding: 1rem var(--container-padding-width);
+    padding: 1rem 1rem;
     transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
     backdrop-filter: blur(20px);
     animation-name: fadeIn;
@@ -103,8 +123,14 @@
     }
 
     &Header__backButton {
-      color: white;
-      text-decoration-color: #fff;
+      color: rgba(255, 255, 255, 1);
+      border-radius: 1rem;
+      padding: 0rem 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      line-height: 3rem;
+      // text-decoration-color: #fff;
+      text-decoration: none;
+      animation: popIn 2s ease-in-out;
     }
 
     &.visibleOnScroll {
