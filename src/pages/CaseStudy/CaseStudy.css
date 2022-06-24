@@ -87,7 +87,7 @@
   .caseStudy__scrollHeader {
     transform: translateY(-200px);
     transform: translateY(0) !important;
-    border-bottom: rgba(0, 0, 0, 0.16) solid 1px;
+    border-bottom: none;
     padding: 1rem 1rem;
     transition: cubic-bezier(0.3, 0.4, 0.2, 0.4) all 200ms;
     backdrop-filter: blur(20px);
