@@ -54,23 +54,42 @@ const Heading = ({
   }
   if (headingLevel === "h3") {
     return (
-      <h2
-        className={`headingH3 ${isSerifFont && "serifHeading"} ${
-          animate ? "slide-up" : undefined
-        }`}
-        style={{
-          color: `${colour}`,
-          fontWeight: `${weight}`,
-        }}
-      >
-        {children}
-      </h2>
+      <span className="curtain">
+        <h2
+          className={`headingH3 ${isSerifFont && "serifHeading"} ${
+            animate ? "slide-up" : undefined
+          }`}
+          style={{
+            color: `${colour}`,
+            fontWeight: `${weight}`,
+          }}
+        >
+          {children}
+        </h2>
+      </span>
     );
   }
   if (headingLevel === "h2") {
     return (
-      <h2
-        className={`headingH2 ${isSerifFont && "serifHeading"} ${
+      <span className="curtain">
+        <h2
+          className={`headingH2 ${isSerifFont && "serifHeading"} ${
+            animate ? "slide-up" : undefined
+          }`}
+          style={{
+            color: `${colour}`,
+            fontWeight: `${weight}`,
+          }}
+        >
+          {children}
+        </h2>
+      </span>
+    );
+  }
+  return (
+    <span className="curtain">
+      <h1
+        className={`headingH1 ${isSerifFont && "serifHeading"} ${
           animate ? "slide-up" : undefined
         }`}
         style={{
@@ -79,21 +98,8 @@ const Heading = ({
         }}
       >
         {children}
-      </h2>
-    );
-  }
-  return (
-    <h1
-      className={`headingH1 ${isSerifFont && "serifHeading"} ${
-        animate ? "slide-up" : undefined
-      }`}
-      style={{
-        color: `${colour}`,
-        fontWeight: `${weight}`,
-      }}
-    >
-      {children}
-    </h1>
+      </h1>
+    </span>
   );
 };
 

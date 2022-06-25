@@ -60,7 +60,6 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
                   size={isMobile ? TextSize.sm : TextSize.md}
                   weight={TextWeight.bold}
                   lineHeight={LineHeight.standard}
-                  animate
                 >
                   {copy.name}
                 </Text>
@@ -73,7 +72,6 @@ const ItemsList = ({ title, copy, icons }: IProps) => {
                         size={isMobile ? TextSize.sm : TextSize.md}
                         lineHeight={LineHeight.standard}
                         key={role}
-                        animate
                       >
                         {role}
                       </Text>

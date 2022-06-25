@@ -36,7 +36,7 @@ const NumberedItem = ({ data, number }: IProps) => {
       </Heading>
       <VerticalSpacing size="xs" />
       <Text
-        size={TextSize.sm}
+        size={TextSize.lg}
         colour={TextColour.lightBlack}
         lineHeight={LineHeight.standard}
       >

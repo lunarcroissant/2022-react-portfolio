@@ -1,6 +1,5 @@
 .numberedItem {
-  max-width: 400px;
-  margin-right: 2rem;
+  margin-right: 4vw;
 }
 .numberedItem:last-of-type {
   margin-right: 0;
