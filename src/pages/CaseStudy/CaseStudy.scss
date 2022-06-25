@@ -20,7 +20,7 @@
   animation-name: slideUp;
   animation-duration: 1000ms;
   animation-timing-function: cubic-bezier(0.3, 0.4, 0.2, 0.4);
-  // overflow-x: overlay;
+  overflow-x: hidden;
   scrollbar-gutter: stable both-edges;
 
   &__container {
