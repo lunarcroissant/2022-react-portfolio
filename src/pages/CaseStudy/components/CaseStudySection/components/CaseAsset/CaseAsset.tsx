@@ -22,7 +22,7 @@ const CaseAsset = React.memo(function ({ asset, assetType, assetAlt }: IProps) {
         />
       ) : (
         <video
-          src={`${process.env.PUBLIC_URL}/assets/caseStudyImages/${asset}`}
+          src={`${process.env.PUBLIC_URL}/assets/caseStudyImages/${asset}#t=0.001`}
           className="caseStudyImage"
           key={asset}
           controls
