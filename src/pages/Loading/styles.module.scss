@@ -5,7 +5,8 @@
   right: 0;
   bottom: 0;
   width: 100vw;
-  height: 100vh;
+  height: -webkit-fill-available;
+  height: var(--vh, 100vh);
   // background: linear-gradient(288.68deg, #00B4DC -26.6%, #7A3CFF 117.8%);
   background-color: #594DE9;
   background-color: #05050f;

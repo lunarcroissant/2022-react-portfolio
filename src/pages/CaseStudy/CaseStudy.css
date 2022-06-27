@@ -9,7 +9,7 @@
   background: #fff;
   backdrop-filter: blur(15vmax);
   overflow: scroll;
-  padding: 0 1rem;
+  padding: 0 2rem;
   cursor: default;
   animation-name: slideUp;
   animation-duration: 1000ms;
