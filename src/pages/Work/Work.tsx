@@ -6,7 +6,7 @@ import PageContext from "../../contexts/PageContext/PageContext";
 import FullViewportSlider from "./components/FullViewportSlider/FullViewportSlider";
 import Project from "./components/Project/Project";
 import "./Work.css";
-
+import loadingAnimation from "../../lotties/PortfolioAnimations.json";
 interface IProps {
   data?: any;
 }
@@ -23,6 +23,15 @@ const Work = ({ data }: IProps) => {
   const [scrollProjects, setScrollProjects] = useState(0);
   const [showCaseStudy, setShowCaseStudy] = useState(false);
   const [showCTACursor, setShowCTACursor] = useState(true);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <PageContext.Provider
@@ -47,6 +56,7 @@ const Work = ({ data }: IProps) => {
           ]}
         />
         {mobileMenuVisible ? <MobileMenu links={["Profile"]} /> : null}
+
         <FullViewportSlider data={projectsArray}>
           {projectsArray.map((project: any) => {
             return (

@@ -2,6 +2,13 @@
   --container-padding-width: calc((100vw + 80px) / 21);
   --mobile-standard-horizontal-padding: 1rem;
   --desktop-standard-horizontal-padding: 2rem;
+  --highest-z-priority: 1000;
+  --very-high-z-priority: 900;
+  --high-z-priority: 800;
+  --medium-z-priority: 500;
+  --low-z-priority: 300;
+  --very-low-z-priority: 200;
+  --lowest-z-priority: 1;
 }
 
 .margin-right-1 {

@@ -1,0 +1,27 @@
+.loading-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  // background: linear-gradient(288.68deg, #00B4DC -26.6%, #7A3CFF 117.8%);
+  background-color: #594DE9;
+  background-color: #05050f;
+  backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9000;
+  // animation: fadeOutLoading 1000ms ease-in-out forwards;
+  // animation-delay: 4000ms;
+}
+
+@keyframes fadeOutLoading {
+  0% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}

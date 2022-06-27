@@ -35,7 +35,6 @@ const NavLinkNative = ({
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      {...(download ? download : null)}
       href={download ? download : undefined}
     >
       {icon ? <img src={`${process.env.PUBLIC_URL}${icon}`} /> : null}

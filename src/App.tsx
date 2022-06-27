@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import "./global-js/WelcomePageBackgroundParticle.js";
@@ -9,10 +8,12 @@ import Profile from "./pages/Profile/Profile";
 import GlobalContext from "./contexts/GlobalContext/GlobalContext";
 import Contact from "./pages/Contact/Contact";
 import { iPad } from "./constants/globalConstants";
+import Loading from "./pages/Loading/Loading";
 
 function App() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   let windowInnerWidth = 0;
 
@@ -35,6 +36,23 @@ function App() {
     }
   }
 
+  const handleLoadingComplete = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    // setLoading(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("load", handleLoadingComplete);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 3000);
+    return () => {
+      window.removeEventListener("load", handleLoadingComplete);
+    };
+  }, []);
+
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     if (iPad) {
@@ -55,25 +73,32 @@ function App() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   });
+
   return (
     <>
-      <GlobalContext.Provider
-        value={{
-          contactFormVisible,
-          setContactFormVisible,
-          mobileMenuVisible,
-          setMobileMenuVisible,
-        }}
-      >
-        <Contact />
-        <BrowserRouter>
-          <Routes>
-            <Route path="" element={<Work />} />
-            <Route path="/profile" element={<Profile data={[]} />} />
-            {/* <Route path="/contact" element={<Contact />} /> */}
-          </Routes>
-        </BrowserRouter>
-      </GlobalContext.Provider>
+      {loading ? (
+        <Loading />
+      ) : (
+        <GlobalContext.Provider
+          value={{
+            contactFormVisible,
+            setContactFormVisible,
+            mobileMenuVisible,
+            setMobileMenuVisible,
+          }}
+        >
+          <>
+            <Contact />
+            <BrowserRouter>
+              <Routes>
+                <Route path="" element={<Work />} />
+                <Route path="/profile" element={<Profile data={[]} />} />
+                {/* <Route path="/contact" element={<Contact />} /> */}
+              </Routes>
+            </BrowserRouter>
+          </>
+        </GlobalContext.Provider>
+      )}
       {/* <Work /> */}
     </>
   );
