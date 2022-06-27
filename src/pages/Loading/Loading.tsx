@@ -12,7 +12,7 @@ const Loading = () => {
         autoplay
         loop
         src={loadingAnimation}
-        style={{ height: "10vh", width: "10vw" }}
+        style={{ height: "80px", width: "80px" }}
       >
         {/* <Controls
           visible={true}
