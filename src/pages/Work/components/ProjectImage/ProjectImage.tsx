@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import GlobalContext from "../../../../contexts/GlobalContext/GlobalContext";
 import PageContext from "../../../../contexts/PageContext/PageContext";
 import "./ProjectImage.css";
 
@@ -9,6 +10,7 @@ interface IProps {
 
 const ProjectImage = ({ source, backgroundColour }: IProps) => {
   const { showCaseStudy } = useContext(PageContext);
+  const { setLoading } = useContext(GlobalContext);
   return (
     <div
       className={`projectImage__container row align-center justify-end`}
@@ -18,6 +20,7 @@ const ProjectImage = ({ source, backgroundColour }: IProps) => {
         src={`${process.env.PUBLIC_URL}/assets/caseStudyImages/${source}`}
         alt=""
         className={`projectImage ${showCaseStudy ? "fadeAway" : null}`}
+        onLoad={() => setLoading(false)}
       />
     </div>
   );

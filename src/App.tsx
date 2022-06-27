@@ -19,6 +19,8 @@ function App() {
 
   handleResize();
 
+  console.log(loading);
+
   function handleResize() {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     const currentWindowInnerWidth = window.innerWidth;
@@ -85,6 +87,8 @@ function App() {
             setContactFormVisible,
             mobileMenuVisible,
             setMobileMenuVisible,
+            loading,
+            setLoading,
           }}
         >
           <>

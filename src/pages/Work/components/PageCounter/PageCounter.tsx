@@ -19,6 +19,8 @@ const PageCounter = ({ data }: IProps) => {
 
   const isExperimental = true;
 
+  // console.log(data.);
+
   const {
     currentPage,
     setCurrentPage,
@@ -39,8 +41,6 @@ const PageCounter = ({ data }: IProps) => {
   const sliderParentComponent = document.querySelector(
     ".fullviewportslider__content"
   );
-
-  console.log(currentPage);
 
   function scrollNextProject() {
     if (sliderParentComponent && currentPage < totalPages - 1) {
@@ -80,7 +80,7 @@ const PageCounter = ({ data }: IProps) => {
               className={`pageCounterDot ${
                 activePage === index + 1 ? "active" : null
               }`}
-              key={pages}
+              key={`indicator_for_${pages.title}`}
             ></button>
           );
         })}
