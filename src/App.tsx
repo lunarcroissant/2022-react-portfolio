@@ -41,19 +41,19 @@ function App() {
   const handleLoadingComplete = () => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
     // setLoading(false);
   };
 
-  useEffect(() => {
-    window.addEventListener("load", handleLoadingComplete);
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 3000);
-    return () => {
-      window.removeEventListener("load", handleLoadingComplete);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("load", handleLoadingComplete);
+  //   // setTimeout(() => {
+  //   //   setLoading(false);
+  //   // }, 3000);
+  //   return () => {
+  //     window.removeEventListener("load", handleLoadingComplete);
+  //   };
+  // }, []);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -78,31 +78,32 @@ function App() {
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <Loading />
-      ) : (
-        <GlobalContext.Provider
-          value={{
-            contactFormVisible,
-            setContactFormVisible,
-            mobileMenuVisible,
-            setMobileMenuVisible,
-            loading,
-            setLoading,
-          }}
-        >
-          <>
-            <Contact />
-            <BrowserRouter>
-              <Routes>
-                <Route path="" element={<Work />} />
-                <Route path="/profile" element={<Profile data={[]} />} />
-                {/* <Route path="/contact" element={<Contact />} /> */}
-              </Routes>
-            </BrowserRouter>
-          </>
-        </GlobalContext.Provider>
-      )}
+      ) : ( */}
+      <GlobalContext.Provider
+        value={{
+          contactFormVisible,
+          setContactFormVisible,
+          mobileMenuVisible,
+          setMobileMenuVisible,
+          loading,
+          setLoading,
+        }}
+      >
+        <>
+          {loading && <Loading />}
+          <Contact />
+          <BrowserRouter>
+            <Routes>
+              <Route path="" element={<Work />} />
+              <Route path="/profile" element={<Profile data={[]} />} />
+              {/* <Route path="/contact" element={<Contact />} /> */}
+            </Routes>
+          </BrowserRouter>
+        </>
+      </GlobalContext.Provider>
+      {/* )} */}
       {/* <Work /> */}
     </>
   );
