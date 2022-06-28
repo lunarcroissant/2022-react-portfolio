@@ -15,7 +15,7 @@ const ProjectImage = ({ source, backgroundColour }: IProps) => {
   const handleLoadingComplete = () => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2630);
   };
   return (
     <div
@@ -25,6 +25,7 @@ const ProjectImage = ({ source, backgroundColour }: IProps) => {
       <img
         src={`${process.env.PUBLIC_URL}/assets/caseStudyImages/${source}`}
         alt=""
+        loading="eager"
         className={`projectImage ${showCaseStudy ? "fadeAway" : null}`}
         onLoad={() => handleLoadingComplete()}
       />

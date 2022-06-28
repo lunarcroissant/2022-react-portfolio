@@ -1,5 +1,8 @@
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import loadingAnimation from "../../lotties/LogoAnimationV1.json";
+import LoadingAnimation from "./Constants";
+import loadingAnimationSmoothed from "../../lotties/LogoAnimationWithSmoothing.json";
+import loadingAnimationSmoothedV3 from "../../lotties/LogoAnimationWithSmoothingV3.json";
+import loadingAnimationLinear from "../../lotties/LogoAnimationV1.json";
 
 import styles from "./styles.module.css";
 
@@ -11,9 +14,9 @@ const Loading = () => {
       <Player
         autoplay
         loop
-        src={loadingAnimation}
+        src={loadingAnimationSmoothedV3}
         style={{ height: "80px", width: "80px" }}
-        speed={0.9}
+        speed={1}
       >
         {/* <Controls
           visible={true}
