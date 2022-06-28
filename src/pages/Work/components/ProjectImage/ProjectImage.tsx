@@ -11,6 +11,12 @@ interface IProps {
 const ProjectImage = ({ source, backgroundColour }: IProps) => {
   const { showCaseStudy } = useContext(PageContext);
   const { setLoading } = useContext(GlobalContext);
+
+  const handleLoadingComplete = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
   return (
     <div
       className={`projectImage__container row align-center justify-end`}
@@ -20,7 +26,7 @@ const ProjectImage = ({ source, backgroundColour }: IProps) => {
         src={`${process.env.PUBLIC_URL}/assets/caseStudyImages/${source}`}
         alt=""
         className={`projectImage ${showCaseStudy ? "fadeAway" : null}`}
-        onLoad={() => setLoading(false)}
+        onLoad={() => handleLoadingComplete()}
       />
     </div>
   );
