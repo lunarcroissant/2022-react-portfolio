@@ -13,7 +13,7 @@ const Loading = () => {
         loop
         src={loadingAnimation}
         style={{ height: "80px", width: "80px" }}
-        speed={0.8}
+        speed={0.9}
       >
         {/* <Controls
           visible={true}
