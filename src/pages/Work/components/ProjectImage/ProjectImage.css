@@ -1,6 +1,7 @@
 .projectImage {
   width: 80vw;
   height: auto;
+  transition: all 400ms ease-in-out;
 }
 
 .projectImage__container {

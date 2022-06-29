@@ -36,7 +36,7 @@ const InfoTile = ({
   // });
 
   const { setMobileMenuVisible } = useContext(GlobalContext);
-  const { setShowCaseStudy } = useContext(PageContext);
+  const { showCaseStudy, setShowCaseStudy } = useContext(PageContext);
 
   const isMobile = useViewportSize(768);
 
@@ -48,7 +48,11 @@ const InfoTile = ({
 
   if (isMobile) {
     return (
-      <div className="infoTile col">
+      <div
+        className={`infoTile col ${showInfoTile ? null : "hidden"} ${
+          showCaseStudy ? "fadeAway" : null
+        }`}
+      >
         <div className="row justify-between infoTile__about">
           <div className="col infoTile__copy">
             <Text
@@ -118,7 +122,7 @@ const InfoTile = ({
     <div
       className={`col infoTile justify-center ${
         showInfoTile ? null : "hidden"
-      } `}
+      } ${showCaseStudy ? "fadeAway" : null}`}
       key={imageSource}
     >
       {false ? (

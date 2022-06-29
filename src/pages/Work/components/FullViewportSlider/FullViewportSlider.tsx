@@ -18,6 +18,7 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     showCaseStudy,
     showCTACursor,
     setShowCTACursor,
+    setScaleImage,
   } = useContext(PageContext);
 
   const [mouseLocation, setMouseLocation] = useState({ x: 0, y: 0 });
@@ -37,7 +38,9 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     const proportionedProjectHeight = fullYHeight / totalPages;
 
     setCurrentPage(Math.round(distanceFromTop / proportionedProjectHeight));
-
+    const finishedScrolling =
+      distanceFromTop - proportionedProjectHeight * currentPage;
+    setScaleImage(finishedScrolling === 0 ? 1 : 0.98);
     // Only fire when project is exactly in view
     // if (distanceFromTop % proportionedProjectHeight === 0) {
     //   setCurrentPage(distanceFromTop / proportionedProjectHeight);

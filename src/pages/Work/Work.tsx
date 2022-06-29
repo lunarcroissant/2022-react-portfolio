@@ -23,6 +23,7 @@ const Work = ({ data }: IProps) => {
   const [scrollProjects, setScrollProjects] = useState(0);
   const [showCaseStudy, setShowCaseStudy] = useState(false);
   const [showCTACursor, setShowCTACursor] = useState(true);
+  const [scaleImage, setScaleImage] = useState(1);
 
   const defaultOptions = {
     loop: true,
@@ -46,6 +47,8 @@ const Work = ({ data }: IProps) => {
         setShowCaseStudy,
         showCTACursor,
         setShowCTACursor,
+        scaleImage,
+        setScaleImage,
       }}
     >
       <div className="pageContainer col">
