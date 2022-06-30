@@ -68,7 +68,7 @@ const InfoTile = ({
               opacity="1"
               animate
             >
-              {truncateCopy(title, 14)}
+              {truncateCopy(title, 16)}
             </Text>
             <VerticalSpacing size="xs" />
             <Text

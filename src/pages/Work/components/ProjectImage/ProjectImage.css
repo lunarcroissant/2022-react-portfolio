@@ -12,7 +12,7 @@
 @media screen and (max-width: 768px) {
   .projectImage {
     position: absolute;
-    top: 15rem;
+    top: calc(75px + 16vh);
     width: 100vw;
     height: auto;
   }

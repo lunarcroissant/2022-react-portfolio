@@ -27,7 +27,8 @@
     }
 
     position: absolute;
-    top: 15rem;
+    // top: 15rem;
+    top: calc(75px + 16vh);
     // left: -70vw;
     width: 100vw;
     height: auto;
