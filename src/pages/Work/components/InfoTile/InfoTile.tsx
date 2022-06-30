@@ -42,8 +42,14 @@ const InfoTile = ({
 
   const [showInfoTile, setShowInfoTile] = useState(true);
 
-  const setBodyBackground = (backgroundColour: string) => {
-    document.body.style.backgroundColor = backgroundColour;
+  const truncateCopy = (copy: string, length?: number) => {
+    if (length) {
+      return copy.length > length
+        ? `${copy.substring(0, length ? length : 110)}...`
+        : copy;
+    }
+
+    return copy.length > 40 ? `${copy.substring(0, 110)}...` : copy;
   };
 
   if (isMobile) {
@@ -55,14 +61,6 @@ const InfoTile = ({
       >
         <div className="row justify-between infoTile__about">
           <div className="col infoTile__copy">
-            <Text
-              colour={TextColour.white}
-              size={TextSize.xs}
-              opacity="0.5"
-              animate
-            >
-              Project
-            </Text>
             <VerticalSpacing size="xs" />
             <Text
               colour={TextColour.white}
@@ -70,7 +68,7 @@ const InfoTile = ({
               opacity="1"
               animate
             >
-              {title}
+              {truncateCopy(title, 14)}
             </Text>
             <VerticalSpacing size="xs" />
             <Text
@@ -80,7 +78,8 @@ const InfoTile = ({
               opacity="1"
               animate
             >
-              {description}
+              {/* {description} */}
+              {truncateCopy(description)}
             </Text>
           </div>
         </div>
@@ -92,7 +91,7 @@ const InfoTile = ({
             })}
           </div>
         </div>
-        <VerticalSpacing size="md" />
+        <VerticalSpacing size="lg" />
         <Button
           buttonVariant={ButtonType.primary}
           handleClick={() => setShowCaseStudy(true)}

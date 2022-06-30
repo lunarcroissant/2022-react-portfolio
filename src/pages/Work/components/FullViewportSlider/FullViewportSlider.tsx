@@ -40,7 +40,15 @@ const FullViewportSlider = ({ children, data }: IProps) => {
     setCurrentPage(Math.round(distanceFromTop / proportionedProjectHeight));
     const finishedScrolling =
       distanceFromTop - proportionedProjectHeight * currentPage;
-    setScaleImage(finishedScrolling === 0 ? 1 : 0.98);
+
+    setScaleImage(finishedScrolling === 0 ? 1 : 0.95);
+    // setScaleImage(
+    //   1 - Math.abs(finishedScrolling * 0.2) / (window.innerHeight / 2)
+    // );
+    // console.log());
+    // setScaleImage(
+    //   window.innerHeight - Math.abs(finishedScrolling / 2) / window.innerHeight
+    // );
     // Only fire when project is exactly in view
     // if (distanceFromTop % proportionedProjectHeight === 0) {
     //   setCurrentPage(distanceFromTop / proportionedProjectHeight);
