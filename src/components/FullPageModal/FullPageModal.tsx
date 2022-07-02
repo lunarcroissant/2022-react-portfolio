@@ -4,11 +4,17 @@ import Icon from "../base/Icon/Icon";
 
 import "./FullPageModal.css";
 
-interface IProps {
-  children: any;
+export enum ModalTheme {
+  light = "--white",
+  dark = "--dark",
 }
 
-const FullPageModal = ({ children }: IProps) => {
+interface IProps {
+  children: any;
+  theme: ModalTheme;
+}
+
+const FullPageModal = ({ children, theme }: IProps) => {
   const [visible, setVisible] = useState(true);
   const { contactFormVisible, setContactFormVisible } =
     useContext(GlobalContext);
@@ -20,7 +26,11 @@ const FullPageModal = ({ children }: IProps) => {
             <Icon
               isButton
               size="sm"
-              icon="close--white"
+              icon={`${
+                theme === ModalTheme.light
+                  ? `close${ModalTheme.dark}`
+                  : `close${ModalTheme.light}`
+              }`}
               handleClick={() => setContactFormVisible(false)}
             />
           </div>

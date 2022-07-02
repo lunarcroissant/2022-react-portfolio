@@ -6,7 +6,8 @@
     width: 90%;
     opacity: 0.15;
     // min-width: 400px;
-    background: var(--off-white);
+    // background: var(--off-white);
+    background-color: var(--light-grey);
     border-radius: 50rem;
   }
 
@@ -23,6 +24,7 @@
     width: 90%;
     // min-width: 400px;
     background: var(--primary);
+    background-color: var(--light-grey);
   }
 
   & p {

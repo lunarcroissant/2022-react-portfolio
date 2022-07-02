@@ -2,7 +2,7 @@
   height: 1px;
   width: 90%;
   opacity: 0.15;
-  background: var(--off-white);
+  background-color: var(--light-grey);
   border-radius: 50rem;
 }
 .divider p {
@@ -13,6 +13,7 @@
   height: 2px;
   width: 90%;
   background: var(--primary);
+  background-color: var(--light-grey);
 }
 .divider--dark p {
   margin: 0 2rem;

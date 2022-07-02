@@ -3,6 +3,11 @@ import Text, { TextColour, TextSize } from "../Text/Text";
 import VerticalSpacing from "../VerticalSpacing/VerticalSpacing";
 import "./Icon.css";
 
+export enum Theme {
+  light = "light",
+  dark = "dark",
+}
+
 interface IProps {
   size: string;
   background?: Backgrounds;
@@ -59,7 +64,14 @@ const Icon = ({
         {label ? (
           <>
             <VerticalSpacing size="sm" />
-            <Text size={TextSize.md} colour={TextColour.offWhite}>
+            <Text
+              size={TextSize.md}
+              colour={
+                theme === Theme.light
+                  ? TextColour.lightBlack
+                  : TextColour.offWhite
+              }
+            >
               {label}
             </Text>
           </>

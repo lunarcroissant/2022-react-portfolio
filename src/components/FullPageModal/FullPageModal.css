@@ -53,6 +53,9 @@
   align-items: center;
   z-index: 9000;
 }
+.fullpagemodal__container--dark {
+  background: rgba(255, 255, 255, 0.85);
+}
 .fullpagemodal > * {
   color: var(--dark-grey);
 }

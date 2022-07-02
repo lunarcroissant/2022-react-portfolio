@@ -22,7 +22,7 @@ export enum Icons {
 interface IProps {
   linkVariant: LinkType;
   children: string;
-  icon?: Icons;
+  icon?: string;
   handleClick?: (value: any) => void;
   href?: string;
 }

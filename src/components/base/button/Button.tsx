@@ -17,6 +17,9 @@ export enum Icons {
   gitHubLight = "icons_github--white",
   dribbleLight = "icons_dribble--white",
   linkedInLight = "icons_linkedin--white",
+  gitHubDark = "icons_github--dark",
+  dribbleDark = "icons_dribble--dark",
+  linkedInDark = "icons_linkedin--dark",
 }
 
 interface IProps {

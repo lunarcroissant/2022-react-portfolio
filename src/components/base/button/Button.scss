@@ -62,12 +62,16 @@
   background: none;
   // box-shadow: inset 0 0 0 2px rgb(255, 255, 255, 0.1);
   box-shadow: inset 0 0 0 50px rgb(255, 255, 255, 0.2);
+  // box-shadow: inset 0 0 0 70px #2972FF;
   font-weight: var(--font--regular);
   backdrop-filter: blur(2rem);
+  width: 100%;
+  padding: 0.5rem 0;
 
   &:hover {
     // box-shadow: inset 0 0 0 2px white;
     box-shadow: inset 0 0 0 50px rgb(255, 255, 255, 0.2);
+    // box-shadow: inset 0 0 0 70px #2972FF;
     transform: scale(1.1);
     // background: rgb(255, 255, 255, 0.2);
   }
