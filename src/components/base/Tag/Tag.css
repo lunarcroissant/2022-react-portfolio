@@ -2,6 +2,7 @@
   /* background: var(--off-white); */
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2rem);
   border-radius: 3rem;
   margin-right: 0.5rem;
   height: min-content;
