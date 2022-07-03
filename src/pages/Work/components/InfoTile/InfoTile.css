@@ -2,6 +2,7 @@
   height: 100%;
   left: 0.25rem;
   height: 100%;
+  pointer-events: none;
   /* background-image: url(/public/assets/Noise.png); */
   border-radius: 1.5rem;
   width: 30vw;
