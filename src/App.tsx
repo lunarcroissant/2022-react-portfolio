@@ -19,8 +19,6 @@ function App() {
 
   handleResize();
 
-  console.log(loading);
-
   function handleResize() {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     const currentWindowInnerWidth = window.innerWidth;
@@ -73,7 +71,7 @@ function App() {
   window.addEventListener("resize", () => {
     // We execute the same script as before
     let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty("--vh", `${vh * 100}px`);
   });
 
   return (

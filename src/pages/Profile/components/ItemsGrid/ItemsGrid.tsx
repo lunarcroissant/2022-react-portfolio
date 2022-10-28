@@ -44,8 +44,6 @@ const ItemsGrid = ({ data, filter }: IProps) => {
           ? {
               transform: `translateY(1rem)`,
               opacity: 0,
-              // position: "absolute",
-              // top: "2rem",
             }
           : {
               transform: `translateY(0)`,
@@ -53,7 +51,6 @@ const ItemsGrid = ({ data, filter }: IProps) => {
             }
       }
     >
-      {/* <div className="width-100"></div> */}
       {data.map((item: any) => {
         return (
           <ItemTile label={item.skill} subInfo={item.status} icon={item.icon} />
